@@ -46,7 +46,7 @@ assign SCLK =  sclk_counter[4];
 // generate shift signal when sclk_counter reaches 30
 // want to shift out MOSI one cycle before SCLK negedge which happens at sclk_counter 31
 // so we asssert shift one cycle before that
-assign shift = (sclk_counter == 5'b01110) ? 1 : 0;
+assign shift = (sclk_counter == 5'b11110) ? 1 : 0;
        
 
 /*-- 6-bit counter to track number of bits that have been shifte in/out --*/

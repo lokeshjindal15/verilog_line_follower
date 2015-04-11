@@ -31,7 +31,8 @@ $readmemh("analog.dat",A2D_mem);		// read the analog data
 end
 
 ///////// Self-triggering clock signal of 2 ns //////////
-always @(clk) #10 clk <= ~clk;
+always 
+#10 clk = ~clk;
 
 ////////// Change the channel and start conversion
 initial begin
@@ -45,7 +46,7 @@ initial begin
 				@(posedge clk) strt_cnv = 1;
 				@(posedge clk) strt_cnv = 0;
 				// Wait for cnv to complete
-				while(!cnv_cmplt) ;
+				while(!cnv_cmplt) #10;
 				// Check if the value is correct. Not sure how to do this yet
 				$display("Count:%d chnnl:%d Value: %h", count, chnnl, res);
 				$stop;
