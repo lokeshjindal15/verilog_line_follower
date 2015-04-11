@@ -17,7 +17,7 @@ output [11:0] res; // A2D converted value communicated by the A2D slave
 /*-- SPI interface to/from a2d--*/
 output SCLK;
 input MISO;
-output reg MOSI;
+output logic MOSI;
 output reg a2d_SS_n;
 
 output reg cnv_cmplt;
@@ -29,14 +29,16 @@ logic set_cnv_cmplt;
 logic [5:0] bit_counter;
 logic [15:0] shift_reg;
 
-logic bit_cnt_33;
+logic bit_cnt_32;
 
 /*-- 5-bit counter to generate SCLK --*/
 always_ff @(posedge(clk) or negedge(rst_n))
 if (!rst_n)
-  sclk_counter <= 5'b10000; 
+  // sclk_counter <= 5'b10000; 
+  sclk_counter <= 5'b11111; 
 else if (load)
-  sclk_counter <= 5'b10000;
+  // sclk_counter <= 5'b10000;
+  sclk_counter <= 5'b11111; 
 else if (en_sclk_cnt)
   sclk_counter <= sclk_counter + 1;
 
@@ -56,8 +58,8 @@ if (load)
 else if (shift)
   bit_counter <= bit_counter + 1;
 
-// generate the bit_cnt_33 signal
-assign bit_cnt_33 = (bit_counter == 6'd33) ? 1 : 0;   //-- we end up with one extra shift in our design -
+// generate the bit_cnt_32 signal
+assign bit_cnt_32 = (bit_counter == 6'd32) ? 1 : 0;   //-- we end up with one extra shift in our design -
                                                       //   so count a extra shift to receive MISO correctly
 
 
@@ -71,14 +73,16 @@ else if (shift)
 // a2d value relayed on res signal
 assign  res = shift_reg[11:0];
 
+/*
 // flop for holding the MOSI o/p
 always_ff@(posedge(clk) or negedge(rst_n))
 if (!rst_n)
   MOSI <= 1'b0;
 else if (shift)
   MOSI <= shift_reg[15];
-
-  
+*/ 
+assign MOSI = shift_reg[15];
+ 
 /*----- FSM for SPI interface -------*/
 typedef enum reg {IDLE, SAMPLING} state_t;
 state_t state, nxt_state;
@@ -100,7 +104,7 @@ set_cnv_cmplt = 0;
       end
   
   SAMPLING: 
-      if (bit_cnt_33) begin
+      if (bit_cnt_32) begin
         set_cnv_cmplt = 1;
         nxt_state = IDLE;
       end
