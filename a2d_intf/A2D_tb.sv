@@ -38,7 +38,7 @@ always
 
 // get the expected result from the model
 always @(posedge(A2D_Model.ld_shft_reg))
-expected_res <= A2D_Model.shft_data[11:0];
+expected_res <= ~A2D_Model.shft_data[11:0];   // complement analog value: as this is expected at the intf
 
 ////////// Change the channel and start conversion
 initial begin

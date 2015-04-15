@@ -70,8 +70,8 @@ if (load)
 else if (shift)
   shift_reg <= {shift_reg[14:0], MISO};
 
-// a2d value relayed on res signal
-assign  res = shift_reg[11:0];
+// a2d value inverted and relayed on res signal
+assign  res = ~shift_reg[11:0];
 
 /*
 // flop for holding the MOSI o/p
