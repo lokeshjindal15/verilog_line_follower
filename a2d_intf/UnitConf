@@ -1,0 +1,8 @@
+
+unit("a2d_intf")
+
+addfile("A2D_intf.sv")
+addfile("A2D_tb.sv")
+addfile("ADC128S.sv")
+
+toplevel("A2D_tb")

@@ -65,14 +65,14 @@ initial begin
           $display("OK: Count:%d chnnl:%d  Expected: %h , Got Value: %h", count, chnnl, expected_res, res);
         else begin
           $display("ERROR:!! Count:%d chnnl:%d  Expected: %h , Got Value: %h", count, chnnl, expected_res, res);
-          $stop();
+          $finish();
         end
         
 					
 		end
 	
   $display("Yo yo!!, ALL TESTS PASSED :) \n");
-  $stop();
+  $finish();
 end
 
 endmodule
