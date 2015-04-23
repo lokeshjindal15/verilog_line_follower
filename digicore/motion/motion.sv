@@ -26,7 +26,7 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
  output logic strt_cnv;					      	// used to initiate a Round Robing conversion on IR sensors
  output logic IR_in_en,IR_mid_en,IR_out_en; 	// PWM based enables to various IR sensors
   
- output reg [10:0] lft_reg,rht_reg;	   // 11-bit signed left and right motor controls
+ output reg [11:0] lft_reg,rht_reg;	   // 11-bit signed left and right motor controls
  
  
  ////////  PI MATH CONSTANTS  ///////////
@@ -210,7 +210,7 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
  /*-- integral decimator --*/
  always_ff @(posedge clk or negedge rst_n)
    if(!rst_n)
-    intgdec  <=  2'b00;
+    intgdec  <=  2'b11;
    else if(inc_intgdec)
     intgdec  <=  intgdec + 1;
     
@@ -271,7 +271,7 @@ nxt_state = IDLE;
   
     IDLE: /* wait for the go signal 1. Accum = 0*/
           if (go) begin
-            reset_channel_cnt = 1;
+            //reset_channel_cnt = 1;  // because we reset channel count as we leave OUT_LEFT
             reset_timer = 1;
             rstaccum = 1;
             update_IR_en = 1;
@@ -382,6 +382,7 @@ nxt_state = IDLE;
           dst2error = 1;
           inc_intgdec = 1;
           clear_IR_all = 1; // turn of all the IR sensors
+		  reset_channel_cnt = 1; // reset channel count so that when we do update_IR_en we enable the correct IR sensor
           nxt_state = INTGL;
          end
 

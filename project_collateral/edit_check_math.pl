@@ -98,13 +98,13 @@ for ($calcs=0; $calcs<($set_cntr+1)/6; $calcs++) {
   printf "  rht_reg = %3x\n",$rht_reg;
   printf DETAILED "  rht_reg = %3x\n",$rht_reg;
   printf SUMMARY "%3x ",$rht_reg;
-  printf MATHFILE "\@%x %.4x\n", 2* $calcs, $rht_reg;
+  printf MATHFILE "\@%x %s\n", 2* $calcs, sprintf("%.4x",$rht_reg);
   $accum = $Fwd + $Pcomp;
   $lft_reg = saturate($accum + $Icomp);
   printf "  lft_reg = %3x\n",$lft_reg;
   printf DETAILED "  lft_reg = %3x\n",$lft_reg;
   printf SUMMARY "%3x\n",$lft_reg;
-  printf MATHFILE "\@%x %.4x\n", (2*$calcs + 1), $lft_reg;
+  printf MATHFILE "\@%x %s\n", (2*$calcs + 1), sprintf("%.4x",$lft_reg);
 }
 close(SUMMARY);
 close(DETAILED);
