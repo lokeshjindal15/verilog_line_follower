@@ -1,7 +1,9 @@
 /*
 Author: Lokesh Jindal, Brian Coutinho
 e-mail: lokeshjindal15@cs.wisc.edu, bcoutinho@wisc.edu
-Date:	APril 10, 2015
+Date:	April 22, 2015
+
+ECE551
 
 Motion Control : this block handles reading the IR sensors and 
                   basically crunched out the PI math.
@@ -87,19 +89,21 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
   else if(dst2accum)
     Accum  <=  dst;   // 16 bit result
  
- always_ff @(posedge clk or negedge rst_n)
+ always_ff @(posedge clk )
   if(dst2error)
     Error  <=  dst[11:0];
  
  always_ff @(posedge clk or negedge rst_n)
-  if(dst2intgrl)
+  if (!rst_n)
+    Intgrl <= 0;
+ else  if(dst2intgrl)
     Intgrl <=  dst[11:0]; 
 
- always_ff @(posedge clk or negedge rst_n)
+ always_ff @(posedge clk )
   if(dst2icomp)
     Icomp  <=  dst[11:0]; 
     
- always_ff @(posedge clk or negedge rst_n)
+ always_ff @(posedge clk )
   if(dst2pcomp)
     Pcomp  <=  dst;  // 16 bit result
   
@@ -221,9 +225,17 @@ typedef enum reg [4:0] {IDLE = 0, WAIT_4095,
                   A2D_LEFT, IN_LEFT, MID_LEFT, OUT_LEFT,
                   INTGL, ICOMP, PCOMP,
                   ACCUM_RIGHT, RIGHT_REG,
-                  ACCUM_LEFT, LEFT_REG} state_t;
+                  ACCUM_LEFT, LEFT_REG,
+                  UPDATE_IR_ALL} state_t;
 state_t state, nxt_state;
 
+always_ff @(posedge clk or negedge rst_n) begin
+if (!rst_n)
+  state <= IDLE;
+else
+  state <= nxt_state;
+end
+ 
 always_comb 
 begin
 // reset all the signal output from FSM
@@ -253,43 +265,195 @@ clear_IR_all = 0;
 
 strt_cnv = 0;
 
-end // end of FSM
-/*
+nxt_state = IDLE;
 
-  case(state)
-  IDLE: // wait in this until you receive strt_cnv signal
-      if (strt_cnv) begin
-        load = 1;
-        a2d_SS_n = 0;
-        nxt_state = SAMPLING;
-      end
+  case (state)
   
-  SAMPLING: 
-      if (bit_cnt_32) begin
-        set_cnv_cmplt = 1;
-        nxt_state = IDLE;
-      end
-      else begin
-        a2d_SS_n = 0;
-        en_sclk_cnt = 1;
-        nxt_state = SAMPLING;
-      end
-      
-  default:
-      nxt_state = IDLE;      
-  endcase
-end
+    IDLE: /* wait for the go signal 1. Accum = 0*/
+          if (go) begin
+            reset_channel_cnt = 1;
+            reset_timer = 1;
+            rstaccum = 1;
+            update_IR_en = 1;
+            nxt_state = WAIT_4095;
+            end
+            
+    WAIT_4095:/* wait for IR sensors to stabilize and then start conv on right chnnel*/
+          if (timer_4095) begin
+          strt_cnv = 1;
+          nxt_state = A2D_RIGHT;
+        end
+        else begin
+          en_timer = 1;
+          nxt_state = WAIT_4095;
+        end
 
-// state flop
-always_ff @(posedge(clk) or negedge(rst_n))
-  if(!rst_n)
-    state <= IDLE;
-  else
-    state <= nxt_state;
-*/
+    A2D_RIGHT: /* wait for right channel to complt conversion and move to appropriate right chnnl*/
+          if (cnv_cmplt) begin
+            case(channel_cnt[2:1])
+              2'b00: nxt_state = IN_RIGHT;
+              2'b01: nxt_state = MID_RIGHT;
+              2'b10: nxt_state = OUT_RIGHT;
+            endcase
+            reset_timer = 1;
+          end
+          else begin
+            nxt_state = A2D_RIGHT;
+          end
 
-      
-      
+     IN_RIGHT: /* 2. Accum = Accum _+ IR_in_rht*/
+         begin
+          dst2accum = 1;
+          inc_channel_cnt = 1;
+          nxt_state = WAIT_32;
+         end
+          
+      MID_RIGHT: /* 4. Accum = Accum _+ 2* IR_mid_rht*/
+         begin
+          mult2 = 1;
+          dst2accum = 1;
+          inc_channel_cnt = 1;
+          nxt_state = WAIT_32;
+         end
+
+      OUT_RIGHT: /* 6. Accum = Accum _+ 4* IR_out_rht*/
+         begin
+          mult4 = 1;
+          dst2accum = 1;
+          inc_channel_cnt = 1;
+          nxt_state = WAIT_32;
+         end
+
+      WAIT_32: /* coz Eric says Wait for 32 cycles*/
+          if (timer_32) begin
+            strt_cnv = 1;
+            nxt_state = A2D_LEFT;
+          end
+          else begin
+            en_timer = 1;
+            nxt_state = WAIT_32;
+          end
+
+      A2D_LEFT: /* wait for left chnnl to cmplt conversion and move to approriate left chnnl*/
+          if (cnv_cmplt) begin
+            case(channel_cnt[2:1])
+              2'b00: nxt_state = IN_LEFT;
+              2'b01: nxt_state = MID_LEFT;
+              2'b10: nxt_state = OUT_LEFT;
+            endcase
+            // reset_timer = 1; // reset_timer while going to WAIT_4095 from UPDATE_IR_ALL
+          end
+          else begin
+            nxt_state = A2D_LEFT;
+          end
+
+      /* From here IN_LEFT and MID_LEFT should go to next channel UPDATE_IR_ALL
+      * OUT_LEFT goes to PI calculation path*/    
+
+      IN_LEFT: /*3. Accum = Accum - IR_in_lft*/
+         begin
+          sub = 1; 
+          dst2accum = 1;
+          inc_channel_cnt = 1;
+          nxt_state = UPDATE_IR_ALL;
+         end
+
+      MID_LEFT: /*5. Accum = Accum - 2*IR_mid_lft*/
+         begin
+          sub = 1; 
+          mult2 = 1;
+          dst2accum = 1;
+          inc_channel_cnt = 1;
+          nxt_state = UPDATE_IR_ALL;
+         end
+
+      UPDATE_IR_ALL:
+         begin
+          update_IR_en = 1;
+          reset_timer = 1;
+          nxt_state = WAIT_4095;
+         end
+
+      OUT_LEFT: /*7. Error = saturate(Accum - 4*IR_out_lft)*/
+         begin
+          sub = 1; 
+          mult4 = 1;
+          saturate = 1;
+          dst2error = 1;
+          inc_intgdec = 1;
+          clear_IR_all = 1; // turn of all the IR sensors
+          nxt_state = INTGL;
+         end
+
+      INTGL: /* 8. Intgrl = saturate(Error >> 4 + Intgrl)*/
+         begin
+          src0sel = INTGRLIN0;
+          src1sel = ERRORSCALEIN1;
+          dst2intgrl = &intgdec[1:0]; // integral result captured only once in 4 PI calc cycles
+          saturate = 1;
+          nxt_state = ICOMP;
+         end
+
+      ICOMP: /* 9. Icomp = Iterm * Ingrl */
+         begin
+          src0sel = INTGRLIN0;
+          src1sel = ITERMIN1;
+          multiply = 1;
+          dst2icomp = 1;
+          nxt_state = PCOMP;
+         end
+
+      PCOMP: /* 10. Pcomp = Error * Pterm */
+         begin
+          src0sel = PTERMIN0;
+          src1sel = ERRORIN1;
+          multiply = 1;
+          dst2pcomp = 1;
+          nxt_state = ACCUM_RIGHT;
+         end
+
+      ACCUM_RIGHT: /* 11. Accum = Fwd - Pterm */
+         begin
+          src0sel = PCOMPIN0;
+          src1sel = FWDIN1;
+          sub = 1;
+          dst2accum = 1;
+          nxt_state = RIGHT_REG;
+         end
+
+      RIGHT_REG: /* 12. rht_reg = saturate (Accum - Icomp)*/
+         begin
+          src0sel = ICOMPIN0;
+          src1sel = ACCUMIN1;
+          sub = 1;
+          saturate = 1;
+          dst2rht = 1;
+          nxt_state = ACCUM_LEFT;
+         end
+
+      ACCUM_LEFT: /* 13. Accum = Fwd + Pcomp */
+         begin
+          src0sel = PCOMPIN0;
+          src1sel = FWDIN1;
+          dst2accum = 1;
+          nxt_state = LEFT_REG;
+         end
+
+      LEFT_REG: /* 14. lft_reg = saturate(Accum + Icmop) */
+         begin
+          src0sel = ICOMPIN0;
+          src1sel = ACCUMIN1;
+          saturate = 1;
+          dst2lft = 1;
+          nxt_state = IDLE;
+         end
+
+      default: /* I hope we never reach this state */
+          nxt_state = IDLE;
+          
+  endcase   
+end // end of FSM
+     
 endmodule
 
   
