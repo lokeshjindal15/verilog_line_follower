@@ -116,7 +116,7 @@ for ($calcs=0; $calcs<($set_cntr+1)/6; $calcs++) {
   printf MATHFILE "\@%x %04x\n", 2* $calcs + 1, $lft_reg;
   }
   else{
-  $s_lft_reg = substr($s_lft_reg, -4);
+  $sub_s_lft_reg = substr($s_lft_reg, -4);
   printf MATHFILE "\@%x %s\n", 2* $calcs +1, $sub_s_lft_reg;
   }
 }
