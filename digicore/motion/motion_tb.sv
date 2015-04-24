@@ -16,7 +16,7 @@ module motion_tb();
 logic clk, rst_n;
 logic IR_in_en, IR_mid_en, IR_out_en;
 logic [11:0] lft_reg, rht_reg;
-logic [15:0] lft_reg_sgex, rht_reg_sgex, lft_ref, rht_ref;
+logic signed [15:0] lft_reg_sgex, rht_reg_sgex, lft_ref, rht_ref;
 logic go, strt_cnv, cnv_cmplt;
 
 logic [2:0 ]chnnl;
@@ -90,10 +90,11 @@ task runbot();
   if((lft_reg_sgex != lft_ref) || (rht_reg_sgex != rht_ref)) begin
     $display("[iter=%d] WARN: mismatch Expected: lht=%x rht=%x, found lht = %x, rht = %x, left diff=%d, right diff=%d",
                       	i, lft_ref, rht_ref, lft_reg_sgex, rht_reg_sgex, lft_reg_sgex - lft_ref, rht_reg_sgex - rht_ref);
-    /*if( ((lft_reg_sgex - lft_ref) > 1) || ((lft_ref - lft_reg_sgex) > 1) || ((rht_reg_sgex - rht_ref) > 1) || ((rht_ref - rht_reg_sgex) > 1) ) begin
+    if( ((lft_reg_sgex - lft_ref) > 1) || ((lft_reg_sgex - lft_ref) < -1) || ((rht_reg_sgex - rht_ref) > 1) || ((rht_reg_sgex - rht_ref) < -1) ) begin
 	   $display( "ERROR: intolerable difference");
        $stop();
-	end*/
+	end
+	
   end
   else begin
     $display("[iter=%d] OK: values match lht = %x, rht = %x", i, lft_reg_sgex, rht_reg_sgex);
