@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : barcode
+Version: I-2013.12-SP5
+Date   : Sat Apr 25 18:42:22 2015
+****************************************
+
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2013/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                           13
+Number of nets:                           279
+Number of cells:                          230
+Number of combinational cells:            165
+Number of sequential cells:                64
+Number of macros/black boxes:               0
+Number of buf/inv:                         25
+Number of references:                      40
+
+Combinational area:                302.349607
+Buf/Inv area:                       38.455201
+Noncombinational area:             256.662003
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   559.011610
+Total area:                 undefined
+1

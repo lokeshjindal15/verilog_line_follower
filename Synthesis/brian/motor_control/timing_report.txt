@@ -1,0 +1,68 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : motor_cntrl
+Version: I-2013.12-SP5
+Date   : Sat Apr 25 18:37:37 2015
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: lft[0] (input port clocked by clk)
+  Endpoint: iPwmlft/PWM_sig_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  motor_cntrl        TSMC32K_Lowk_Conservative
+                                           tcbn40lpbwptc
+  motor_cntrl_DW01_inc_3
+                     ZeroWireload          tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  lft[0] (in)                                             0.00       0.50 f
+  U114/ZN (INVD1BWP)                                      0.04       0.55 r
+  add_28/A[0] (motor_cntrl_DW01_inc_3)                    0.00       0.55 r
+  add_28/U1_1_1/CO (HA1D0BWP)                             0.08       0.63 r
+  add_28/U1_1_2/CO (HA1D0BWP)                             0.08       0.70 r
+  add_28/U1_1_3/CO (HA1D0BWP)                             0.08       0.78 r
+  add_28/U1_1_4/CO (HA1D0BWP)                             0.08       0.85 r
+  add_28/U1_1_5/CO (HA1D0BWP)                             0.08       0.93 r
+  add_28/U1_1_6/CO (HA1D0BWP)                             0.08       1.01 r
+  add_28/U1_1_7/CO (HA1D0BWP)                             0.08       1.08 r
+  add_28/U1_1_8/CO (HA1D0BWP)                             0.07       1.15 r
+  add_28/U1/Z (CKXOR2D0BWP)                               0.08       1.22 f
+  add_28/SUM[9] (motor_cntrl_DW01_inc_3)                  0.00       1.22 f
+  U102/ZN (MOAI22D0BWP)                                   0.08       1.30 f
+  U156/ZN (XNR2D0BWP)                                     0.09       1.39 r
+  U157/ZN (ND3D0BWP)                                      0.05       1.44 f
+  U160/ZN (NR4D0BWP)                                      0.09       1.53 r
+  U97/ZN (OAI32D1BWP)                                     0.07       1.60 f
+  iPwmlft/PWM_sig_reg/D (DFSND1BWP)                       0.00       1.60 f
+  data arrival time                                                  1.60
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  clock uncertainty                                      -0.10       2.40
+  iPwmlft/PWM_sig_reg/CP (DFSND1BWP)                      0.00       2.40 r
+  library setup time                                     -0.02       2.38
+  data required time                                                 2.38
+  --------------------------------------------------------------------------
+  data required time                                                 2.38
+  data arrival time                                                 -1.60
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.78
+
+
+1

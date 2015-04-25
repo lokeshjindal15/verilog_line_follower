@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : uart_recv
+Version: I-2013.12-SP5
+Date   : Sat Apr 25 17:39:16 2015
+****************************************
+
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/synopsys-2013/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                           13
+Number of nets:                           125
+Number of cells:                           94
+Number of combinational cells:             63
+Number of sequential cells:                30
+Number of macros/black boxes:               0
+Number of buf/inv:                         25
+Number of references:                      29
+
+Combinational area:                120.834002
+Buf/Inv area:                       37.044001
+Noncombinational area:             135.122402
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   255.956404
+Total area:                 undefined
+1

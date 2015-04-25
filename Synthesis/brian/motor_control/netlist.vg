@@ -1,0 +1,312 @@
+
+module motor_cntrl_DW01_inc_0 ( A, SUM );
+  input [9:0] A;
+  output [9:0] SUM;
+
+  wire   [9:2] carry;
+
+  HA1D0BWP U1_1_8 ( .A(A[8]), .B(carry[8]), .CO(carry[9]), .S(SUM[8]) );
+  HA1D0BWP U1_1_6 ( .A(A[6]), .B(carry[6]), .CO(carry[7]), .S(SUM[6]) );
+  HA1D0BWP U1_1_5 ( .A(A[5]), .B(carry[5]), .CO(carry[6]), .S(SUM[5]) );
+  HA1D0BWP U1_1_7 ( .A(A[7]), .B(carry[7]), .CO(carry[8]), .S(SUM[7]) );
+  HA1D0BWP U1_1_2 ( .A(A[2]), .B(carry[2]), .CO(carry[3]), .S(SUM[2]) );
+  HA1D0BWP U1_1_4 ( .A(A[4]), .B(carry[4]), .CO(carry[5]), .S(SUM[4]) );
+  HA1D0BWP U1_1_3 ( .A(A[3]), .B(carry[3]), .CO(carry[4]), .S(SUM[3]) );
+  HA1D0BWP U1_1_1 ( .A(A[1]), .B(A[0]), .CO(carry[2]), .S(SUM[1]) );
+  CKXOR2D0BWP U1 ( .A1(carry[9]), .A2(A[9]), .Z(SUM[9]) );
+  CKND0BWP U2 ( .I(A[0]), .ZN(SUM[0]) );
+endmodule
+
+
+module motor_cntrl_DW01_inc_1 ( A, SUM );
+  input [9:0] A;
+  output [9:0] SUM;
+
+  wire   [9:2] carry;
+
+  HA1D0BWP U1_1_8 ( .A(A[8]), .B(carry[8]), .CO(carry[9]), .S(SUM[8]) );
+  HA1D0BWP U1_1_6 ( .A(A[6]), .B(carry[6]), .CO(carry[7]), .S(SUM[6]) );
+  HA1D0BWP U1_1_5 ( .A(A[5]), .B(carry[5]), .CO(carry[6]), .S(SUM[5]) );
+  HA1D0BWP U1_1_7 ( .A(A[7]), .B(carry[7]), .CO(carry[8]), .S(SUM[7]) );
+  HA1D0BWP U1_1_2 ( .A(A[2]), .B(carry[2]), .CO(carry[3]), .S(SUM[2]) );
+  HA1D0BWP U1_1_4 ( .A(A[4]), .B(carry[4]), .CO(carry[5]), .S(SUM[4]) );
+  HA1D0BWP U1_1_3 ( .A(A[3]), .B(carry[3]), .CO(carry[4]), .S(SUM[3]) );
+  HA1D0BWP U1_1_1 ( .A(A[1]), .B(A[0]), .CO(carry[2]), .S(SUM[1]) );
+  CKXOR2D0BWP U1 ( .A1(carry[9]), .A2(A[9]), .Z(SUM[9]) );
+  CKND0BWP U2 ( .I(A[0]), .ZN(SUM[0]) );
+endmodule
+
+
+module motor_cntrl_DW01_inc_2 ( A, SUM );
+  input [9:0] A;
+  output [9:0] SUM;
+
+  wire   [9:2] carry;
+
+  HA1D0BWP U1_1_8 ( .A(A[8]), .B(carry[8]), .CO(carry[9]), .S(SUM[8]) );
+  HA1D0BWP U1_1_7 ( .A(A[7]), .B(carry[7]), .CO(carry[8]), .S(SUM[7]) );
+  HA1D0BWP U1_1_4 ( .A(A[4]), .B(carry[4]), .CO(carry[5]), .S(SUM[4]) );
+  HA1D0BWP U1_1_3 ( .A(A[3]), .B(carry[3]), .CO(carry[4]), .S(SUM[3]) );
+  HA1D0BWP U1_1_6 ( .A(A[6]), .B(carry[6]), .CO(carry[7]), .S(SUM[6]) );
+  HA1D0BWP U1_1_1 ( .A(A[1]), .B(A[0]), .CO(carry[2]), .S(SUM[1]) );
+  HA1D0BWP U1_1_2 ( .A(A[2]), .B(carry[2]), .CO(carry[3]), .S(SUM[2]) );
+  HA1D0BWP U1_1_5 ( .A(A[5]), .B(carry[5]), .CO(carry[6]), .S(SUM[5]) );
+  CKXOR2D0BWP U1 ( .A1(carry[9]), .A2(A[9]), .Z(SUM[9]) );
+  CKND0BWP U2 ( .I(A[0]), .ZN(SUM[0]) );
+endmodule
+
+
+module motor_cntrl_DW01_inc_3 ( A, SUM );
+  input [9:0] A;
+  output [9:0] SUM;
+
+  wire   [9:2] carry;
+
+  HA1D0BWP U1_1_8 ( .A(A[8]), .B(carry[8]), .CO(carry[9]), .S(SUM[8]) );
+  HA1D0BWP U1_1_7 ( .A(A[7]), .B(carry[7]), .CO(carry[8]), .S(SUM[7]) );
+  HA1D0BWP U1_1_4 ( .A(A[4]), .B(carry[4]), .CO(carry[5]), .S(SUM[4]) );
+  HA1D0BWP U1_1_3 ( .A(A[3]), .B(carry[3]), .CO(carry[4]), .S(SUM[3]) );
+  HA1D0BWP U1_1_6 ( .A(A[6]), .B(carry[6]), .CO(carry[7]), .S(SUM[6]) );
+  HA1D0BWP U1_1_1 ( .A(A[1]), .B(A[0]), .CO(carry[2]), .S(SUM[1]) );
+  HA1D0BWP U1_1_2 ( .A(A[2]), .B(carry[2]), .CO(carry[3]), .S(SUM[2]) );
+  HA1D0BWP U1_1_5 ( .A(A[5]), .B(carry[5]), .CO(carry[6]), .S(SUM[5]) );
+  CKXOR2D0BWP U1 ( .A1(carry[9]), .A2(A[9]), .Z(SUM[9]) );
+  CKND0BWP U2 ( .I(A[0]), .ZN(SUM[0]) );
+endmodule
+
+
+module motor_cntrl ( clk, rst_n, lft, rht, fwd_lft, rev_lft, fwd_rht, rev_rht
+ );
+  input [10:0] lft;
+  input [10:0] rht;
+  input clk, rst_n;
+  output fwd_lft, rev_lft, fwd_rht, rev_rht;
+  wire   n111, n112, n113, N12, N13, N14, N15, N16, N17, N18, N19, N20, N21,
+         N32, N33, N34, N35, N36, N37, N38, N39, N40, N41, \iPwmlft/N12 ,
+         \iPwmlft/N11 , \iPwmlft/N10 , \iPwmlft/N9 , \iPwmlft/N8 ,
+         \iPwmlft/N7 , \iPwmlft/N6 , \iPwmlft/N5 , \iPwmlft/N4 , \iPwmlft/N3 ,
+         \iPwmlft/pwmreset , \iPwmlft/count[0] , \iPwmlft/count[1] ,
+         \iPwmlft/count[2] , \iPwmlft/count[3] , \iPwmlft/count[4] ,
+         \iPwmlft/count[5] , \iPwmlft/count[6] , \iPwmlft/count[7] ,
+         \iPwmlft/count[8] , \iPwmlft/count[9] , \iPwmrht/N12 , \iPwmrht/N11 ,
+         \iPwmrht/N10 , \iPwmrht/N9 , \iPwmrht/N8 , \iPwmrht/N7 , \iPwmrht/N6 ,
+         \iPwmrht/N5 , \iPwmrht/N4 , \iPwmrht/N3 , \iPwmrht/pwmreset ,
+         \iPwmrht/count[0] , \iPwmrht/count[1] , \iPwmrht/count[2] ,
+         \iPwmrht/count[3] , \iPwmrht/count[4] , \iPwmrht/count[5] ,
+         \iPwmrht/count[6] , \iPwmrht/count[7] , \iPwmrht/count[8] ,
+         \iPwmrht/count[9] , n27, n28, n29, n30, n31, n32, n33, n34, n35, n36,
+         n37, n38, n39, n40, n41, n42, n43, n44, n45, n46, n48, n49, n50, n53,
+         n54, n55, n56, n57, n58, n59, n60, n61, n62, n63, n64, n65, n66, n67,
+         n68, n69, n70, n71, n72, n73, n74, n75, n76, n77, n78, n79, n80, n81,
+         n82, n83, n84, n85, n86, n87, n88, n89, n90, n91, n92, n93, n94, n95,
+         n96, n97, n98, n99, n100, n101, n102, n103, n104, n105, n106, n107,
+         n108, n109, n110;
+  wire   [9:0] mag_lft;
+  wire   [9:0] mag_rht;
+
+  DFCNQD1BWP \iPwmlft/count_reg[9]  ( .D(\iPwmlft/N12 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmlft/count[9] ) );
+  DFCNQD1BWP \iPwmlft/count_reg[0]  ( .D(\iPwmlft/N3 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmlft/count[0] ) );
+  DFCNQD1BWP \iPwmlft/count_reg[1]  ( .D(\iPwmlft/N4 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmlft/count[1] ) );
+  DFCNQD1BWP \iPwmlft/count_reg[2]  ( .D(\iPwmlft/N5 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmlft/count[2] ) );
+  DFCNQD1BWP \iPwmlft/count_reg[3]  ( .D(\iPwmlft/N6 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmlft/count[3] ) );
+  DFCNQD1BWP \iPwmlft/count_reg[4]  ( .D(\iPwmlft/N7 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmlft/count[4] ) );
+  DFCNQD1BWP \iPwmlft/count_reg[5]  ( .D(\iPwmlft/N8 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmlft/count[5] ) );
+  DFCNQD1BWP \iPwmlft/count_reg[6]  ( .D(\iPwmlft/N9 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmlft/count[6] ) );
+  DFCNQD1BWP \iPwmlft/count_reg[7]  ( .D(\iPwmlft/N10 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmlft/count[7] ) );
+  DFCNQD1BWP \iPwmlft/count_reg[8]  ( .D(\iPwmlft/N11 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmlft/count[8] ) );
+  DFCNQD1BWP \iPwmrht/count_reg[9]  ( .D(\iPwmrht/N12 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmrht/count[9] ) );
+  DFCNQD1BWP \iPwmrht/count_reg[0]  ( .D(\iPwmrht/N3 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmrht/count[0] ) );
+  DFCNQD1BWP \iPwmrht/count_reg[1]  ( .D(\iPwmrht/N4 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmrht/count[1] ) );
+  DFCNQD1BWP \iPwmrht/count_reg[2]  ( .D(\iPwmrht/N5 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmrht/count[2] ) );
+  DFCNQD1BWP \iPwmrht/count_reg[3]  ( .D(\iPwmrht/N6 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmrht/count[3] ) );
+  DFCNQD1BWP \iPwmrht/count_reg[4]  ( .D(\iPwmrht/N7 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmrht/count[4] ) );
+  DFCNQD1BWP \iPwmrht/count_reg[5]  ( .D(\iPwmrht/N8 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmrht/count[5] ) );
+  DFCNQD1BWP \iPwmrht/count_reg[6]  ( .D(\iPwmrht/N9 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmrht/count[6] ) );
+  DFCNQD1BWP \iPwmrht/count_reg[7]  ( .D(\iPwmrht/N10 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmrht/count[7] ) );
+  DFCNQD1BWP \iPwmrht/count_reg[8]  ( .D(\iPwmrht/N11 ), .CP(clk), .CDN(rst_n), 
+        .Q(\iPwmrht/count[8] ) );
+  motor_cntrl_DW01_inc_0 \iPwmrht/add_44  ( .A({\iPwmrht/count[9] , 
+        \iPwmrht/count[8] , \iPwmrht/count[7] , \iPwmrht/count[6] , 
+        \iPwmrht/count[5] , \iPwmrht/count[4] , \iPwmrht/count[3] , 
+        \iPwmrht/count[2] , \iPwmrht/count[1] , \iPwmrht/count[0] }), .SUM({
+        \iPwmrht/N12 , \iPwmrht/N11 , \iPwmrht/N10 , \iPwmrht/N9 , 
+        \iPwmrht/N8 , \iPwmrht/N7 , \iPwmrht/N6 , \iPwmrht/N5 , \iPwmrht/N4 , 
+        \iPwmrht/N3 }) );
+  motor_cntrl_DW01_inc_1 \iPwmlft/add_44  ( .A({\iPwmlft/count[9] , 
+        \iPwmlft/count[8] , \iPwmlft/count[7] , \iPwmlft/count[6] , 
+        \iPwmlft/count[5] , \iPwmlft/count[4] , \iPwmlft/count[3] , 
+        \iPwmlft/count[2] , \iPwmlft/count[1] , \iPwmlft/count[0] }), .SUM({
+        \iPwmlft/N12 , \iPwmlft/N11 , \iPwmlft/N10 , \iPwmlft/N9 , 
+        \iPwmlft/N8 , \iPwmlft/N7 , \iPwmlft/N6 , \iPwmlft/N5 , \iPwmlft/N4 , 
+        \iPwmlft/N3 }) );
+  motor_cntrl_DW01_inc_2 add_29 ( .A({n94, n95, n96, n104, n105, n106, n107, 
+        n108, n109, n110}), .SUM({N41, N40, N39, N38, N37, N36, N35, N34, N33, 
+        N32}) );
+  motor_cntrl_DW01_inc_3 add_28 ( .A({n90, n91, n92, n97, n98, n99, n100, n101, 
+        n102, n103}), .SUM({N21, N20, N19, N18, N17, N16, N15, N14, N13, N12})
+         );
+  DFSND1BWP \iPwmrht/PWM_sig_reg  ( .D(n45), .CP(clk), .SDN(rst_n), .QN(n28)
+         );
+  DFSND1BWP \iPwmlft/PWM_sig_reg  ( .D(n46), .CP(clk), .SDN(rst_n), .QN(n27)
+         );
+  OA21D1BWP U69 ( .A1(n89), .A2(n27), .B(n30), .Z(n112) );
+  CKND12BWP U70 ( .I(n112), .ZN(rev_lft) );
+  ND4D1BWP U71 ( .A1(n103), .A2(n89), .A3(n42), .A4(n43), .ZN(n30) );
+  CKND12BWP U72 ( .I(n48), .ZN(rev_rht) );
+  NR2XD0BWP U73 ( .A1(n28), .A2(n93), .ZN(n49) );
+  CKND0BWP U74 ( .I(n29), .ZN(n50) );
+  NR2D2BWP U75 ( .A1(n49), .A2(n50), .ZN(n48) );
+  ND4D1BWP U76 ( .A1(n110), .A2(n93), .A3(n39), .A4(n40), .ZN(n29) );
+  OA21D1BWP U77 ( .A1(n54), .A2(n27), .B(n30), .Z(n111) );
+  CKND12BWP U78 ( .I(n111), .ZN(fwd_lft) );
+  OA21D1BWP U79 ( .A1(n53), .A2(n28), .B(n29), .Z(n113) );
+  CKND12BWP U80 ( .I(n113), .ZN(fwd_rht) );
+  INVD1BWP U81 ( .I(n53), .ZN(n93) );
+  INVD1BWP U82 ( .I(n54), .ZN(n89) );
+  MOAI22D0BWP U83 ( .A1(n53), .A2(n110), .B1(N32), .B2(n53), .ZN(mag_rht[0])
+         );
+  MOAI22D0BWP U84 ( .A1(n54), .A2(n103), .B1(N12), .B2(n54), .ZN(mag_lft[0])
+         );
+  INVD1BWP U85 ( .I(mag_rht[1]), .ZN(n88) );
+  INVD1BWP U86 ( .I(mag_lft[1]), .ZN(n71) );
+  NR3D0BWP U87 ( .A1(rht[1]), .A2(rht[3]), .A3(rht[2]), .ZN(n39) );
+  NR4D0BWP U88 ( .A1(n41), .A2(rht[4]), .A3(rht[6]), .A4(rht[5]), .ZN(n40) );
+  ND3D1BWP U89 ( .A1(n95), .A2(n94), .A3(n96), .ZN(n41) );
+  NR3D0BWP U90 ( .A1(lft[1]), .A2(lft[3]), .A3(lft[2]), .ZN(n42) );
+  NR4D0BWP U91 ( .A1(n44), .A2(lft[4]), .A3(lft[6]), .A4(lft[5]), .ZN(n43) );
+  ND3D1BWP U92 ( .A1(n91), .A2(n90), .A3(n92), .ZN(n44) );
+  OAI32D1BWP U93 ( .A1(n31), .A2(n32), .A3(n33), .B1(\iPwmrht/pwmreset ), .B2(
+        n28), .ZN(n45) );
+  ND2D1BWP U94 ( .A1(\iPwmrht/count[9] ), .A2(\iPwmrht/count[8] ), .ZN(n33) );
+  ND3D1BWP U95 ( .A1(\iPwmrht/count[6] ), .A2(\iPwmrht/count[5] ), .A3(
+        \iPwmrht/count[7] ), .ZN(n32) );
+  IND4D1BWP U96 ( .A1(n34), .B1(\iPwmrht/count[2] ), .B2(\iPwmrht/count[4] ), 
+        .B3(\iPwmrht/count[3] ), .ZN(n31) );
+  OAI32D1BWP U97 ( .A1(n35), .A2(n36), .A3(n37), .B1(\iPwmlft/pwmreset ), .B2(
+        n27), .ZN(n46) );
+  ND2D1BWP U98 ( .A1(\iPwmlft/count[9] ), .A2(\iPwmlft/count[8] ), .ZN(n37) );
+  ND3D1BWP U99 ( .A1(\iPwmlft/count[6] ), .A2(\iPwmlft/count[5] ), .A3(
+        \iPwmlft/count[7] ), .ZN(n36) );
+  IND4D1BWP U100 ( .A1(n38), .B1(\iPwmlft/count[2] ), .B2(\iPwmlft/count[4] ), 
+        .B3(\iPwmlft/count[3] ), .ZN(n35) );
+  MOAI22D0BWP U101 ( .A1(n53), .A2(n94), .B1(N41), .B2(n53), .ZN(mag_rht[9])
+         );
+  MOAI22D0BWP U102 ( .A1(n54), .A2(n90), .B1(N21), .B2(n54), .ZN(mag_lft[9])
+         );
+  CKBD4BWP U103 ( .I(rht[10]), .Z(n53) );
+  CKBD4BWP U104 ( .I(lft[10]), .Z(n54) );
+  MOAI22D0BWP U105 ( .A1(n53), .A2(n95), .B1(N40), .B2(n53), .ZN(mag_rht[8])
+         );
+  MOAI22D0BWP U106 ( .A1(n54), .A2(n91), .B1(N20), .B2(n54), .ZN(mag_lft[8])
+         );
+  INVD1BWP U107 ( .I(rht[7]), .ZN(n96) );
+  INVD1BWP U108 ( .I(lft[7]), .ZN(n92) );
+  INVD1BWP U109 ( .I(rht[9]), .ZN(n94) );
+  INVD1BWP U110 ( .I(lft[9]), .ZN(n90) );
+  INVD1BWP U111 ( .I(rht[8]), .ZN(n95) );
+  INVD1BWP U112 ( .I(lft[8]), .ZN(n91) );
+  INVD1BWP U113 ( .I(rht[0]), .ZN(n110) );
+  INVD1BWP U114 ( .I(lft[0]), .ZN(n103) );
+  INVD1BWP U115 ( .I(rht[5]), .ZN(n105) );
+  INVD1BWP U116 ( .I(lft[5]), .ZN(n98) );
+  INVD1BWP U117 ( .I(rht[2]), .ZN(n108) );
+  INVD1BWP U118 ( .I(lft[2]), .ZN(n101) );
+  INVD1BWP U119 ( .I(rht[1]), .ZN(n109) );
+  INVD1BWP U120 ( .I(lft[1]), .ZN(n102) );
+  INVD1BWP U121 ( .I(rht[6]), .ZN(n104) );
+  INVD1BWP U122 ( .I(lft[6]), .ZN(n97) );
+  INVD1BWP U123 ( .I(rht[3]), .ZN(n107) );
+  INVD1BWP U124 ( .I(lft[3]), .ZN(n100) );
+  INVD1BWP U125 ( .I(rht[4]), .ZN(n106) );
+  INVD1BWP U126 ( .I(lft[4]), .ZN(n99) );
+  MOAI22D0BWP U127 ( .A1(n53), .A2(n109), .B1(N33), .B2(n53), .ZN(mag_rht[1])
+         );
+  MOAI22D0BWP U128 ( .A1(n54), .A2(n102), .B1(N13), .B2(n54), .ZN(mag_lft[1])
+         );
+  MOAI22D0BWP U129 ( .A1(n53), .A2(n106), .B1(N36), .B2(n53), .ZN(mag_rht[4])
+         );
+  MOAI22D0BWP U130 ( .A1(n54), .A2(n99), .B1(N16), .B2(n54), .ZN(mag_lft[4])
+         );
+  MOAI22D0BWP U131 ( .A1(n53), .A2(n105), .B1(N37), .B2(n53), .ZN(mag_rht[5])
+         );
+  MOAI22D0BWP U132 ( .A1(n54), .A2(n98), .B1(N17), .B2(n54), .ZN(mag_lft[5])
+         );
+  MOAI22D0BWP U133 ( .A1(n53), .A2(n107), .B1(N35), .B2(n53), .ZN(mag_rht[3])
+         );
+  MOAI22D0BWP U134 ( .A1(n53), .A2(n108), .B1(N34), .B2(n53), .ZN(mag_rht[2])
+         );
+  MOAI22D0BWP U135 ( .A1(n54), .A2(n100), .B1(N15), .B2(n54), .ZN(mag_lft[3])
+         );
+  MOAI22D0BWP U136 ( .A1(n54), .A2(n101), .B1(N14), .B2(n54), .ZN(mag_lft[2])
+         );
+  MOAI22D0BWP U137 ( .A1(n53), .A2(n104), .B1(N38), .B2(n53), .ZN(mag_rht[6])
+         );
+  MOAI22D0BWP U138 ( .A1(n54), .A2(n97), .B1(N18), .B2(n54), .ZN(mag_lft[6])
+         );
+  MOAI22D0BWP U139 ( .A1(n53), .A2(n96), .B1(N39), .B2(n53), .ZN(mag_rht[7])
+         );
+  MOAI22D0BWP U140 ( .A1(n54), .A2(n92), .B1(N19), .B2(n54), .ZN(mag_lft[7])
+         );
+  INVD1BWP U141 ( .I(\iPwmrht/count[1] ), .ZN(n87) );
+  INVD1BWP U142 ( .I(\iPwmlft/count[1] ), .ZN(n70) );
+  ND2D1BWP U143 ( .A1(\iPwmrht/count[1] ), .A2(\iPwmrht/count[0] ), .ZN(n34)
+         );
+  ND2D1BWP U144 ( .A1(\iPwmlft/count[1] ), .A2(\iPwmlft/count[0] ), .ZN(n38)
+         );
+  XNR2D0BWP U145 ( .A1(mag_lft[8]), .A2(\iPwmlft/count[8] ), .ZN(n60) );
+  XNR2D0BWP U146 ( .A1(mag_lft[7]), .A2(\iPwmlft/count[7] ), .ZN(n59) );
+  CKXOR2D0BWP U147 ( .A1(mag_lft[4]), .A2(\iPwmlft/count[4] ), .Z(n56) );
+  CKXOR2D0BWP U148 ( .A1(mag_lft[5]), .A2(\iPwmlft/count[5] ), .Z(n55) );
+  NR2D0BWP U149 ( .A1(n56), .A2(n55), .ZN(n58) );
+  XNR2D0BWP U150 ( .A1(mag_lft[6]), .A2(\iPwmlft/count[6] ), .ZN(n57) );
+  ND4D0BWP U151 ( .A1(n60), .A2(n59), .A3(n58), .A4(n57), .ZN(n69) );
+  INR2D0BWP U152 ( .A1(\iPwmlft/count[0] ), .B1(mag_lft[0]), .ZN(n61) );
+  OAI22D0BWP U153 ( .A1(\iPwmlft/count[1] ), .A2(n61), .B1(n61), .B2(n71), 
+        .ZN(n65) );
+  INR2D0BWP U154 ( .A1(mag_lft[0]), .B1(\iPwmlft/count[0] ), .ZN(n62) );
+  OAI22D0BWP U155 ( .A1(n62), .A2(n70), .B1(mag_lft[1]), .B2(n62), .ZN(n64) );
+  XNR2D0BWP U156 ( .A1(mag_lft[9]), .A2(\iPwmlft/count[9] ), .ZN(n63) );
+  ND3D0BWP U157 ( .A1(n65), .A2(n64), .A3(n63), .ZN(n68) );
+  CKXOR2D0BWP U158 ( .A1(mag_lft[2]), .A2(\iPwmlft/count[2] ), .Z(n67) );
+  CKXOR2D0BWP U159 ( .A1(mag_lft[3]), .A2(\iPwmlft/count[3] ), .Z(n66) );
+  NR4D0BWP U160 ( .A1(n69), .A2(n68), .A3(n67), .A4(n66), .ZN(
+        \iPwmlft/pwmreset ) );
+  XNR2D0BWP U161 ( .A1(mag_rht[8]), .A2(\iPwmrht/count[8] ), .ZN(n77) );
+  XNR2D0BWP U162 ( .A1(mag_rht[7]), .A2(\iPwmrht/count[7] ), .ZN(n76) );
+  CKXOR2D0BWP U163 ( .A1(mag_rht[4]), .A2(\iPwmrht/count[4] ), .Z(n73) );
+  CKXOR2D0BWP U164 ( .A1(mag_rht[5]), .A2(\iPwmrht/count[5] ), .Z(n72) );
+  NR2D0BWP U165 ( .A1(n73), .A2(n72), .ZN(n75) );
+  XNR2D0BWP U166 ( .A1(mag_rht[6]), .A2(\iPwmrht/count[6] ), .ZN(n74) );
+  ND4D0BWP U167 ( .A1(n77), .A2(n76), .A3(n75), .A4(n74), .ZN(n86) );
+  INR2D0BWP U168 ( .A1(\iPwmrht/count[0] ), .B1(mag_rht[0]), .ZN(n78) );
+  OAI22D0BWP U169 ( .A1(\iPwmrht/count[1] ), .A2(n78), .B1(n78), .B2(n88), 
+        .ZN(n82) );
+  INR2D0BWP U170 ( .A1(mag_rht[0]), .B1(\iPwmrht/count[0] ), .ZN(n79) );
+  OAI22D0BWP U171 ( .A1(n79), .A2(n87), .B1(mag_rht[1]), .B2(n79), .ZN(n81) );
+  XNR2D0BWP U172 ( .A1(mag_rht[9]), .A2(\iPwmrht/count[9] ), .ZN(n80) );
+  ND3D0BWP U173 ( .A1(n82), .A2(n81), .A3(n80), .ZN(n85) );
+  CKXOR2D0BWP U174 ( .A1(mag_rht[2]), .A2(\iPwmrht/count[2] ), .Z(n84) );
+  CKXOR2D0BWP U175 ( .A1(mag_rht[3]), .A2(\iPwmrht/count[3] ), .Z(n83) );
+  NR4D0BWP U176 ( .A1(n86), .A2(n85), .A3(n84), .A4(n83), .ZN(
+        \iPwmrht/pwmreset ) );
+endmodule
+

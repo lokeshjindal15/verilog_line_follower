@@ -1,0 +1,64 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : uart_recv
+Version: I-2013.12-SP5
+Date   : Sat Apr 25 17:39:16 2015
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: baud_cnt_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: baud_cnt_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  uart_recv          TSMC32K_Lowk_Conservative
+                                           tcbn40lpbwptc
+  uart_recv_DW01_inc_0
+                     ZeroWireload          tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  baud_cnt_reg[4]/CP (DFD1BWP)             0.00       0.00 r
+  baud_cnt_reg[4]/Q (DFD1BWP)              0.12       0.12 f
+  U120/ZN (NR3D0BWP)                       0.06       0.18 r
+  U63/ZN (ND4D1BWP)                        0.08       0.27 f
+  U107/ZN (NR4D0BWP)                       0.10       0.37 r
+  U64/ZN (ND4D1BWP)                        0.11       0.48 f
+  U98/ZN (OAI33D4BWP)                      0.16       0.65 r
+  U90/ZN (INVD1BWP)                        0.02       0.67 f
+  U96/ZN (OAI21D1BWP)                      0.09       0.76 r
+  U95/Z (CKBD2BWP)                         0.10       0.87 r
+  U94/ZN (AOI21D1BWP)                      0.04       0.90 f
+  U93/Z (CKBD2BWP)                         0.09       0.99 f
+  U28/ZN (IND3D4BWP)                       0.13       1.12 f
+  U115/ZN (MOAI22D0BWP)                    0.08       1.20 r
+  baud_cnt_reg[0]/D (DFD1BWP)              0.00       1.20 r
+  data arrival time                                   1.20
+
+  clock clk (rise edge)                    2.50       2.50
+  clock network delay (ideal)              0.00       2.50
+  clock uncertainty                       -0.10       2.40
+  baud_cnt_reg[0]/CP (DFD1BWP)             0.00       2.40 r
+  library setup time                      -0.04       2.36
+  data required time                                  2.36
+  -----------------------------------------------------------
+  data required time                                  2.36
+  data arrival time                                  -1.20
+  -----------------------------------------------------------
+  slack (MET)                                         1.17
+
+
+1
