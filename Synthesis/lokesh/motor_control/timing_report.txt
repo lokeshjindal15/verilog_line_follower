@@ -1,0 +1,64 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : motor_cntrl
+Version: I-2013.12-SP5
+Date   : Sat Apr 25 18:00:17 2015
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: lft[0] (input port clocked by clk)
+  Endpoint: pwm_gen_lft/pwm_sig_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  motor_cntrl        TSMC32K_Lowk_Conservative
+                                           tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  lft[0] (in)                                             0.01       0.51 f
+  U108/ZN (INVD1BWP)                                      0.04       0.55 r
+  U125/CO (HA1D0BWP)                                      0.08       0.63 r
+  U121/CO (HA1D0BWP)                                      0.08       0.72 r
+  U133/CO (HA1D0BWP)                                      0.08       0.80 r
+  U137/CO (HA1D0BWP)                                      0.08       0.88 r
+  U117/CO (HA1D0BWP)                                      0.08       0.96 r
+  U129/CO (HA1D0BWP)                                      0.08       1.05 r
+  U140/CO (HA1D0BWP)                                      0.08       1.13 r
+  U142/CO (HA1D0BWP)                                      0.07       1.20 r
+  U104/Z (XOR2D1BWP)                                      0.09       1.29 f
+  U103/ZN (MOAI22D0BWP)                                   0.07       1.35 f
+  U172/ZN (XNR2D0BWP)                                     0.10       1.45 r
+  U173/ZN (ND3D0BWP)                                      0.05       1.51 f
+  U176/ZN (NR4D0BWP)                                      0.09       1.60 r
+  U95/ZN (OAI32D1BWP)                                     0.07       1.66 f
+  pwm_gen_lft/pwm_sig_reg/D (DFSND1BWP)                   0.00       1.66 f
+  data arrival time                                                  1.66
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  clock uncertainty                                      -0.10       2.40
+  pwm_gen_lft/pwm_sig_reg/CP (DFSND1BWP)                  0.00       2.40 r
+  library setup time                                     -0.02       2.38
+  data required time                                                 2.38
+  --------------------------------------------------------------------------
+  data required time                                                 2.38
+  data arrival time                                                 -1.66
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.72
+
+
+1

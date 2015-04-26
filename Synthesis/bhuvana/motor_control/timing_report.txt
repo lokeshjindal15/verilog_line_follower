@@ -1,0 +1,52 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : motor_cntrl
+Version: I-2013.12-SP5
+Date   : Sat Apr 25 18:22:08 2015
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: rht[10] (input port clocked by clk)
+  Endpoint: fwd_rht (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  motor_cntrl        TSMC32K_Lowk_Conservative
+                                           tcbn40lpbwptc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.50       0.50 f
+  rht[10] (in)                             0.08       0.58 f
+  U76/ZN (CKND0BWP)                        0.06       0.64 r
+  U89/ZN (INVD1BWP)                        0.07       0.70 f
+  U86/ZN (IND4D1BWP)                       0.11       0.82 f
+  U80/Z (OA21D1BWP)                        0.09       0.91 f
+  U81/ZN (CKND12BWP)                       0.08       0.99 r
+  fwd_rht (out)                            0.00       0.99 r
+  data arrival time                                   0.99
+
+  clock clk (rise edge)                    2.50       2.50
+  clock network delay (ideal)              0.00       2.50
+  clock uncertainty                       -0.10       2.40
+  output external delay                   -0.50       1.90
+  data required time                                  1.90
+  -----------------------------------------------------------
+  data required time                                  1.90
+  data arrival time                                  -0.99
+  -----------------------------------------------------------
+  slack (MET)                                         0.91
+
+
+1

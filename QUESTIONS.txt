@@ -1,0 +1,68 @@
+QUESTIONS
+
+Q1. dig_core.sv has a signal called led. what is that signal for?
+
+Q2. dig_core.sv has a signal called "go" as output. Why output?
+
+Q3. Should synthesize ALU with Class exercise parameters especially inputdrive 0od 10ohms and output load of 0.01 pF?
+
+Q4. Get these errors while setting driving cell:
+dc_shell> set_output_delay -clock clk 0.5 [all_outputs]
+1
+dc_shell> set drive_inputs [remove_from_collection [copy_collection $prim_inputs] [find port rst_n]]
+{lft[10] lft[9] lft[8] lft[7] lft[6] lft[5] lft[4] lft[3] lft[2] lft[1] lft[0] rht[10] rht[9] rht[8] rht[7] rht[6] rht[5] rht[4] rht[3] rht[2] rht[1] rht[0]}
+dc_shell> set_driving_cell -lib_cell ND2D2BWP -library tcbn40lpbwptc [copy_collection $drive_inputs]
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+
+		
+Q5. Get these erros while doing "ungroup all" for motor_cntrl?
+dc_shell> ungroup -all
+Information: Changed wire load model for 'pwm_gen' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'pwm_gen' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Updating graph... (UID-83)
+1
+
+Q6. 
