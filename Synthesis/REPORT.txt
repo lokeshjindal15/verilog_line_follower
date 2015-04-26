@@ -2,20 +2,20 @@
 UART area
 ##########
 Lokesh:		255.956404
-Bhuvana:	256.662004
+Bhuvana:	256.662004 (SELECTED)
 Brian:		264.600004 
 
 #################
 motor_cntrl area
 #################
 Lokesh:		322.106404
-Bhuvana:	335.865604
-Brian:		324.399604
+Bhuvana:	335.865604 (Inferring latch)
+Brian:		324.399604 (SELECTED)
 
 #################
 Barcode area
 #################
-Lokesh:		537.314404
+Lokesh:		537.314404 (SELECTED)
 Bhuvana:	---
 Brian:		559.011610
 
