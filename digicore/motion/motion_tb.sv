@@ -30,7 +30,7 @@ reg [15:0] refptr;			// address pointer into array that contains analog values
 integer i;
 
 // Instantiate DUT //
-motion iDUT(.clk(clk), .rst_n(rst_n), .A2D_res(~A2D_res), .cnv_cmplt(cnv_cmplt),
+motion iDUT(.clk(clk), .rst_n(rst_n), .A2D_res(A2D_res), .cnv_cmplt(cnv_cmplt),
             .go(go), .chnnl(chnnl), .strt_cnv(strt_cnv),
             .IR_in_en(IR_in_en), .IR_mid_en(IR_mid_en), .IR_out_en(IR_out_en),
             .lft_reg(lft_reg), .rht_reg(rht_reg) );
@@ -63,7 +63,7 @@ always @(posedge strt_cnv) begin
   //$display("    LEDS - {IR_out_en, IR_mid_en, IR_in_en}i = %b %b %b", IR_out_en, IR_mid_en, IR_in_en );
   repeat(256) @(posedge clk);
 
-  A2D_res = {4'b0000, A2D_mem[ptr*8+chnnl]};
+  A2D_res =  ~( {4'b0000, A2D_mem[ptr*8+chnnl]} );
   cnv_cmplt = 1;
   ptr = ptr + 1;
 

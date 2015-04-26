@@ -26,7 +26,7 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
  output logic strt_cnv;					      	// used to initiate a Round Robing conversion on IR sensors
  output logic IR_in_en,IR_mid_en,IR_out_en; 	// PWM based enables to various IR sensors
   
- output reg [11:0] lft_reg,rht_reg;	   // 11-bit signed left and right motor controls
+ output reg [11:0] lft_reg,rht_reg;	   // 12-bit signed left and right motor controls
  
  
  ////////  PI MATH CONSTANTS  ///////////

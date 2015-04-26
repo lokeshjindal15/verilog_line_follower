@@ -1,0 +1,567 @@
+For calculation 1 results are...
+  The Error function for calc 1 is   0
+  No integration occurs this cycle
+  Icomp =   0
+  Pcomp =   0
+  rht_reg =   0
+  lft_reg =   0
+For calculation 2 results are...
+  The Error function for calc 1 is  b7
+  No integration occurs this cycle
+  Icomp =   0
+  Pcomp = 26f
+  rht_reg = fffffffffffffd91
+  lft_reg = 26f
+For calculation 3 results are...
+  The Error function for calc 1 is 13e
+  No integration occurs this cycle
+  Icomp =   0
+  Pcomp = 43b
+  rht_reg = fffffffffffffbc5
+  lft_reg = 43b
+For calculation 4 results are...
+  The Error function for calc 1 is 186
+  Integrating...  Intgrl =  18 ...Fwd incremented to   1
+  Icomp =   7
+  Pcomp = 530
+  rht_reg = fffffffffffffaca
+  lft_reg = 538
+For calculation 5 results are...
+  The Error function for calc 1 is 18c
+  No integration occurs this cycle
+  Icomp =   7
+  Pcomp = 544
+  rht_reg = fffffffffffffab6
+  lft_reg = 54c
+For calculation 6 results are...
+  The Error function for calc 1 is 158
+  No integration occurs this cycle
+  Icomp =   7
+  Pcomp = 493
+  rht_reg = fffffffffffffb67
+  lft_reg = 49b
+For calculation 7 results are...
+  The Error function for calc 1 is  f8
+  No integration occurs this cycle
+  Icomp =   7
+  Pcomp = 34c
+  rht_reg = fffffffffffffcae
+  lft_reg = 354
+For calculation 8 results are...
+  The Error function for calc 1 is  7e
+  Integrating...  Intgrl =  1f ...Fwd incremented to   2
+  Icomp =   9
+  Pcomp = 1ad
+  rht_reg = fffffffffffffe4c
+  lft_reg = 1b8
+For calculation 9 results are...
+  The Error function for calc 1 is   0
+  No integration occurs this cycle
+  Icomp =   9
+  Pcomp =   0
+  rht_reg = fffffffffffffff9
+  lft_reg =   b
+For calculation 10 results are...
+  The Error function for calc 1 is ffffffffffffff92
+  No integration occurs this cycle
+  Icomp =   9
+  Pcomp = fffffffffffffe8a
+  rht_reg = 16f
+  lft_reg = fffffffffffffe95
+For calculation 11 results are...
+  The Error function for calc 1 is ffffffffffffff40
+  No integration occurs this cycle
+  Icomp =   9
+  Pcomp = fffffffffffffd72
+  rht_reg = 287
+  lft_reg = fffffffffffffd7d
+For calculation 12 results are...
+  The Error function for calc 1 is ffffffffffffff14
+  Integrating...  Intgrl =  10 ...Fwd incremented to   3
+  Icomp =   5
+  Pcomp = fffffffffffffcdd
+  rht_reg = 321
+  lft_reg = fffffffffffffce5
+For calculation 13 results are...
+  The Error function for calc 1 is ffffffffffffff10
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp = fffffffffffffccf
+  rht_reg = 32f
+  lft_reg = fffffffffffffcd7
+For calculation 14 results are...
+  The Error function for calc 1 is ffffffffffffff2f
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp = fffffffffffffd39
+  rht_reg = 2c5
+  lft_reg = fffffffffffffd41
+For calculation 15 results are...
+  The Error function for calc 1 is ffffffffffffff6a
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp = fffffffffffffe02
+  rht_reg = 1fc
+  lft_reg = fffffffffffffe0a
+For calculation 16 results are...
+  The Error function for calc 1 is ffffffffffffffb4
+  Integrating...  Intgrl =   b ...Fwd incremented to   4
+  Icomp =   3
+  Pcomp = fffffffffffffefe
+  rht_reg = 103
+  lft_reg = ffffffffffffff05
+For calculation 17 results are...
+  The Error function for calc 1 is   0
+  No integration occurs this cycle
+  Icomp =   3
+  Pcomp =   0
+  rht_reg =   1
+  lft_reg =   7
+For calculation 18 results are...
+  The Error function for calc 1 is  42
+  No integration occurs this cycle
+  Icomp =   3
+  Pcomp =  e0
+  rht_reg = ffffffffffffff21
+  lft_reg =  e7
+For calculation 19 results are...
+  The Error function for calc 1 is  74
+  No integration occurs this cycle
+  Icomp =   3
+  Pcomp = 18b
+  rht_reg = fffffffffffffe76
+  lft_reg = 192
+For calculation 20 results are...
+  The Error function for calc 1 is  8f
+  Integrating...  Intgrl =  13 ...Fwd incremented to   5
+  Icomp =   5
+  Pcomp = 1e7
+  rht_reg = fffffffffffffe19
+  lft_reg = 1f1
+For calculation 21 results are...
+  The Error function for calc 1 is  92
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp = 1f1
+  rht_reg = fffffffffffffe0f
+  lft_reg = 1fb
+For calculation 22 results are...
+  The Error function for calc 1 is  7f
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp = 1b0
+  rht_reg = fffffffffffffe50
+  lft_reg = 1ba
+For calculation 23 results are...
+  The Error function for calc 1 is  5b
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp = 135
+  rht_reg = fffffffffffffecb
+  lft_reg = 13f
+For calculation 24 results are...
+  The Error function for calc 1 is  2e
+  Integrating...  Intgrl =  15 ...Fwd incremented to   6
+  Icomp =   6
+  Pcomp =  9c
+  rht_reg = ffffffffffffff64
+  lft_reg =  a8
+For calculation 25 results are...
+  The Error function for calc 1 is   0
+  No integration occurs this cycle
+  Icomp =   6
+  Pcomp =   0
+  rht_reg =   0
+  lft_reg =   c
+For calculation 26 results are...
+  The Error function for calc 1 is ffffffffffffffd8
+  No integration occurs this cycle
+  Icomp =   6
+  Pcomp = ffffffffffffff78
+  rht_reg =  88
+  lft_reg = ffffffffffffff84
+For calculation 27 results are...
+  The Error function for calc 1 is ffffffffffffffba
+  No integration occurs this cycle
+  Icomp =   6
+  Pcomp = ffffffffffffff12
+  rht_reg =  ee
+  lft_reg = ffffffffffffff1e
+For calculation 28 results are...
+  The Error function for calc 1 is ffffffffffffffaa
+  Integrating...  Intgrl =   f ...Fwd incremented to   7
+  Icomp =   4
+  Pcomp = fffffffffffffedc
+  rht_reg = 127
+  lft_reg = fffffffffffffee7
+For calculation 29 results are...
+  The Error function for calc 1 is ffffffffffffffa8
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = fffffffffffffed5
+  rht_reg = 12e
+  lft_reg = fffffffffffffee0
+For calculation 30 results are...
+  The Error function for calc 1 is ffffffffffffffb3
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = fffffffffffffefa
+  rht_reg = 109
+  lft_reg = ffffffffffffff05
+For calculation 31 results are...
+  The Error function for calc 1 is ffffffffffffffc9
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = ffffffffffffff45
+  rht_reg =  be
+  lft_reg = ffffffffffffff50
+For calculation 32 results are...
+  The Error function for calc 1 is ffffffffffffffe4
+  Integrating...  Intgrl =   d ...Fwd incremented to   8
+  Icomp =   4
+  Pcomp = ffffffffffffffa1
+  rht_reg =  63
+  lft_reg = ffffffffffffffad
+For calculation 33 results are...
+  The Error function for calc 1 is   0
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =   0
+  rht_reg =   4
+  lft_reg =   c
+For calculation 34 results are...
+  The Error function for calc 1 is  18
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =  51
+  rht_reg = ffffffffffffffb3
+  lft_reg =  5d
+For calculation 35 results are...
+  The Error function for calc 1 is  2a
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =  8f
+  rht_reg = ffffffffffffff75
+  lft_reg =  9b
+For calculation 36 results are...
+  The Error function for calc 1 is  34
+  Integrating...  Intgrl =  10 ...Fwd incremented to   9
+  Icomp =   5
+  Pcomp =  b1
+  rht_reg = ffffffffffffff53
+  lft_reg =  bf
+For calculation 37 results are...
+  The Error function for calc 1 is  35
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp =  b4
+  rht_reg = ffffffffffffff50
+  lft_reg =  c2
+For calculation 38 results are...
+  The Error function for calc 1 is  2e
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp =  9c
+  rht_reg = ffffffffffffff68
+  lft_reg =  aa
+For calculation 39 results are...
+  The Error function for calc 1 is  21
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp =  70
+  rht_reg = ffffffffffffff94
+  lft_reg =  7e
+For calculation 40 results are...
+  The Error function for calc 1 is  11
+  Integrating...  Intgrl =  11 ...Fwd incremented to   a
+  Icomp =   5
+  Pcomp =  39
+  rht_reg = ffffffffffffffcc
+  lft_reg =  48
+For calculation 41 results are...
+  The Error function for calc 1 is   0
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp =   0
+  rht_reg =   5
+  lft_reg =   f
+For calculation 42 results are...
+  The Error function for calc 1 is fffffffffffffff2
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp = ffffffffffffffd1
+  rht_reg =  34
+  lft_reg = ffffffffffffffe0
+For calculation 43 results are...
+  The Error function for calc 1 is ffffffffffffffe7
+  No integration occurs this cycle
+  Icomp =   5
+  Pcomp = ffffffffffffffab
+  rht_reg =  5a
+  lft_reg = ffffffffffffffba
+For calculation 44 results are...
+  The Error function for calc 1 is ffffffffffffffe1
+  Integrating...  Intgrl =   f ...Fwd incremented to   b
+  Icomp =   4
+  Pcomp = ffffffffffffff97
+  rht_reg =  70
+  lft_reg = ffffffffffffffa6
+For calculation 45 results are...
+  The Error function for calc 1 is ffffffffffffffe0
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = ffffffffffffff93
+  rht_reg =  74
+  lft_reg = ffffffffffffffa2
+For calculation 46 results are...
+  The Error function for calc 1 is ffffffffffffffe4
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = ffffffffffffffa1
+  rht_reg =  66
+  lft_reg = ffffffffffffffb0
+For calculation 47 results are...
+  The Error function for calc 1 is ffffffffffffffec
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = ffffffffffffffbc
+  rht_reg =  4b
+  lft_reg = ffffffffffffffcb
+For calculation 48 results are...
+  The Error function for calc 1 is fffffffffffffff6
+  Integrating...  Intgrl =   e ...Fwd incremented to   c
+  Icomp =   4
+  Pcomp = ffffffffffffffde
+  rht_reg =  2a
+  lft_reg = ffffffffffffffee
+For calculation 49 results are...
+  The Error function for calc 1 is   0
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =   0
+  rht_reg =   8
+  lft_reg =  10
+For calculation 50 results are...
+  The Error function for calc 1 is   8
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =  1b
+  rht_reg = ffffffffffffffed
+  lft_reg =  2b
+For calculation 51 results are...
+  The Error function for calc 1 is   f
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =  33
+  rht_reg = ffffffffffffffd5
+  lft_reg =  43
+For calculation 52 results are...
+  The Error function for calc 1 is  13
+  Integrating...  Intgrl =   f ...Fwd incremented to   d
+  Icomp =   4
+  Pcomp =  40
+  rht_reg = ffffffffffffffc9
+  lft_reg =  51
+For calculation 53 results are...
+  The Error function for calc 1 is  13
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =  40
+  rht_reg = ffffffffffffffc9
+  lft_reg =  51
+For calculation 54 results are...
+  The Error function for calc 1 is  11
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =  39
+  rht_reg = ffffffffffffffd0
+  lft_reg =  4a
+For calculation 55 results are...
+  The Error function for calc 1 is   c
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =  28
+  rht_reg = ffffffffffffffe1
+  lft_reg =  39
+For calculation 56 results are...
+  The Error function for calc 1 is   6
+  Integrating...  Intgrl =   f ...Fwd incremented to   e
+  Icomp =   4
+  Pcomp =  14
+  rht_reg = fffffffffffffff6
+  lft_reg =  26
+For calculation 57 results are...
+  The Error function for calc 1 is   0
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =   0
+  rht_reg =   a
+  lft_reg =  12
+For calculation 58 results are...
+  The Error function for calc 1 is fffffffffffffffb
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = ffffffffffffffef
+  rht_reg =  1b
+  lft_reg =   1
+For calculation 59 results are...
+  The Error function for calc 1 is fffffffffffffff7
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = ffffffffffffffe2
+  rht_reg =  28
+  lft_reg = fffffffffffffff4
+For calculation 60 results are...
+  The Error function for calc 1 is fffffffffffffff5
+  Integrating...  Intgrl =   e ...Fwd incremented to   f
+  Icomp =   4
+  Pcomp = ffffffffffffffdb
+  rht_reg =  30
+  lft_reg = ffffffffffffffee
+For calculation 61 results are...
+  The Error function for calc 1 is fffffffffffffff5
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = ffffffffffffffdb
+  rht_reg =  30
+  lft_reg = ffffffffffffffee
+For calculation 62 results are...
+  The Error function for calc 1 is fffffffffffffff6
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = ffffffffffffffde
+  rht_reg =  2d
+  lft_reg = fffffffffffffff1
+For calculation 63 results are...
+  The Error function for calc 1 is fffffffffffffff9
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = ffffffffffffffe9
+  rht_reg =  22
+  lft_reg = fffffffffffffffc
+For calculation 64 results are...
+  The Error function for calc 1 is fffffffffffffffd
+  Integrating...  Intgrl =   d ...Fwd incremented to  10
+  Icomp =   4
+  Pcomp = fffffffffffffff6
+  rht_reg =  16
+  lft_reg =   a
+For calculation 65 results are...
+  The Error function for calc 1 is   0
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =   0
+  rht_reg =   c
+  lft_reg =  14
+For calculation 66 results are...
+  The Error function for calc 1 is   3
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =   a
+  rht_reg =   2
+  lft_reg =  1e
+For calculation 67 results are...
+  The Error function for calc 1 is   5
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =  11
+  rht_reg = fffffffffffffffb
+  lft_reg =  25
+For calculation 68 results are...
+  The Error function for calc 1 is   7
+  Integrating...  Intgrl =   d ...Fwd incremented to  11
+  Icomp =   4
+  Pcomp =  17
+  rht_reg = fffffffffffffff6
+  lft_reg =  2c
+For calculation 69 results are...
+  The Error function for calc 1 is   7
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =  17
+  rht_reg = fffffffffffffff6
+  lft_reg =  2c
+For calculation 70 results are...
+  The Error function for calc 1 is   6
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =  14
+  rht_reg = fffffffffffffff9
+  lft_reg =  29
+For calculation 71 results are...
+  The Error function for calc 1 is   4
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =   d
+  rht_reg =   0
+  lft_reg =  22
+For calculation 72 results are...
+  The Error function for calc 1 is   2
+  Integrating...  Intgrl =   d ...Fwd incremented to  12
+  Icomp =   4
+  Pcomp =   6
+  rht_reg =   8
+  lft_reg =  1c
+For calculation 73 results are...
+  The Error function for calc 1 is   0
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp =   0
+  rht_reg =   e
+  lft_reg =  16
+For calculation 74 results are...
+  The Error function for calc 1 is ffffffffffffffff
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = fffffffffffffffd
+  rht_reg =  11
+  lft_reg =  13
+For calculation 75 results are...
+  The Error function for calc 1 is fffffffffffffffd
+  No integration occurs this cycle
+  Icomp =   4
+  Pcomp = fffffffffffffff6
+  rht_reg =  18
+  lft_reg =   c
+For calculation 76 results are...
+  The Error function for calc 1 is fffffffffffffffc
+  Integrating...  Intgrl =   c ...Fwd incremented to  13
+  Icomp =   3
+  Pcomp = fffffffffffffff3
+  rht_reg =  1d
+  lft_reg =   9
+For calculation 77 results are...
+  The Error function for calc 1 is fffffffffffffffc
+  No integration occurs this cycle
+  Icomp =   3
+  Pcomp = fffffffffffffff3
+  rht_reg =  1d
+  lft_reg =   9
+For calculation 78 results are...
+  The Error function for calc 1 is fffffffffffffffd
+  No integration occurs this cycle
+  Icomp =   3
+  Pcomp = fffffffffffffff6
+  rht_reg =  1a
+  lft_reg =   c
+For calculation 79 results are...
+  The Error function for calc 1 is fffffffffffffffe
+  No integration occurs this cycle
+  Icomp =   3
+  Pcomp = fffffffffffffffa
+  rht_reg =  16
+  lft_reg =  10
+For calculation 80 results are...
+  The Error function for calc 1 is ffffffffffffffff
+  Integrating...  Intgrl =   b ...Fwd incremented to  14
+  Icomp =   3
+  Pcomp = fffffffffffffffd
+  rht_reg =  14
+  lft_reg =  14
+For calculation 81 results are...
+  The Error function for calc 1 is   0
+  No integration occurs this cycle
+  Icomp =   3
+  Pcomp =   0
+  rht_reg =  11
+  lft_reg =  17
