@@ -1,0 +1,20 @@
+
+1. simple test: send a cmd go to station id x, and send Id for x, and see if bot stops
+2. fske ids: send a cmd go for ID x, but send few fake IDs and then ID x, bot should not stop in between
+3. blocked bot:  send a cmd go, while the bot is moving set OK2Move to 0 low for a while, and then let it go, 
+              check if bot gets to the final destiantion or not
+4. reroute test1:  send a cmdgo to station A, on the way send a cmdgo to station B,  send ID A, then send ID B,
+             bot should not stop at A but only at B
+5. stop test: send a cmdgo to station A, send a cmdstop, check if it stops, then send a cmdg to station B,  send ID A, then send ID B,
+             bot should not stop at A but only at B
+          
+6. rogue cmd1 test: send a cmdgo, stop it at an obstactle,  send a rogue cmd and it should go to the actual id
+7. rogue cmd2 test: send a rogue cmd first, it should not move 
+                    then send a cmdgo, send a few rogue cmd, but it should not stop
+
+note add: add an always block to monitor IR_*_en - such that whenever str_cnv is asserted make sure chnnl no 
+  matches tha of the illuminated IR.
+
+Additional Top LEVEL test ideas
+  - rouge IDs - send some interminent invalid IDs which should be filtered out by barcode reader 
+   keep the lower  6 bits matching to the dest station ID
