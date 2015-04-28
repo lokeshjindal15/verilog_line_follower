@@ -66,7 +66,7 @@ assign  src0 =  sub  ?  ~scaled_src0 : scaled_src0;
 assign raw_sum = src0 + src1 + sub;   // ignore carry for now ??
 
 // 12-bit signed saturation logic -- keeps the top 4 bits 0
-assign sat_sum =  raw_sum[15]  ?  ( (&raw_sum[14:11]) ? raw_sum[15:0] : 16'h0800 ) 
+assign sat_sum =  raw_sum[15]  ?  ( (&raw_sum[14:11]) ? raw_sum[15:0] : 16'hf800 ) 
                                :  (~(|raw_sum[14:11]) ? raw_sum[15:0] : 16'h07ff );
 
 							   
