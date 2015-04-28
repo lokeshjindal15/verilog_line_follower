@@ -1,10 +1,13 @@
 QUESTIONS
 
 Q1. dig_core.sv has a signal called led. what is that signal for?
+A. Use for whatever you want to use for.
 
 Q2. dig_core.sv has a signal called "go" as output. Why output?
+A. Just export to enhance visibility for Eric's TB.
 
 Q3. Should synthesize ALU with Class exercise parameters especially inputdrive 0od 10ohms and output load of 0.01 pF?
+A. Synthesize at top level directly and should hopefully see violations.
 
 Q4. Get these errors while setting driving cell:
 dc_shell> set_output_delay -clock clk 0.5 [all_outputs]
@@ -57,6 +60,7 @@ Warning: Design rule attributes from the driving cell will be
 Warning: Design rule attributes from the driving cell will be
         set on the port. (UID-401)
 
+A. NO worries for these warnings.
 		
 Q5. Get these erros while doing "ungroup all" for motor_cntrl?
 dc_shell> ungroup -all
@@ -64,5 +68,6 @@ Information: Changed wire load model for 'pwm_gen' from '(none)' to 'ZeroWireloa
 Information: Changed wire load model for 'pwm_gen' from '(none)' to 'ZeroWireload'. (OPT-170)
 Information: Updating graph... (UID-83)
 1
+A. Was doing this at wrong place. Should do "ungroup -all -flatten" after cimpile and then do a seconds compile after doing "ungroup -all -flatten".
 
 Q6. 
