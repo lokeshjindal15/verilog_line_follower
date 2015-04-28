@@ -17,6 +17,7 @@ logic go, strt_cnv, cnv_cmplt;
 
 logic [2:0 ]chnnl;
 logic [11:0]A2D_res;
+logic [7:0] temp_id;
   
 /*-- a2d and reference memories --*/
 reg [11:0] A2D_mem[0:65535];
@@ -37,6 +38,8 @@ logic OK2Move;      // simulate proximity sensor
 /////////////////////////////////////////
 /// Test parameters 
 localparam ID_DELAY = 30;		// clock cycles for correct ID to cause the robot to stop
+localparam OBS_DELAY = 3;		// clock cycles for the robot to stop on seeing an obstacle
+localparam CMD_DELAY = 3;		// clock cycles for the robot to stop on seeing an obstacle
 
 ////////////////////////////////////////
 // DUT instance                     ////
@@ -122,6 +125,79 @@ task simple_test;
   $display("SimpleTest: PASSED!\n");
 endtask
 
+task check_if_stops_on_id;
+  fork
+    begin : check_lft_rht
+     while( |lft || |rht) #1; 
+	 disable simple_timeout;
+	end
+	begin : simple_timeout
+	 repeat(ID_DELAY) @(posedge clk);
+	 disable check_lft_rht;
+	 $display ("TIMEOUT ERROR::  Bot did not stop on correct ID\n");
+	 $stop();
+	end
+  join
+endtask
+
+task check_if_stops_on_obs;
+  fork
+    begin : check_lft_rht1
+     while( |lft || |rht) #1; 
+	 disable simple_timeout1;
+	end
+	begin : simple_timeout1
+	 repeat(OBS_DELAY) @(posedge clk);
+	 disable check_lft_rht1;
+	 $display ("TIMEOUT ERROR::  Bot did not stop on obstacle\n");
+	 $stop();
+	end
+  join
+endtask
+
+
+// rogue cmd1: we set the bot on motion, to station id A, 
+//   stop it at an obstacle, and at this point send a rogue cmd, 
+//   then pull out the obstactle, wanna check it still stops 
+//     at the correct destination
+
+task rogue_cmd_test1;
+
+  $display("Starting: rogue cmd test 1\n");
+
+  OK2Move = 1;
+  // send cmd go for ID A = 101001
+  send_cmd_go(8'b01_101001);
+
+  repeat(25 * 15000) @(posedge clk);
+
+  OK2Move = 0;
+  check_if_stops_on_obs();
+
+  // send rogue cmd go for ID B =  101011
+  send_cmd_go(8'b11_101011);
+  repeat(2 * CMD_DELAY) @(posedge clk);
+
+  // send erroenous ID B = 101011
+  send_ID(8'b00_101011);
+  repeat(ID_DELAY) @(posedge clk);
+
+  // did the bot stop?
+  if( |lft || |rht) begin
+    $display("ERROR: bot stops at erroneous ID");
+    $stop();
+  end
+
+  @(posedge clk); 
+
+  // send valid ID A
+  send_ID(8'b00_101001);
+  repeat(ID_DELAY) @(posedge clk);
+
+  check_if_stops_on_id();
+
+  $display("Rogue cmd Test1: PASSED!\n");
+endtask
 
 initial begin
 
