@@ -34,9 +34,10 @@ task send_cmd_stop;
 endtask
 
 task send_cmd_invalid;
-	$display("Sending an invalid command");
-	cmd = 8'b11000111;
-	cmd_rdy = 1;
+ input [7:0] icmd;
+  cmd = icmd;
+  cmd_rdy = 1;
+ $display("Sending an invalid command: %b", cmd);
 endtask
 
 // Task to send barcode id

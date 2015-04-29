@@ -45,7 +45,7 @@ end
 
 
 // Checker to see if PI math is correct //
-always @(posedge iDUT.iMotion.dst2lft) begin
+always @(posedge iDUT.iMotion.dst2lft) begin : motion_checker
 
   @(posedge clk);
   @(posedge clk);
@@ -58,17 +58,18 @@ always @(posedge iDUT.iMotion.dst2lft) begin
   rht_ref_15b = rht_ref[15:1];
   lft_ref_15b = lft_ref[15:1];
 
-  if((lft_reg_sgex != lft_ref_15b) || (rht_reg_sgex != rht_ref_15b)) begin
+  // if we are moving check the values
+  if(go && ((lft_reg_sgex != lft_ref_15b) || (rht_reg_sgex != rht_ref_15b))) begin
     $display("[iter=%d] WARN: mismatch Expected: lht=%x rht=%x, found lht = %x, rht = %x, left diff=%d, right diff=%d",
                       	i, lft_ref_15b, rht_ref_15b, lft_reg_sgex, rht_reg_sgex, lft_reg_sgex - lft_ref_15b, rht_reg_sgex - rht_ref_15b);
     if( ((lft_reg_sgex - lft_ref_15b) > 1) || ((lft_reg_sgex - lft_ref_15b) < -1) || ((rht_reg_sgex - rht_ref_15b) > 1) || ((rht_reg_sgex - rht_ref_15b) < -1) ) begin
 	   $display( "ERROR: intolerable difference");
-       $stop();
+     //$stop();
 	end
 	
   end
   else begin
-    $display("[iter=%d] OK: values match lht = %x, rht = %x", i, lft_reg_sgex, rht_reg_sgex);
+    $display("[iter=%d] OK: values match lht = %x, rht = %x, go=%b", i, lft_reg_sgex, rht_reg_sgex, go);
   end
 
   refptr = refptr + 1;
@@ -83,7 +84,6 @@ task init_motion;
 
   A2D_res = 0;
   cnv_cmplt = 0;
-  go = 0;
   ptr = 0;
   refptr = 0;
   i = 0;                 // trial number
