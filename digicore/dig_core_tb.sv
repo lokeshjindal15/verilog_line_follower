@@ -181,7 +181,83 @@ task simple_test;
   $display("SimpleTest: PASSED!\n");
 endtask
 
+// FakeIDtest send a go cmd, and send few fakeIDs
+// before sending the correct stop ID. Check if the bot
+// stops at the correct station ID.
+task fakeID_test;
 
+  OK2Move = 1;
+  send_cmd_go(8'b01010000);
+  repeat(10 * 15000) @(posedge clk);
+  send_ID(8'b00001000);
+  
+  for(counter = 0; counter < 9; counter = counter + 1) begin
+      repeat(ID_DELAY) @(posedge clk);
+      if( ~(|lft || |rht) && (ID[5:0] != 6'b010000)) begin
+       $display("Error: Bot stopped at the wrong ID %b", ID[5:0]);
+       $stop;
+      end
+      repeat(10 * 15000) @(posedge clk);
+      inc_ID;
+  end
+
+  $display("FAKEIDTest: PASSED!\n");
+
+endtask
+
+// Send a go cmd, while the bot is moving set OK2Move 
+// to 0 for a while, and then let it go,
+// check if bot gets to the final destiantion or not
+task blockedbot_test;
+
+  OK2Move = 1;
+  send_cmd_go(8'b01010000);
+  repeat(25 * 15000) @(posedge clk);
+  OK2Move = 0;
+  repeat(25 * 15000) @(posedge clk);
+  OK2Move = 1;
+  
+  repeat(10 * 15000) @(posedge clk);
+  send_ID(8'b00010000);
+  
+  check_if_stops_on_id();
+
+  $display("Blocked Bot test Passed!! ");
+
+endtask
+
+// send a cmdgo to station A, send a cmdstop,check if it stops, then send a cmdg to station B,
+// send ID A, then send ID B, bot should not stop at A but only at B
+
+task stop_test;
+  
+  OK2Move = 1;
+  send_cmd_go(8'b01010000);
+
+  repeat(10 * 15000) @(posedge clk);
+  send_cmd_stop();
+  
+  check_if_stops_on_id();
+
+  repeat(10 * 15000) @(posedge clk);
+  send_cmd_go(8'b01011000);
+  
+  repeat(10 * 15000) @(posedge clk);
+  send_ID(8'b00010000);
+
+  if(~(|lft || |rht) ) begin
+    $display("Reroute test failed. Stopped at wrong ID %b", ID[5:0]);
+    $stop;
+  end
+
+  repeat(10 * 15000) @(posedge clk);
+  send_ID(8'b00011000);  
+
+  check_if_stops_on_id();
+  
+  $display("Stop test passed !!");
+
+endtask
 
 // rogue cmd1: we set the bot on motion, to station id A, 
 //   stop it at an obstacle, and at this point send a rogue cmd, 
@@ -203,6 +279,7 @@ task rogue_cmd_test1;
 
   // send rogue cmd go for ID B =  101011
   send_cmd_invalid(8'b11_101011);
+
   repeat(2 * CMD_DELAY) @(posedge clk);
 
   repeat(2 * 15000) @(posedge clk);
@@ -334,9 +411,12 @@ initial begin
   init_motion();
 
   //simple_test();
-  //rogue_cmd_test1();
+  rogue_cmd_test1();
   //rogue_cmd_test2();
-  reroute_test();
+ // reroute_test();
+//  fakeID_test();
+//  blockedbot_test();
+//  stop_test();
 
   repeat(1000) @(posedge clk);
   $stop();
