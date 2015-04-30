@@ -22,3 +22,5 @@ note add: add an always block to monitor IR_*_en - such that whenever str_cnv is
 Additional Top LEVEL test ideas
   - rouge IDs - send some interminent invalid IDs which should be filtered out by barcode reader 
    keep the lower  6 bits matching to the dest station ID
+
+Checks that all interface flops /signals have rst_n

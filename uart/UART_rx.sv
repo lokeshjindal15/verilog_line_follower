@@ -82,8 +82,10 @@ module UART_rx(clk, rst_n, clr_rdy, RX, rdy, cmd);
     end
 
 	///////////// Infer state flops ////////////
-    always @(posedge clk) begin
-		if(clr_rdy)
+    always @(posedge clk or negedge rst_n) begin
+    if(!rst_n)
+      rdy <= 1'b0;
+		else if(clr_rdy)
 			rdy <= 1'b0;
 		else if(set_rdy)
 			rdy <= 1'b1;
