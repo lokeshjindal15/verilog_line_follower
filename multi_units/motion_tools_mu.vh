@@ -24,7 +24,7 @@ enum {IDLE = 0, WAIT_4095,
 // and load results //
 initial begin
   //$readmemh("analog.dat", A2D_mem);		// read the analog data
-  $readmemh("check_math.dat", motor_ref);		// reference results for motor
+  $readmemh("../tests/check_math.dat", motor_ref);		// reference results for motor
 end
 
 // Checker to see if PI math is correct //

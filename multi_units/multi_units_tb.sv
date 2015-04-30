@@ -8,6 +8,9 @@
 
 module multi_unit_tb();
 
+parameter TEST_NAME = "simple_test";
+string test_name;
+
 logic clk, rst_n;
 
 /*-- motion control stuff --*/
@@ -22,13 +25,13 @@ logic [11:0]A2D_res;
 logic [7:0] temp_id;
   
 /*-- a2d and reference memories --*/
-reg [11:0] A2D_mem[0:65535];
-reg [15:0] ptr;			// address pointer into array that contains analog values
+//reg [11:0] A2D_mem[0:65535];    // this is now done by ADC model
+//reg [15:0] ptr;			// address pointer into array that contains analog values
 reg [15:0] motor_ref[0:65535];
 reg [15:0] refptr;			// address pointer into array that contains analog values
 integer i;
 
-/*-- out going interfaces from these blocks--*/
+/*-- out going interfaces from dut blocks--*/
 logic BC;               // for bar code reader input
 
 logic RX;               // for UART/CMD interface
@@ -154,7 +157,7 @@ ADC128S t_A2D_Model(.clk(clk), .rst_n(rst_n), .SS_n(a2d_SS_n), .SCLK(SCLK), .MIS
 barcode_mimic t_Barcode_mimic(.clk(clk), .rst_n(rst_n), .period(period), .BC(BC),
                       .send(send), .station_ID(ID_send), .BC_done(bc_done));
 
-// Instance Blue toothc UART model
+// Instance Blue tooth  UART model
 uart_trans t_UART_TX(        // TBD: rename to UART_tx
 .clk(clk), 
 .rst_n(rst_n), 
@@ -164,12 +167,11 @@ uart_trans t_UART_TX(        // TBD: rename to UART_tx
 .tx_done(tx_done)
 );
 
+
 ///////////////////////////////////////////
 // include tb tasks and blocks
-//   NOTE: this now includes modelling blocks 
 //      
 ///////////////////////////////////////////
-
 
 `include "cmdcntrl_tools_mu.vh"
 `include "motion_tools_mu.vh"
@@ -194,13 +196,8 @@ initial begin
   init_cmd(); 
   init_motion();
 
-  //simple_test();
-  stop_test();
-  //blockedbot_test();
-  //reroute_test();
-  //fakeID_test();
-  //rogue_cmd_test1();
-  //rogue_cmd_test2();
+  test_name = TEST_NAME;
+  run_digi_test(); // test_name set above
 
   repeat(1000) @(posedge clk);
   $stop();

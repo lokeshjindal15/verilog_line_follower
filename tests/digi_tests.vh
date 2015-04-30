@@ -106,8 +106,10 @@ endtask
 // before sending the correct stop ID. Check if the bot
 // stops at the correct station ID.
 task fakeID_test;
-
   logic [7:0] tmp_ID;
+  
+  $display("Starting FakeID Test...");
+  
   OK2Move = 1;
   send_cmd_go(8'b01010000);
   repeat(10 * 15000) @(posedge clk);
@@ -135,6 +137,7 @@ endtask
 task blockedbot_test;
 
   disable_motion_check = 1;
+  $display("Starting Blocked bot test ..");
 
   OK2Move = 1;
   send_cmd_go(8'b01010000);
@@ -143,6 +146,7 @@ task blockedbot_test;
   OK2Move = 0;
   check_if_stops_on_obs();
 
+  repeat(25 * 15000) @(posedge clk);
   OK2Move = 1;
   
   repeat(10 * 15000) @(posedge clk);
@@ -160,14 +164,15 @@ endtask
 task stop_test;
   
   disable_motion_check = 1;
-
+  $display("Starting stopped test ..");
+  
   OK2Move = 1;
   send_cmd_go(8'b01010000);
 
   repeat(10 * 15000) @(posedge clk);
   send_cmd_stop();
   
-  check_if_stops_on_obs();
+  check_if_stops_on_cmdstop();
 
   repeat(10 * 15000) @(posedge clk);
   send_cmd_go(8'b01011000);
@@ -176,7 +181,7 @@ task stop_test;
   send_ID(8'b00010000);
 
   if(~(|lft || |rht) ) begin
-    $display("Reroute test failed. Stopped at wrong ID %b", ID[5:0]);
+    $display("Stop test failed. Stopped at wrong ID %b", ID[5:0]);
     $stop;
   end
 
@@ -250,7 +255,7 @@ endtask
 
 task rogue_cmd_test2;
  
-  $display("Starting: rogue cmd test 1\n");
+  $display("Starting: rogue cmd test 2\n");
   
   OK2Move = 1;
   // send a rogue cmd for ID 1
@@ -336,3 +341,42 @@ task reroute_test();
 
 endtask
 
+/////////////////////////////////////////////////
+/*----------------------------------------------
+ *  main test run wrapper:
+ *   Args:  test_name : (string) name of test    
+ *--------------------------------------------*/
+task run_digi_test();
+
+  if(test_name == "simple_test")
+    simple_test();
+  else if(test_name == "fakeID_test")
+    fakeID_test();
+  else if(test_name == "blockedbot_test")
+    blockedbot_test();
+  else if(test_name == "reroute_test")
+    reroute_test();
+  else if(test_name == "stop_test")
+    stop_test();
+  else if(test_name == "rogue_cmd_test1")
+    rogue_cmd_test1();
+  else if(test_name == "rogue_cmd_test2")
+    rogue_cmd_test2();
+  else if(test_name == "all")
+    $display("SORRY: disabled all as it does not work ");
+    //run_all_digi_tests();
+  else
+    $display("Digi Test: Sorry no matching test found for %s", test_name);
+  
+endtask
+
+/* -- run all tests :NOT WORKING--*/
+task run_all_digi_tests();
+  simple_test();
+  fakeID_test();
+  blockedbot_test();
+  reroute_test();
+  stop_test();
+  rogue_cmd_test1();
+  rogue_cmd_test2();
+endtask

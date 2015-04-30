@@ -2,9 +2,13 @@
 * Digital core test bench
 *   
 *   TBD: description 
+*    TEST_NAME = "test_to_run" default="simple_test"
  *----------------------------------------------*/
 
 module dig_core_tb();
+
+parameter TEST_NAME = "simple_test";
+string test_name;
 
 logic clk, rst_n;
 
@@ -39,7 +43,7 @@ logic disable_motion_check;			// set to turn off motion checker
 /// Test parameters 
 localparam ID_DELAY = 30;		// clock cycles for correct ID to cause the robot to stop
 localparam OBS_DELAY = 3;		// clock cycles for the robot to stop on seeing an obstacle
-localparam CMD_DELAY = 3;		// clock cycles for tobot to receive and process a cmd
+localparam CMD_DELAY = 4;		// clock cycles for tobot to receive and process a cmd
 
 ////////////////////////////////////////
 // DUT instance                     ////
@@ -102,18 +106,15 @@ initial begin
   init_cmd(); 
   init_motion();
 
-  //simple_test();
-  //rogue_cmd_test1();
-  //rogue_cmd_test2();
- // reroute_test();
-  fakeID_test();
-//  blockedbot_test();
-//  stop_test();
+  test_name = TEST_NAME;
+  run_digi_test(); // test_name set above
 
   repeat(1000) @(posedge clk);
+  $display("*** ALL TESTS PASSED ***");
   $stop();
 end
-/*
+
+/* TBD: do something like this
 initial begin
 
 
@@ -132,33 +133,6 @@ initial begin
 end
 */
 
-// Send a rogue command
-
-/*
-initial begin
-	repeat (900)@(posedge clk);
-	tmp_cmd = cmd;
-	send_cmd_invalid;
-
-	repeat (5) @(posedge clk);
-	cmd = tmp_cmd;
-end
-
-//Send another go command with different dest_ID
-initial begin
-	repeat (1100)@(posedge clk);
-	cmd = cmd+1;
-	send_cmd_go;
-
-end
-
-//Send a stop command
-initial begin 
-	repeat (1500)@(posedge clk);
-	send_cmd_stop;
-end
-
-*/
 
 // clk
 always
