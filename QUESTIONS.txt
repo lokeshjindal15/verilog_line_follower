@@ -70,4 +70,14 @@ Information: Updating graph... (UID-83)
 1
 A. Was doing this at wrong place. Should do "ungroup -all -flatten" after cimpile and then do a seconds compile after doing "ungroup -all -flatten".
 
-Q6. 
+6. 
+
+Motion block: should Intgrl be rest on go low ?
+  NO, it makes sense to retain value
+
+
+
+fork join?
+ Eric: not faced this before
+
+

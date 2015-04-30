@@ -12,6 +12,10 @@
 7. rogue cmd2 test: send a rogue cmd first, it should not move 
                     then send a cmdgo, send a few rogue cmd, but it should not stop
 
+8. exhaustive station id test - send command go foa a prticular station ID. Then loop through IDs. should stop only at the correct ID.
+
+9. Try all the tests above with different error analog.dat files.
+
 note add: add an always block to monitor IR_*_en - such that whenever str_cnv is asserted make sure chnnl no 
   matches tha of the illuminated IR.
 

@@ -23,26 +23,9 @@ enum {IDLE = 0, WAIT_4095,
 // Load analog values //
 // and load results //
 initial begin
-  $readmemh("analog.dat", A2D_mem);		// read the analog data
+  //$readmemh("analog.dat", A2D_mem);		// read the analog data
   $readmemh("check_math.dat", motor_ref);		// reference results for motor
 end
-
-
-// Block to send A2D results -- just a hacky model//
-always @(posedge strt_cnv) begin
-  
-  cnv_cmplt = 0;
-  //$display("    LEDS - {IR_out_en, IR_mid_en, IR_in_en}i = %b %b %b", IR_out_en, IR_mid_en, IR_in_en );
-  repeat(256) @(posedge clk);
-
-  A2D_res = ~( {4'b0000, A2D_mem[ptr*8+chnnl]} );
-  cnv_cmplt = 1;
-  ptr = ptr + 1;
-
-  // dump IR values
-  //$display("   [a2d model] returning value %h", ~A2D_res);
-end
-
 
 // Checker to see if PI math is correct //
 always @(posedge iDUT.iMotion.dst2lft) begin : motion_checker
@@ -85,9 +68,6 @@ end
 // Init motion tb signals//
 task init_motion;
 
-  A2D_res = 0;
-  cnv_cmplt = 0;
-  ptr = 0;
   refptr = 0;
   i = 0;                 // trial number
   disable_motion_check = 0;	//motion checker enabled by default
