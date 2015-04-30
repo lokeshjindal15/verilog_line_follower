@@ -14,9 +14,6 @@ task init_cmd;
   period = 22'h0;
   ID_send = 8'h0;
 
-  ID_vld = 0;
-
-	ID = 8'b00000100;
 	counter = 10'h00;
 endtask
 
@@ -33,7 +30,6 @@ endtask
 // Task to send commands
 task send_cmd_go;
   input [7:0] icmd;
-  cmd = icmd;
   send_via_bluetooth(icmd);
 	$display("Go command for station ID: %b", cmd);
 endtask
@@ -46,7 +42,6 @@ endtask
 
 task send_cmd_invalid;
  input [7:0] icmd;
-  cmd = icmd;
   send_via_bluetooth(icmd);
  $display("Sending an invalid command: %b", cmd);
 endtask
@@ -60,7 +55,7 @@ endtask
 task send_ID;
   input [7:0] iID;
 	ID_send = iID;
-  period = 22'h20a;
+  period = PERIOD;
   
   send = 1;
   @(posedge clk);

@@ -52,14 +52,16 @@ logic	[7:0] tx_data;
 logic	tx_done, trmt;
 
 logic [21:0] period;        // chosen random period of barcode signal
-logic send, bc_done, ID_send;
+logic send, bc_done;
+logic [7:0] ID_send;
 
 
 /////////////////////////////////////////
 /// Test parameters 
-localparam ID_DELAY = 30;		// clock cycles for correct ID to cause the robot to stop
+localparam PERIOD = 12'h20a;
+localparam ID_DELAY = 10*PERIOD;		// clock cycles for correct ID to cause the robot to stop
 localparam OBS_DELAY = 3;		// clock cycles for the robot to stop on seeing an obstacle
-localparam CMD_DELAY = 3;		// clock cycles for tobot to receive and process a cmd
+localparam CMD_DELAY = 26040 + 5000;		// clock cycles for tobot to receive and process a cmd : courtesy lokesh tb
 
 ////////////////////////////////////////
 // Digi Core instance               ////
@@ -192,13 +194,13 @@ initial begin
   init_cmd(); 
   init_motion();
 
-  simple_test();
+  //simple_test();
+  stop_test();
+  //blockedbot_test();
+  //reroute_test();
+  //fakeID_test();
   //rogue_cmd_test1();
   //rogue_cmd_test2();
- // reroute_test();
-  //fakeID_test();
-//  blockedbot_test();
-//  stop_test();
 
   repeat(1000) @(posedge clk);
   $stop();

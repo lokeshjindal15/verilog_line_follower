@@ -28,7 +28,7 @@ initial begin
 end
 
 // Checker to see if PI math is correct //
-always @(posedge iDUT.iMotion.dst2lft) begin : motion_checker
+always @(posedge i_CORE.iMotion.dst2lft) begin : motion_checker
 
   if(disable_motion_check)
       disable motion_checker;

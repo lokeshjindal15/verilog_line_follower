@@ -46,7 +46,7 @@ task check_if_stops_on_id;
   if(lft==11'b0 && rht==11'b0)
     ; // ok
   else begin
-     $display ("TIMEOUT ERROR::  Bot did not stop on correct ID\n");
+     $display ("TIMEOUT ERROR:: func check_if_stops_on_id:  Bot did not stop on correct ID\n");
 	 $stop();
   end
   
@@ -61,12 +61,26 @@ task check_if_stops_on_obs;
 	begin : simple_timeout1
 	 repeat(OBS_DELAY) @(posedge clk);
 	 disable check_lft_rht1;
-	 $display ("TIMEOUT ERROR::  Bot did not stop on obstacle\n");
+	 $display ("TIMEOUT ERROR:: func check_if_stops_on_obs:  Bot did not stop on obstacle\n");
 	 $stop();
 	end
   join
 endtask
 
+task check_if_stops_on_cmdstop;
+  fork
+    begin : check_lft_rht2
+     while( |lft || |rht) #1; 
+	 disable simple_timeout2;
+	end
+	begin : simple_timeout2
+	 repeat(CMD_DELAY) @(posedge clk);
+	 disable check_lft_rht2;
+	 $display ("TIMEOUT ERROR:: func check_if_stops_on_cmdstop:  Bot did not stop on obstacle\n");
+	 $stop();
+	end
+  join
+endtask
 
 ///////////////////////////////////////////////
 //  Tests 
@@ -93,10 +107,12 @@ endtask
 // stops at the correct station ID.
 task fakeID_test;
 
+  logic [7:0] tmp_ID;
   OK2Move = 1;
   send_cmd_go(8'b01010000);
   repeat(10 * 15000) @(posedge clk);
-  send_ID(8'b00001000);
+  tmp_ID = 8'b00001000;
+  send_ID(tmp_ID);
   
   for(counter = 0; counter < 9; counter = counter + 1) begin
       repeat(ID_DELAY) @(posedge clk);
@@ -105,7 +121,8 @@ task fakeID_test;
        $stop;
       end
       repeat(10 * 15000) @(posedge clk);
-      inc_ID;
+      tmp_ID = tmp_ID + 1;
+      send_ID(tmp_ID);
   end
 
   $display("FAKEIDTest: PASSED!\n");
@@ -118,11 +135,14 @@ endtask
 task blockedbot_test;
 
   disable_motion_check = 1;
+
   OK2Move = 1;
   send_cmd_go(8'b01010000);
   repeat(25 * 15000) @(posedge clk);
+
   OK2Move = 0;
-  repeat(25 * 15000) @(posedge clk);
+  check_if_stops_on_obs();
+
   OK2Move = 1;
   
   repeat(10 * 15000) @(posedge clk);
@@ -139,13 +159,15 @@ endtask
 
 task stop_test;
   
+  disable_motion_check = 1;
+
   OK2Move = 1;
   send_cmd_go(8'b01010000);
 
   repeat(10 * 15000) @(posedge clk);
   send_cmd_stop();
   
-  check_if_stops_on_id();
+  check_if_stops_on_obs();
 
   repeat(10 * 15000) @(posedge clk);
   send_cmd_go(8'b01011000);
@@ -173,6 +195,8 @@ endtask
 //     at the correct destination
 
 task rogue_cmd_test1;
+
+  disable_motion_check = 1;
 
   $display("Starting: rogue cmd test 1\n");
 
@@ -225,7 +249,7 @@ endtask
 //   stop on the way, and finally send the right ID
 
 task rogue_cmd_test2;
-
+ 
   $display("Starting: rogue cmd test 1\n");
   
   OK2Move = 1;
