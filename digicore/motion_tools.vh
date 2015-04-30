@@ -82,6 +82,43 @@ always @(posedge iDUT.iMotion.dst2lft) begin : motion_checker
 
 end
 
+logic [2:0] channel_count;
+assign channel_count = iDUT.iMotion.channel_cnt;
+// Checker to make sure we are enabling and reading from the correct IR pair //
+always@(posedge iDUT.iMotion.strt_cnv) begin: IR_en_checker
+  case(channel_count[2:1])
+    00: begin
+	  if ((chnnl == 3'b001 || chnnl == 3'b000) && (IR_in_en == 1'b1))
+	    ;
+    	  else begin
+	  	$display("ERROR! IR_en_checker failed for IR_in_en @ channel_count = %d\n", channel_count);
+		$stop;
+	  end
+	end
+    01: begin
+	  if ((chnnl == 3'b010 || chnnl == 3'b100) && (IR_mid_en == 1'b1))
+	    ;
+    	  else begin
+	  	$display("ERROR! IR_en_checker failed for IR_mid_en @ channel_count = %d\n", channel_count);
+		$stop;
+	  end
+	end
+    10: begin
+	  if ((chnnl == 3'b011 || chnnl == 3'b111) && (IR_out_en == 1'b1))
+	    ;
+    	  else begin
+	  	$display("ERROR! IR_en_checker failed for IR_out_eni @ channel_count = %d\n", channel_count);
+		$stop;
+	  end
+	end
+    11: begin
+	  $display("ERROR! IR_en_checker failed as chnnl_cnt exceeded 5 @ channel_count = %d\n", channel_count);
+	  $stop;
+	end
+    endcase
+end // end of IR_en_checker
+	    
+
 // Init motion tb signals//
 task init_motion;
 
