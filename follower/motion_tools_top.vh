@@ -55,7 +55,7 @@ always @(posedge iDut.iCORE.iMotion.dst2lft) begin : motion_checker
 	
   end
   else begin
-    $display("[iter=%d] OK: values match lht = %x, rht = %x, go=%b", i, lft_reg_sgex, rht_reg_sgex, go);
+    $display("[iter=%d] OK: values match lht = %x, rht = %x, go=%b", i, lft_reg_sgex, rht_reg_sgex, iDut.go);
   end
 
   refptr = refptr + 1;

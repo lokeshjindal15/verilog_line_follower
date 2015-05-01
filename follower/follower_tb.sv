@@ -6,7 +6,7 @@
 
 module follower_tb();
 
-parameter TEST_NAME = "simple_test";
+parameter TEST_NAME = "rogue_cmd_test1";
 string test_name;
 
 logic clk, rst_n;
@@ -154,6 +154,7 @@ initial begin
   run_digi_test(); // test_name set above
 
   repeat(1000) @(posedge clk);
+  $display("*** ALL TESTS PASSED ***");
   $stop();
 end
 
