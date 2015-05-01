@@ -1,0 +1,79 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Follower
+Version: I-2013.12-SP5
+Date   : Fri May  1 00:20:39 2015
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: iCORE/iMotion/state_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iCORE/iMotion/Intgrl_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Follower           TSMC32K_Lowk_Conservative
+                                           tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  iCORE/iMotion/state_reg[1]/CP (DFCND2BWP)               0.00       0.00 r
+  iCORE/iMotion/state_reg[1]/QN (DFCND2BWP)               0.17       0.17 f
+  U2678/ZN (NR2XD0BWP)                                    0.05       0.22 r
+  U2784/ZN (ND2D4BWP)                                     0.05       0.27 f
+  U2785/ZN (NR2XD3BWP)                                    0.08       0.35 r
+  U2674/ZN (OAI21D2BWP)                                   0.09       0.44 f
+  U2823/ZN (INVD3BWP)                                     0.05       0.49 r
+  U2965/ZN (ND2D1BWP)                                     0.04       0.53 f
+  U2966/ZN (ND3D2BWP)                                     0.04       0.56 r
+  U2992/ZN (ND2D2BWP)                                     0.04       0.60 f
+  U2993/ZN (MUX2ND4BWP)                                   0.09       0.69 f
+  U2994/CON (FCICOND1BWP)                                 0.08       0.77 r
+  U2995/CON (FCICOND1BWP)                                 0.09       0.86 f
+  U2996/CON (FCICOND1BWP)                                 0.11       0.97 r
+  U2997/ZN (MAOI222D1BWP)                                 0.10       1.07 f
+  U2998/ZN (MAOI222D1BWP)                                 0.11       1.18 r
+  U2676/ZN (MAOI222D1BWP)                                 0.10       1.27 f
+  U2677/ZN (MAOI222D1BWP)                                 0.12       1.39 r
+  U2768/CON (FCICOND1BWP)                                 0.09       1.48 f
+  U2999/CON (FCICOND1BWP)                                 0.12       1.60 r
+  U3000/ZN (INVD1BWP)                                     0.04       1.64 f
+  U3010/ZN (MAOI222D1BWP)                                 0.07       1.72 r
+  U3138/CO (FA1D1BWP)                                     0.08       1.79 r
+  U3137/CO (FA1D1BWP)                                     0.06       1.85 r
+  U3136/CO (FA1D1BWP)                                     0.06       1.91 r
+  U3135/S (FA1D1BWP)                                      0.09       2.00 f
+  U3139/ZN (NR4D1BWP)                                     0.06       2.06 r
+  U3141/ZN (NR3D2BWP)                                     0.04       2.10 f
+  U3142/Z (BUFFD8BWP)                                     0.06       2.15 f
+  U2711/ZN (IAO21D1BWP)                                   0.08       2.23 f
+  U3500/ZN (AOI21D2BWP)                                   0.08       2.32 r
+  U3968/ZN (MUX2ND0BWP)                                   0.07       2.38 f
+  iCORE/iMotion/Intgrl_reg[6]/D (DFCNQD1BWP)              0.00       2.38 f
+  data arrival time                                                  2.38
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  clock uncertainty                                      -0.10       2.40
+  iCORE/iMotion/Intgrl_reg[6]/CP (DFCNQD1BWP)             0.00       2.40 r
+  library setup time                                     -0.02       2.38
+  data required time                                                 2.38
+  --------------------------------------------------------------------------
+  data required time                                                 2.38
+  data arrival time                                                 -2.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
