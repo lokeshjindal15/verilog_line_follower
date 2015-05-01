@@ -51,8 +51,8 @@ assign lft_reg_sgex = { {4{lft_reg[11]}} , lft_reg};
 // Load analog values //
 // and load results //
 initial begin
-  $readmemh("analog.dat", A2D_mem);		// read the analog data
-  $readmemh("check_math.dat", motor_ref);		// reference results for motor
+  $readmemh("../../tests/analog.dat", A2D_mem);		// read the analog data
+  $readmemh("../../tests/check_math.dat", motor_ref);		// reference results for motor
 end
 
 

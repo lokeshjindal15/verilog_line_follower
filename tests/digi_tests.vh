@@ -91,7 +91,7 @@ endtask
 //    the new ID to be 
 task simple_test;
 
-  disable motion_checker;
+  //disable motion_checker;
   OK2Move = 1;
   send_cmd_go(8'b01010000);
   repeat(50 * 15000) @(posedge clk);
@@ -225,7 +225,7 @@ task rogue_cmd_test1;
   //init_motion();  // HACK!! checker does not account for FWD being reset
                   //  so lets reset to older values again
                   // DUH!!! now Intgr is not getting reset so wtf?
-  disable motion_checker;       // no more motion checks, TODO : FIXME
+  //disable motion_checker;       // no more motion checks, TODO : FIXME
   repeat(25 * 15000) @(posedge clk);
   
   // send erroenous ID B = 101011

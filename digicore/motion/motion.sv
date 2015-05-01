@@ -38,9 +38,10 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
  logic [11:0] ir_timer;
  logic [2:0]  channel_cnt;    // internal channel counter
  logic [1:0]  intgdec;        // integral decimator!
+ logic  mult_cnt;             // for the multi cycle mutliply !
  
  logic reset_timer, en_timer, timer_4095, timer_32;
- logic inc_intgdec, inc_channel_cnt, reset_channel_cnt;
+ logic inc_intgdec, inc_channel_cnt, reset_channel_cnt, reset_mult_cnt, inc_mult_cnt;
  logic update_IR_en, clear_IR_all;
  
  /* -- ALU registers  --*/
@@ -213,7 +214,15 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
     intgdec  <=  2'b11;
    else if(inc_intgdec)
     intgdec  <=  intgdec + 1;
-    
+ 
+ /*-- muti cycle multipleir - counter --*/
+ always_ff @(posedge clk or negedge rst_n)
+   if(!rst_n)
+     mult_cnt <= 0;
+   else if(reset_mult_cnt)
+     mult_cnt <= 0;
+   else if(inc_mult_cnt)
+     mult_cnt <= ~mult_cnt;   // 1 bit counter :)
  
 ///////////////////////////////////////////////
  /*--- The BIGGG FSM ---*/
@@ -241,6 +250,8 @@ begin
 // reset all the signal output from FSM
 reset_channel_cnt = 0;
 inc_channel_cnt = 0;
+reset_mult_cnt = 0;
+inc_mult_cnt = 0;
 
 reset_timer = 0;
 en_timer = 0;
@@ -392,6 +403,7 @@ nxt_state = IDLE;
           src1sel = ERRORSCALEIN1;
           dst2intgrl = &intgdec[1:0]; // integral result captured only once in 4 PI calc cycles
           saturate = 1;
+          reset_mult_cnt = 1;
           nxt_state = ICOMP;
          end
 
@@ -400,8 +412,16 @@ nxt_state = IDLE;
           src0sel = INTGRLIN0;
           src1sel = ITERMIN1;
           multiply = 1;
-          dst2icomp = 1;
-          nxt_state = PCOMP;
+          
+          if(mult_cnt == 1'b1) begin   // implement a multi-cycle multipy
+            dst2icomp = 1;
+            nxt_state = PCOMP;
+            reset_mult_cnt = 1;       // need this ??
+          end
+          else begin
+            nxt_state = ICOMP;
+            inc_mult_cnt = 1;            
+          end  
          end
 
       PCOMP: /* 10. Pcomp = Error * Pterm */
@@ -409,8 +429,15 @@ nxt_state = IDLE;
           src0sel = PTERMIN0;
           src1sel = ERRORIN1;
           multiply = 1;
-          dst2pcomp = 1;
-          nxt_state = ACCUM_RIGHT;
+          
+          if(mult_cnt == 1'b1) begin   // implement a multi-cycle multiply
+            dst2pcomp = 1;
+            nxt_state = ACCUM_RIGHT;
+          end
+          else begin
+            nxt_state = PCOMP;
+            inc_mult_cnt = 1;
+          end
          end
 
       ACCUM_RIGHT: /* 11. Accum = Fwd - Pterm */
