@@ -80,4 +80,12 @@ Motion block: should Intgrl be rest on go low ?
 fork join?
  Eric: not faced this before
 
+7. Ok2Move and Ok2Move_ff1/2... which one connects to port of dig_core?
 
+8. rst_n should not be a reg but a wire?
+
+9. should set drive input strength on RST_n or not?? 
+
+10. timing_unflat_report.txt shows a max delay path from state_reg to Accum through multiplier. We won't exercise this path ever? What can be done about this? Here ? In real industrial projects?
+
+11.  
