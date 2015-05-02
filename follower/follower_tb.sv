@@ -130,6 +130,7 @@ uart_trans t_UART_TX(        // TBD: rename to UART_tx
 `include "cmdcntrl_tools_top.vh"
 `include "motion_tools_top.vh"
 `include "../tests/digi_tests.vh"
+`include "../tests/top_tests.vh"
 
 task clk_n_rst;
 
@@ -152,6 +153,8 @@ initial begin
 
   test_name = TEST_NAME;
   run_digi_test(); // test_name set above
+
+  run_top_test();  // run tests from top.vh
 
   repeat(1000) @(posedge clk);
   $display("*** ALL TESTS PASSED ***");
