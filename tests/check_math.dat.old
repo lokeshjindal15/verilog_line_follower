@@ -2,242 +2,242 @@
 @0 0000
 @1 0000
 // rht and lft value for cycle 1 
-@2 fd81
-@3 027f
+@2 fd91
+@3 026f
 // rht and lft value for cycle 2 
-@4 fbaa
-@5 0456
+@4 fbc5
+@5 043b
 // rht and lft value for cycle 3 
-@6 faab
-@7 0557
+@6 faca
+@7 0538
 // rht and lft value for cycle 4 
-@8 fa96
-@9 056c
+@8 fab6
+@9 054c
 // rht and lft value for cycle 5 
-@a fb4b
-@b 04b7
+@a fb67
+@b 049b
 // rht and lft value for cycle 6 
-@c fc9a
-@d 0368
+@c fcae
+@d 0354
 // rht and lft value for cycle 7 
-@e fe44
-@f 01c0
+@e fe4c
+@f 01b8
 // rht and lft value for cycle 8 
-@10 fffc
-@11 0008
+@10 fff9
+@11 000b
 // rht and lft value for cycle 9 
-@12 017c
-@13 fe88
+@12 016f
+@13 fe95
 // rht and lft value for cycle 10 
-@14 029a
-@15 fd6a
+@14 0287
+@15 fd7d
 // rht and lft value for cycle 11 
-@16 0338
-@17 fcce
+@16 0321
+@17 fce5
 // rht and lft value for cycle 12 
-@18 0346
-@19 fcc0
+@18 032f
+@19 fcd7
 // rht and lft value for cycle 13 
-@1a 02d9
-@1b fd2d
+@1a 02c5
+@1b fd41
 // rht and lft value for cycle 14 
-@1c 020b
-@1d fdfb
+@1c 01fc
+@1d fe0a
 // rht and lft value for cycle 15 
-@1e 010b
-@1f fefd
+@1e 0103
+@1f ff05
 // rht and lft value for cycle 16 
-@20 0002
-@21 0006
+@20 0001
+@21 0007
 // rht and lft value for cycle 17 
-@22 ff1c
-@23 00ec
+@22 ff21
+@23 00e7
 // rht and lft value for cycle 18 
-@24 fe6d
-@25 019b
+@24 fe76
+@25 0192
 // rht and lft value for cycle 19 
-@26 fe0e
-@27 01fc
+@26 fe19
+@27 01f1
 // rht and lft value for cycle 20 
-@28 fe04
-@29 0206
+@28 fe0f
+@29 01fb
 // rht and lft value for cycle 21 
-@2a fe46
-@2b 01c4
+@2a fe50
+@2b 01ba
 // rht and lft value for cycle 22 
-@2c fec4
-@2d 0146
+@2c fecb
+@2d 013f
 // rht and lft value for cycle 23 
-@2e ff62
-@2f 00aa
+@2e ff64
+@2f 00a8
 // rht and lft value for cycle 24 
-@30 0002
-@31 000a
+@30 0000
+@31 000c
 // rht and lft value for cycle 25 
-@32 008d
-@33 ff7f
+@32 0088
+@33 ff84
 // rht and lft value for cycle 26 
-@34 00f6
-@35 ff16
+@34 00ee
+@35 ff1e
 // rht and lft value for cycle 27 
-@36 0130
-@37 fede
+@36 0127
+@37 fee7
 // rht and lft value for cycle 28 
-@38 0137
-@39 fed7
+@38 012e
+@39 fee0
 // rht and lft value for cycle 29 
-@3a 0110
-@3b fefe
+@3a 0109
+@3b ff05
 // rht and lft value for cycle 30 
-@3c 00c4
-@3d ff4a
+@3c 00be
+@3d ff50
 // rht and lft value for cycle 31 
-@3e 0067
-@3f ffa9
+@3e 0063
+@3f ffad
 // rht and lft value for cycle 32 
-@40 0006
-@41 000a
+@40 0004
+@41 000c
 // rht and lft value for cycle 33 
 @42 ffb3
 @43 005d
 // rht and lft value for cycle 34 
-@44 ff74
-@45 009c
+@44 ff75
+@45 009b
 // rht and lft value for cycle 35 
-@46 ff51
-@47 00c1
+@46 ff53
+@47 00bf
 // rht and lft value for cycle 36 
-@48 ff4d
-@49 00c5
+@48 ff50
+@49 00c2
 // rht and lft value for cycle 37 
-@4a ff66
-@4b 00ac
+@4a ff68
+@4b 00aa
 // rht and lft value for cycle 38 
-@4c ff93
-@4d 007f
+@4c ff94
+@4d 007e
 // rht and lft value for cycle 39 
 @4e ffcc
 @4f 0048
 // rht and lft value for cycle 40 
-@50 0007
-@51 000d
+@50 0005
+@51 000f
 // rht and lft value for cycle 41 
-@52 0037
-@53 ffdd
+@52 0034
+@53 ffe0
 // rht and lft value for cycle 42 
-@54 005e
-@55 ffb6
+@54 005a
+@55 ffba
 // rht and lft value for cycle 43 
-@56 0074
-@57 ffa2
+@56 0070
+@57 ffa6
 // rht and lft value for cycle 44 
-@58 0077
-@59 ff9f
+@58 0074
+@59 ffa2
 // rht and lft value for cycle 45 
-@5a 0069
-@5b ffad
+@5a 0066
+@5b ffb0
 // rht and lft value for cycle 46 
-@5c 004d
-@5d ffc9
+@5c 004b
+@5d ffcb
 // rht and lft value for cycle 47 
-@5e 002b
-@5f ffed
+@5e 002a
+@5f ffee
 // rht and lft value for cycle 48 
-@60 0009
-@61 000f
+@60 0008
+@61 0010
 // rht and lft value for cycle 49 
-@62 ffee
-@63 002a
+@62 ffed
+@63 002b
 // rht and lft value for cycle 50 
 @64 ffd5
 @65 0043
 // rht and lft value for cycle 51 
-@66 ffc8
-@67 0052
+@66 ffc9
+@67 0051
 // rht and lft value for cycle 52 
-@68 ffc8
-@69 0052
+@68 ffc9
+@69 0051
 // rht and lft value for cycle 53 
-@6a ffcf
-@6b 004b
+@6a ffd0
+@6b 004a
 // rht and lft value for cycle 54 
 @6c ffe1
 @6d 0039
 // rht and lft value for cycle 55 
-@6e fff7
-@6f 0025
+@6e fff6
+@6f 0026
 // rht and lft value for cycle 56 
-@70 000b
-@71 0011
+@70 000a
+@71 0012
 // rht and lft value for cycle 57 
-@72 001c
-@73 0000
+@72 001b
+@73 0001
 // rht and lft value for cycle 58 
-@74 002a
-@75 fff2
+@74 0028
+@75 fff4
 // rht and lft value for cycle 59 
-@76 0032
-@77 ffec
+@76 0030
+@77 ffee
 // rht and lft value for cycle 60 
-@78 0032
-@79 ffec
+@78 0030
+@79 ffee
 // rht and lft value for cycle 61 
-@7a 002e
-@7b fff0
+@7a 002d
+@7b fff1
 // rht and lft value for cycle 62 
-@7c 0024
-@7d fffa
+@7c 0022
+@7d fffc
 // rht and lft value for cycle 63 
-@7e 0018
-@7f 0008
+@7e 0016
+@7f 000a
 // rht and lft value for cycle 64 
-@80 000e
-@81 0012
+@80 000c
+@81 0014
 // rht and lft value for cycle 65 
-@82 0004
-@83 001c
+@82 0002
+@83 001e
 // rht and lft value for cycle 66 
-@84 fffd
-@85 0023
+@84 fffb
+@85 0025
 // rht and lft value for cycle 67 
-@86 fff7
-@87 002b
+@86 fff6
+@87 002c
 // rht and lft value for cycle 68 
-@88 fff7
-@89 002b
+@88 fff6
+@89 002c
 // rht and lft value for cycle 69 
-@8a fffb
-@8b 0027
+@8a fff9
+@8b 0029
 // rht and lft value for cycle 70 
-@8c 0002
-@8d 0020
+@8c 0000
+@8d 0022
 // rht and lft value for cycle 71 
-@8e 000a
-@8f 001a
+@8e 0008
+@8f 001c
 // rht and lft value for cycle 72 
-@90 0010
-@91 0014
+@90 000e
+@91 0016
 // rht and lft value for cycle 73 
-@92 0013
-@93 0011
+@92 0011
+@93 0013
 // rht and lft value for cycle 74 
-@94 001a
-@95 000a
+@94 0018
+@95 000c
 // rht and lft value for cycle 75 
-@96 001e
-@97 0008
+@96 001d
+@97 0009
 // rht and lft value for cycle 76 
-@98 001e
-@99 0008
+@98 001d
+@99 0009
 // rht and lft value for cycle 77 
-@9a 001b
-@9b 000b
+@9a 001a
+@9b 000c
 // rht and lft value for cycle 78 
-@9c 0017
-@9d 000f
+@9c 0016
+@9d 0010
 // rht and lft value for cycle 79 
-@9e 0015
-@9f 0013
+@9e 0014
+@9f 0014
 // rht and lft value for cycle 80 
-@a0 0012
-@a1 0016
+@a0 0011
+@a1 0017
