@@ -1,0 +1,23 @@
+
+unit("Follower")
+
+addfile("../digicore/motion/motion.sv")
+addfile("../digicore/commandcontrol/cmdcntrl.sv")
+addfile("../alu/alu.v")
+addfile("../a2d_intf/A2D_intf.sv")
+addfile("../barcode/barcode.sv")
+addfile("../barcode/barcode_mimic.sv")
+addfile("follower_tb.sv", tb=True)
+addfile("../motor_cntrl/motor_cntrl.sv")
+addfile("../motor_cntrl/pwm_gen.v")
+addfile("../rst_synch/rst_synch.v")
+addfile("../uart/UART_rx.sv")
+addfile("follower.v")
+addfile("../digicore/dig_core.sv")
+addfile("../uart/UART_tx.sv")
+addfile("../a2d_intf/ADC128S.sv")
+
+addtests( ("simple_test", "fakeID_test", "blockedbot_test", "stop_test") )
+addtests( ("reroute_test", "rogue_cmd_test1", "rogue_cmd_test2") )
+addtests( ("invalidID_test", "glitchBC_test") )
+toplevel("follower_tb")

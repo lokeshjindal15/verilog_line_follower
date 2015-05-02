@@ -6,7 +6,7 @@
 
 module follower_tb();
 
-parameter TEST_NAME = "rogue_cmd_test1";
+parameter TEST_NAME = "simple_test";
 string test_name;
 
 logic clk, rst_n;

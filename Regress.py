@@ -17,7 +17,8 @@ def runRegressions():
 def main():
 
   #addUnit('a2d_intf')
-  addUnit('digicore')
+  #addUnit('digicore')
+  addUnit('follower')
 
   runRegressions()
 

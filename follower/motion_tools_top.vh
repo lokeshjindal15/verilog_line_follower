@@ -43,9 +43,9 @@ always @(posedge iDut.iCORE.iMotion.dst2lft) begin : motion_checker
   // strip out LSB
   rht_ref_15b = rht_ref[15:1];
   lft_ref_15b = lft_ref[15:1];
-
+  
   // if we are moving check the values
-  if(go && ((lft_reg_sgex != lft_ref_15b) || (rht_reg_sgex != rht_ref_15b))) begin
+  if(iDut.go && ((lft_reg_sgex != lft_ref_15b) || (rht_reg_sgex != rht_ref_15b))) begin
     $display("[iter=%d] WARN: mismatch Expected: lht=%x rht=%x, found lht = %x, rht = %x, left diff=%d, right diff=%d",
                       	i, lft_ref_15b, rht_ref_15b, lft_reg_sgex, rht_reg_sgex, lft_reg_sgex - lft_ref_15b, rht_reg_sgex - rht_ref_15b);
     if( ((lft_reg_sgex - lft_ref_15b) > 1) || ((lft_reg_sgex - lft_ref_15b) < -1) || ((rht_reg_sgex - rht_ref_15b) > 1) || ((rht_reg_sgex - rht_ref_15b) < -1) ) begin
@@ -55,7 +55,7 @@ always @(posedge iDut.iCORE.iMotion.dst2lft) begin : motion_checker
 	
   end
   else begin
-    $display("[iter=%d] OK: values match lht = %x, rht = %x, go=%b", i, lft_reg_sgex, rht_reg_sgex, iDut.go);
+    $display("[iter=%d] OK: Expected: lht=%x rht=%x, found lht = %x, rht = %x, iDut.go=%b", i, lft_ref_15b, rht_ref_15b, lft_reg_sgex, rht_reg_sgex, iDut.go);
   end
 
   refptr = refptr + 1;
