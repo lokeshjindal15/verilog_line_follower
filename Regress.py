@@ -16,7 +16,8 @@ def runRegressions():
 # :D, hardcoding our first module
 def main():
 
-  addUnit('a2d_intf')
+  #addUnit('a2d_intf')
+  addUnit('digicore')
 
   runRegressions()
 

@@ -1,0 +1,12 @@
+
+unit("digicore")
+
+addfile("motion/motion.sv")
+addfile("commandcontrol/cmdcntrl.sv")
+addfile("../alu/alu.v")
+addfile("dig_core.sv")
+addfile("dig_core_tb.sv", tb=True)
+
+addtests( ("simple_test", "fakeID_test", "blockedbot_test", "stop_test") )
+addtests( ("reroute_test", "rogue_cmd_test1", "rogue_cmd_test2") )
+toplevel("dig_core_tb")
