@@ -41,7 +41,7 @@ module Follower(clk,RST_n,led,a2d_SS_n,SCLK,MISO,MOSI,rev_rht,
   //////////////////////////////
   dig_core iCORE(.clk(clk),.rst_n(rst_n),.cmd_rdy(cmd_rdy),.cmd(cmd),.led(led),
 			     .clr_cmd_rdy(clr_cmd_rdy),.lft(lft),.rht(rht),.buzz(buzz),
-				 .buzz_n(buzz_n),.in_transit(in_transit),.OK2Move(OK2Move),.ID(ID),
+				 .buzz_n(buzz_n),.in_transit(in_transit),.OK2Move(OK2Move_ff2),.ID(ID),
 				 .clr_ID_vld(clr_ID_vld),.ID_vld(ID_vld),.strt_cnv(strt_cnv),
 				 .cnv_cmplt(cnv_cmplt),.chnnl(chnnl),.A2D_res(A2D_res),.go(go),
 				 .IR_in_en(IR_in_en),.IR_mid_en(IR_mid_en),.IR_out_en(IR_out_en));
@@ -69,5 +69,20 @@ module Follower(clk,RST_n,led,a2d_SS_n,SCLK,MISO,MOSI,rev_rht,
   ///////////////////////////////		
   A2D_intf iA2D(.clk(clk),.rst_n(rst_n),.strt_cnv(strt_cnv),.cnv_cmplt(cnv_cmplt),.chnnl(chnnl),
                 .res(A2D_res),.a2d_SS_n(a2d_SS_n),.SCLK(SCLK),.MOSI(MOSI),.MISO(MISO));
+
+  ////////////////////////////////
+  // OK2Move flop  
+  ///////////////////////////////
+
+  always @(posedge clk or negedge rst_n)
+    if(!rst_n) begin
+      OK2Move_ff1  <=  1'b1;
+      OK2Move_ff2  <=  1'b1;
+    end
+    else begin
+      OK2Move_ff1  <=  OK2Move;
+      OK2Move_ff2  <=  OK2Move_ff1;
+    end
+
 		
 endmodule

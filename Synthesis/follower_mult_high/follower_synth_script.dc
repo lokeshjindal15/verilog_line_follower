@@ -1,0 +1,72 @@
+# Opening design vision : design_vision -shell dc_shell
+
+# MODIFY
+read_file -format sverilog {../../a2d_intf/A2D_intf.sv, ../../barcode/barcode.sv, ../../digicore/motion/motion.sv, ../../digicore/commandcontrol/cmdcntrl.sv, ../../digicore/dig_core.sv, ../../motor_cntrl/motor_cntrl.sv, ../../uart/UART_rx.sv}
+
+read_file -format verilog {../../alu/alu.v, ../../motor_cntrl/pwm_gen.v, ../../rst_synch/rst_synch.v, ../../follower/follower.v}
+
+current_design Follower
+
+#Define clock of 400MHz and don't mess with it
+create_clock -name "clk" -period 2.5 {clk}
+set_dont_touch_network [find port clk]
+
+# clock uncertainty of 0.10 ns
+set_clock_uncertainty 0.1 clk
+
+set_fix_hold clk
+
+
+#variable for inputs other than clk
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+
+#set input delay of 0.5 ns
+set_input_delay -clock clk 0.5 [copy_collection $prim_inputs]
+
+#set output delay of 0.5 ns
+set_output_delay -clock clk 0.5 [all_outputs]
+
+
+# set drive-strength euiv to 2-input nand of size 2 from TSMC lib ND2D2BWP for all inputs except clock and rst_n
+# set drive_inputs [remove_from_collection [copy_collection $prim_inputs] [find port rst_n]]
+
+# set_driving_cell -lib_cell <cell> -pin Z -library <lib> <list_of_inputs>
+# set_drive 10 [copy_collection $drive_inputs]
+# TODO FIXME how to use -pin z
+set_driving_cell -lib_cell ND2D2BWP -library tcbn40lpbwptc [copy_collection $prim_inputs]
+
+# set output load of 0.1 pF
+set_load 0.1 [all_outputs]
+
+#set wire load model
+set_wire_load_model -name TSMC32K_Lowk_Conservative -library tcbn40lpbwptc
+
+#set max transition time of 0.15 ns
+set_max_transition 0.15 [current_design]
+
+compile -map_effort medium
+
+set_multicycle_path 2 -through [find port iCORE/iMotion/iALU/mult_77/PRODUCT]
+set_min_delay 0.15 -through [find port iCORE/iMotion/iALU/mult_77/PRODUCT]
+#
+####compile -map_effort high
+#
+## report un flat timing paths 
+##report_area > mult_area_unflat_report.txt
+##report_timing > mult_timing_unflat_report.txt
+
+ungroup -all -flatten
+
+compile -map_effort high
+
+check_design
+
+report_timing > timing_report.txt
+# min-delay report
+report_timing -delay min > min_delay.txt
+
+report_area > area_report.txt
+
+# MODIFY
+write -format verilog Follower -output follower.vg
+

@@ -57,7 +57,7 @@ logic [7:0] ID, ID_send;
 /// Test parameters 
 localparam PERIOD = 12'h20a;
 localparam ID_DELAY = 10*PERIOD;		// clock cycles for correct ID to cause the robot to stop
-localparam OBS_DELAY = 3;		// clock cycles for the robot to stop on seeing an obstacle
+localparam OBS_DELAY = 5;		// clock cycles for the robot to stop on seeing an obstacle
 localparam CMD_DELAY = 26040 + 5000;		// clock cycles for tobot to receive and process a cmd : courtesy lokesh tb
 
 ////////////////////////////////////////
