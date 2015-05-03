@@ -30,8 +30,10 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
  
  
  ////////  PI MATH CONSTANTS  ///////////
- parameter PTERM_CONST = 14'h3680;
- parameter ITERM_CONST = 12'h500;
+ // parameter PTERM_CONST = 14'h3680; // old values
+ // parameter ITERM_CONST = 12'h500;
+ parameter PTERM_CONST = 14'h37e0;
+ parameter ITERM_CONST = 12'h380;
  
  
  /*-- timers for IR reading -*/

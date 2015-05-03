@@ -11,8 +11,10 @@
 # analog data is read from analog.dat in the CWD.  The value of    #
 # the coefficients Pterm/Iterm are defined below.                  #
 ####################################################################
-$Pterm = 0x3680;
-$Iterm = 0x500;
+# $Pterm = 0x3680; # old values
+# $Iterm = 0x500;
+$Pterm = 0x37e0;
+$Iterm = 0x380;
 
 #########################################################################
 # Two log files are output:  "detailed_calcs.txt" contains detailed     #
