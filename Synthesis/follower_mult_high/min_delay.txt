@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : Follower
 Version: I-2013.12-SP5
-Date   : Sat May  2 22:50:33 2015
+Date   : Sat May  2 22:59:57 2015
 ****************************************
 
 Operating Conditions: NCCOM   Library: tcbn40lpbwptc
@@ -30,7 +30,7 @@ Wire Load Model Mode: segmented
   clock network delay (ideal)                             0.00       0.00
   iCORE/iMotion/ir_timer_reg[11]/CP (DFD1BWP)             0.00       0.00 r
   iCORE/iMotion/ir_timer_reg[11]/Q (DFD1BWP)              0.10       0.10 r
-  U2413/ZN (OAI32D1BWP)                                   0.02       0.12 f
+  U2352/ZN (OAI32D1BWP)                                   0.02       0.12 f
   iCORE/iMotion/ir_timer_reg[11]/D (DFD1BWP)              0.00       0.12 f
   data arrival time                                                  0.12
 
