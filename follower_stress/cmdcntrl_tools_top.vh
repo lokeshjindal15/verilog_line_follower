@@ -61,7 +61,7 @@ task send_ID;
   @(posedge clk);
   send = 0;
 
-	$display("Sending ID %b", ID_send);
+	$display("Sending ID %b", ID);
 endtask
 
 //  Just print our logical state //
