@@ -36,9 +36,10 @@ module dig_core(clk,rst_n,cmd_rdy,cmd,clr_cmd_rdy,lft,rht,buzz,buzz_n,
 
   logic [11:0] lft_reg,rht_reg;	      // 12-bit signed left and right motor controls
 
-  logic piezo_en;                     // enable piezo buzzer
+  logic piezo_en, pz_equals_4khz;     // enable piezo buzzer
   logic [12:0] pz_cnt;                // counter for the buzzer
 
+  reg buzz ;          // buzzer flop
   
   ///////////////////////////////////////////////
   // Instantiate Command & Control Block Next //
@@ -94,14 +95,24 @@ module dig_core(clk,rst_n,cmd_rdy,cmd,clr_cmd_rdy,lft,rht,buzz,buzz_n,
  //  Piezzo frequency divider block 
  ///////////////////////////////////////////
  
+ assign pz_equals_4khz = (pz_cnt == 13'd6250);
+
  always_ff @(posedge clk or negedge rst_n) 
   if(!rst_n)
     pz_cnt  <=  13'h0000;
+  else if(pz_equals_4khz)
+    pz_cnt  <=  13'h0000;
   else if(piezo_en)
-    pz_cnt  <= pz_cnt + 1;
+    pz_cnt  <=  pz_cnt + 1;
 
- assign buzz   =  pz_cnt[12];
- assign buzz_n = ~pz_cnt[12];
+ always_ff @(posedge clk or negedge rst_n) 
+  if(!rst_n)
+    buzz  <= 1'b0;
+  else if(pz_equals_4khz)
+    buzz  <= ~buzz;
+
+ //assign buzz   =  pz_cnt[12];
+ assign buzz_n = ~buzz;
 
  // led : signal for our debuggin purposes
  assign led = cmd;

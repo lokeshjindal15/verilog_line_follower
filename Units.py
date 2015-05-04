@@ -90,6 +90,12 @@ class Unit:
     if test:
       print "   Test : %s" % test
 
+    # remove old work directory
+    print "\n ->> removing old work lib"
+    os.system("rm -rf work")
+
+    print "\n ->> Creating Work lib"
+    os.system("vlib work")
     # build the library
     print "\n ->> Creating Work lib"
     os.system("vlib work")
