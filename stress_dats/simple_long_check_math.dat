@@ -1,0 +1,3003 @@
+// rht and lft value for cycle 0 
+@0 ffbb
+@1 0045
+// rht and lft value for cycle 1 
+@2 ff1a
+@3 00e6
+// rht and lft value for cycle 2 
+@4 fe76
+@5 018a
+// rht and lft value for cycle 3 
+@6 fdd9
+@7 0229
+// rht and lft value for cycle 4 
+@8 fd38
+@9 02ca
+// rht and lft value for cycle 5 
+@a fc9e
+@b 0364
+// rht and lft value for cycle 6 
+@c fc05
+@d 03fd
+// rht and lft value for cycle 7 
+@e fb6b
+@f 0499
+// rht and lft value for cycle 8 
+@10 fad4
+@11 0530
+// rht and lft value for cycle 9 
+@12 fa49
+@13 05bb
+// rht and lft value for cycle 10 
+@14 f9b6
+@15 064e
+// rht and lft value for cycle 11 
+@16 f924
+@17 06e2
+// rht and lft value for cycle 12 
+@18 f8a0
+@19 0766
+// rht and lft value for cycle 13 
+@1a f81b
+@1b 07eb
+// rht and lft value for cycle 14 
+@1c f800
+@1d 07ff
+// rht and lft value for cycle 15 
+@1e f800
+@1f 07ff
+// rht and lft value for cycle 16 
+@20 f800
+@21 07ff
+// rht and lft value for cycle 17 
+@22 f800
+@23 07ff
+// rht and lft value for cycle 18 
+@24 f800
+@25 07ff
+// rht and lft value for cycle 19 
+@26 f800
+@27 07ff
+// rht and lft value for cycle 20 
+@28 f800
+@29 07ff
+// rht and lft value for cycle 21 
+@2a f800
+@2b 07ff
+// rht and lft value for cycle 22 
+@2c f800
+@2d 07ff
+// rht and lft value for cycle 23 
+@2e f800
+@2f 07ff
+// rht and lft value for cycle 24 
+@30 f800
+@31 07ff
+// rht and lft value for cycle 25 
+@32 f800
+@33 07ff
+// rht and lft value for cycle 26 
+@34 f800
+@35 07ff
+// rht and lft value for cycle 27 
+@36 f800
+@37 07ff
+// rht and lft value for cycle 28 
+@38 f800
+@39 07ff
+// rht and lft value for cycle 29 
+@3a f800
+@3b 07ff
+// rht and lft value for cycle 30 
+@3c f800
+@3d 07ff
+// rht and lft value for cycle 31 
+@3e f800
+@3f 07ff
+// rht and lft value for cycle 32 
+@40 f800
+@41 07ff
+// rht and lft value for cycle 33 
+@42 f800
+@43 07ff
+// rht and lft value for cycle 34 
+@44 f800
+@45 07ff
+// rht and lft value for cycle 35 
+@46 f800
+@47 07ff
+// rht and lft value for cycle 36 
+@48 f800
+@49 07ff
+// rht and lft value for cycle 37 
+@4a f800
+@4b 07ff
+// rht and lft value for cycle 38 
+@4c f800
+@4d 07ff
+// rht and lft value for cycle 39 
+@4e f800
+@4f 07ff
+// rht and lft value for cycle 40 
+@50 f800
+@51 07ff
+// rht and lft value for cycle 41 
+@52 f800
+@53 07ff
+// rht and lft value for cycle 42 
+@54 f800
+@55 07ff
+// rht and lft value for cycle 43 
+@56 f800
+@57 07ff
+// rht and lft value for cycle 44 
+@58 f800
+@59 07ff
+// rht and lft value for cycle 45 
+@5a f800
+@5b 07ff
+// rht and lft value for cycle 46 
+@5c f800
+@5d 07ff
+// rht and lft value for cycle 47 
+@5e f800
+@5f 07ff
+// rht and lft value for cycle 48 
+@60 f800
+@61 07ff
+// rht and lft value for cycle 49 
+@62 f800
+@63 07ff
+// rht and lft value for cycle 50 
+@64 f800
+@65 07ff
+// rht and lft value for cycle 51 
+@66 f800
+@67 07ff
+// rht and lft value for cycle 52 
+@68 f800
+@69 07ff
+// rht and lft value for cycle 53 
+@6a f800
+@6b 07ff
+// rht and lft value for cycle 54 
+@6c f800
+@6d 07ff
+// rht and lft value for cycle 55 
+@6e f800
+@6f 07ff
+// rht and lft value for cycle 56 
+@70 f800
+@71 07ff
+// rht and lft value for cycle 57 
+@72 f800
+@73 07ff
+// rht and lft value for cycle 58 
+@74 f800
+@75 07ff
+// rht and lft value for cycle 59 
+@76 f800
+@77 07ff
+// rht and lft value for cycle 60 
+@78 f800
+@79 07ff
+// rht and lft value for cycle 61 
+@7a f800
+@7b 07ff
+// rht and lft value for cycle 62 
+@7c f800
+@7d 07ff
+// rht and lft value for cycle 63 
+@7e f800
+@7f 07ff
+// rht and lft value for cycle 64 
+@80 f800
+@81 07ff
+// rht and lft value for cycle 65 
+@82 f800
+@83 07ff
+// rht and lft value for cycle 66 
+@84 f800
+@85 07ff
+// rht and lft value for cycle 67 
+@86 f800
+@87 07ff
+// rht and lft value for cycle 68 
+@88 f800
+@89 07ff
+// rht and lft value for cycle 69 
+@8a f800
+@8b 07ff
+// rht and lft value for cycle 70 
+@8c f800
+@8d 07ff
+// rht and lft value for cycle 71 
+@8e f800
+@8f 07ff
+// rht and lft value for cycle 72 
+@90 f800
+@91 07ff
+// rht and lft value for cycle 73 
+@92 f800
+@93 07ff
+// rht and lft value for cycle 74 
+@94 f800
+@95 07ff
+// rht and lft value for cycle 75 
+@96 f800
+@97 07ff
+// rht and lft value for cycle 76 
+@98 f800
+@99 07ff
+// rht and lft value for cycle 77 
+@9a f800
+@9b 07ff
+// rht and lft value for cycle 78 
+@9c f800
+@9d 07ff
+// rht and lft value for cycle 79 
+@9e f800
+@9f 07ff
+// rht and lft value for cycle 80 
+@a0 f800
+@a1 07ff
+// rht and lft value for cycle 81 
+@a2 f800
+@a3 07ff
+// rht and lft value for cycle 82 
+@a4 f800
+@a5 07ff
+// rht and lft value for cycle 83 
+@a6 f800
+@a7 07ff
+// rht and lft value for cycle 84 
+@a8 f860
+@a9 07ca
+// rht and lft value for cycle 85 
+@aa f8c2
+@ab 0768
+// rht and lft value for cycle 86 
+@ac f92b
+@ad 06ff
+// rht and lft value for cycle 87 
+@ae f990
+@af 069c
+// rht and lft value for cycle 88 
+@b0 f9f8
+@b1 0634
+// rht and lft value for cycle 89 
+@b2 fa61
+@b3 05cb
+// rht and lft value for cycle 90 
+@b4 faca
+@b5 0562
+// rht and lft value for cycle 91 
+@b6 fb30
+@b7 04fe
+// rht and lft value for cycle 92 
+@b8 fb98
+@b9 0496
+// rht and lft value for cycle 93 
+@ba fc01
+@bb 042d
+// rht and lft value for cycle 94 
+@bc fc67
+@bd 03c7
+// rht and lft value for cycle 95 
+@be fcce
+@bf 0362
+// rht and lft value for cycle 96 
+@c0 fd37
+@c1 02f9
+// rht and lft value for cycle 97 
+@c2 fd9c
+@c3 0294
+// rht and lft value for cycle 98 
+@c4 fe02
+@c5 022e
+// rht and lft value for cycle 99 
+@c6 fe67
+@c7 01cb
+// rht and lft value for cycle 100 
+@c8 fecc
+@c9 0166
+// rht and lft value for cycle 101 
+@ca ff29
+@cb 0109
+// rht and lft value for cycle 102 
+@cc ff8f
+@cd 00a3
+// rht and lft value for cycle 103 
+@ce ffef
+@cf 0045
+// rht and lft value for cycle 104 
+@d0 0051
+@d1 ffe3
+// rht and lft value for cycle 105 
+@d2 00af
+@d3 ff85
+// rht and lft value for cycle 106 
+@d4 010a
+@d5 ff2a
+// rht and lft value for cycle 107 
+@d6 016c
+@d7 feca
+// rht and lft value for cycle 108 
+@d8 01c3
+@d9 fe73
+// rht and lft value for cycle 109 
+@da 021e
+@db fe18
+// rht and lft value for cycle 110 
+@dc 0272
+@dd fdc4
+// rht and lft value for cycle 111 
+@de 02cd
+@df fd6b
+// rht and lft value for cycle 112 
+@e0 031e
+@e1 fd1a
+// rht and lft value for cycle 113 
+@e2 0372
+@e3 fcc6
+// rht and lft value for cycle 114 
+@e4 03be
+@e5 fc7a
+// rht and lft value for cycle 115 
+@e6 0411
+@e7 fc29
+// rht and lft value for cycle 116 
+@e8 045e
+@e9 fbdc
+// rht and lft value for cycle 117 
+@ea 04a7
+@eb fb93
+// rht and lft value for cycle 118 
+@ec 04ed
+@ed fb4d
+// rht and lft value for cycle 119 
+@ee 0534
+@ef fb08
+// rht and lft value for cycle 120 
+@f0 057a
+@f1 fac2
+// rht and lft value for cycle 121 
+@f2 05b9
+@f3 fa83
+// rht and lft value for cycle 122 
+@f4 05f8
+@f5 fa44
+// rht and lft value for cycle 123 
+@f6 0637
+@f7 fa07
+// rht and lft value for cycle 124 
+@f8 066f
+@f9 f9cf
+// rht and lft value for cycle 125 
+@fa 06a7
+@fb f997
+// rht and lft value for cycle 126 
+@fc 06d8
+@fd f966
+// rht and lft value for cycle 127 
+@fe 0712
+@ff f92e
+// rht and lft value for cycle 128 
+@100 0743
+@101 f8fd
+// rht and lft value for cycle 129 
+@102 076d
+@103 f8d3
+// rht and lft value for cycle 130 
+@104 0797
+@105 f8a9
+// rht and lft value for cycle 131 
+@106 07c3
+@107 f87f
+// rht and lft value for cycle 132 
+@108 07e6
+@109 f85c
+// rht and lft value for cycle 133 
+@10a 07ff
+@10b f83a
+// rht and lft value for cycle 134 
+@10c 07ff
+@10d f81e
+// rht and lft value for cycle 135 
+@10e 07ff
+@10f f800
+// rht and lft value for cycle 136 
+@110 07ff
+@111 f800
+// rht and lft value for cycle 137 
+@112 07ff
+@113 f800
+// rht and lft value for cycle 138 
+@114 07ff
+@115 f800
+// rht and lft value for cycle 139 
+@116 07ff
+@117 f800
+// rht and lft value for cycle 140 
+@118 07ff
+@119 f800
+// rht and lft value for cycle 141 
+@11a 07ff
+@11b f800
+// rht and lft value for cycle 142 
+@11c 07ff
+@11d f800
+// rht and lft value for cycle 143 
+@11e 07ff
+@11f f800
+// rht and lft value for cycle 144 
+@120 07ff
+@121 f800
+// rht and lft value for cycle 145 
+@122 07ff
+@123 f800
+// rht and lft value for cycle 146 
+@124 07ff
+@125 f800
+// rht and lft value for cycle 147 
+@126 07ff
+@127 f800
+// rht and lft value for cycle 148 
+@128 07ff
+@129 f800
+// rht and lft value for cycle 149 
+@12a 07ff
+@12b f800
+// rht and lft value for cycle 150 
+@12c 07ff
+@12d f800
+// rht and lft value for cycle 151 
+@12e 07ff
+@12f f800
+// rht and lft value for cycle 152 
+@130 07ff
+@131 f800
+// rht and lft value for cycle 153 
+@132 07ff
+@133 f800
+// rht and lft value for cycle 154 
+@134 07ff
+@135 f800
+// rht and lft value for cycle 155 
+@136 07ff
+@137 f800
+// rht and lft value for cycle 156 
+@138 07ff
+@139 f800
+// rht and lft value for cycle 157 
+@13a 07ff
+@13b f800
+// rht and lft value for cycle 158 
+@13c 07ff
+@13d f814
+// rht and lft value for cycle 159 
+@13e 07ff
+@13f f829
+// rht and lft value for cycle 160 
+@140 07ff
+@141 f84c
+// rht and lft value for cycle 161 
+@142 07e1
+@143 f86f
+// rht and lft value for cycle 162 
+@144 07be
+@145 f892
+// rht and lft value for cycle 163 
+@146 07a4
+@147 f8ae
+// rht and lft value for cycle 164 
+@148 077a
+@149 f8d8
+// rht and lft value for cycle 165 
+@14a 0750
+@14b f902
+// rht and lft value for cycle 166 
+@14c 0726
+@14d f92c
+// rht and lft value for cycle 167 
+@14e 06fe
+@14f f956
+// rht and lft value for cycle 168 
+@150 06cd
+@151 f987
+// rht and lft value for cycle 169 
+@152 069d
+@153 f9b7
+// rht and lft value for cycle 170 
+@154 066c
+@155 f9e8
+// rht and lft value for cycle 171 
+@156 0643
+@157 fa13
+// rht and lft value for cycle 172 
+@158 0612
+@159 fa44
+// rht and lft value for cycle 173 
+@15a 05da
+@15b fa7c
+// rht and lft value for cycle 174 
+@15c 05a2
+@15d fab4
+// rht and lft value for cycle 175 
+@15e 0571
+@15f fae7
+// rht and lft value for cycle 176 
+@160 0539
+@161 fb1f
+// rht and lft value for cycle 177 
+@162 0501
+@163 fb57
+// rht and lft value for cycle 178 
+@164 04c6
+@165 fb92
+// rht and lft value for cycle 179 
+@166 0494
+@167 fbc6
+// rht and lft value for cycle 180 
+@168 0455
+@169 fc05
+// rht and lft value for cycle 181 
+@16a 041a
+@16b fc40
+// rht and lft value for cycle 182 
+@16c 03df
+@16d fc7b
+// rht and lft value for cycle 183 
+@16e 03a5
+@16f fcb7
+// rht and lft value for cycle 184 
+@170 0366
+@171 fcf6
+// rht and lft value for cycle 185 
+@172 0327
+@173 fd35
+// rht and lft value for cycle 186 
+@174 02e8
+@175 fd74
+// rht and lft value for cycle 187 
+@176 02ad
+@177 fdb1
+// rht and lft value for cycle 188 
+@178 026e
+@179 fdf0
+// rht and lft value for cycle 189 
+@17a 0230
+@17b fe2e
+// rht and lft value for cycle 190 
+@17c 01ed
+@17d fe71
+// rht and lft value for cycle 191 
+@17e 01b1
+@17f feaf
+// rht and lft value for cycle 192 
+@180 0173
+@181 feed
+// rht and lft value for cycle 193 
+@182 0134
+@183 ff2c
+// rht and lft value for cycle 194 
+@184 00f5
+@185 ff6b
+// rht and lft value for cycle 195 
+@186 00b8
+@187 ffaa
+// rht and lft value for cycle 196 
+@188 0079
+@189 ffe9
+// rht and lft value for cycle 197 
+@18a 003a
+@18b 0028
+// rht and lft value for cycle 198 
+@18c fffb
+@18d 0067
+// rht and lft value for cycle 199 
+@18e ffc5
+@18f 009f
+// rht and lft value for cycle 200 
+@190 ff87
+@191 00dd
+// rht and lft value for cycle 201 
+@192 ff4b
+@193 0119
+// rht and lft value for cycle 202 
+@194 ff10
+@195 0154
+// rht and lft value for cycle 203 
+@196 fed5
+@197 0191
+// rht and lft value for cycle 204 
+@198 fe99
+@199 01cd
+// rht and lft value for cycle 205 
+@19a fe61
+@19b 0205
+// rht and lft value for cycle 206 
+@19c fe29
+@19d 023d
+// rht and lft value for cycle 207 
+@19e fdf1
+@19f 0277
+// rht and lft value for cycle 208 
+@1a0 fdb9
+@1a1 02af
+// rht and lft value for cycle 209 
+@1a2 fd84
+@1a3 02e4
+// rht and lft value for cycle 210 
+@1a4 fd50
+@1a5 0318
+// rht and lft value for cycle 211 
+@1a6 fd1a
+@1a7 0350
+// rht and lft value for cycle 212 
+@1a8 fce9
+@1a9 0381
+// rht and lft value for cycle 213 
+@1aa fcb8
+@1ab 03b2
+// rht and lft value for cycle 214 
+@1ac fc87
+@1ad 03e3
+// rht and lft value for cycle 215 
+@1ae fc57
+@1af 0415
+// rht and lft value for cycle 216 
+@1b0 fc2a
+@1b1 0442
+// rht and lft value for cycle 217 
+@1b2 fbfd
+@1b3 046f
+// rht and lft value for cycle 218 
+@1b4 fbd3
+@1b5 0499
+// rht and lft value for cycle 219 
+@1b6 fba6
+@1b7 04c8
+// rht and lft value for cycle 220 
+@1b8 fb7c
+@1b9 04f2
+// rht and lft value for cycle 221 
+@1ba fb56
+@1bb 0518
+// rht and lft value for cycle 222 
+@1bc fb33
+@1bd 053b
+// rht and lft value for cycle 223 
+@1be fb0d
+@1bf 0563
+// rht and lft value for cycle 224 
+@1c0 faea
+@1c1 0586
+// rht and lft value for cycle 225 
+@1c2 fac7
+@1c3 05a9
+// rht and lft value for cycle 226 
+@1c4 faa7
+@1c5 05c9
+// rht and lft value for cycle 227 
+@1c6 fa87
+@1c7 05eb
+// rht and lft value for cycle 228 
+@1c8 fa6c
+@1c9 0606
+// rht and lft value for cycle 229 
+@1ca fa50
+@1cb 0622
+// rht and lft value for cycle 230 
+@1cc fa3b
+@1cd 0637
+// rht and lft value for cycle 231 
+@1ce fa21
+@1cf 0653
+// rht and lft value for cycle 232 
+@1d0 fa05
+@1d1 066f
+// rht and lft value for cycle 233 
+@1d2 f9f7
+@1d3 067d
+// rht and lft value for cycle 234 
+@1d4 f9e2
+@1d5 0692
+// rht and lft value for cycle 235 
+@1d6 f9cf
+@1d7 06a7
+// rht and lft value for cycle 236 
+@1d8 f9ba
+@1d9 06bc
+// rht and lft value for cycle 237 
+@1da f9ac
+@1db 06ca
+// rht and lft value for cycle 238 
+@1dc f9a5
+@1dd 06d1
+// rht and lft value for cycle 239 
+@1de f993
+@1df 06e5
+// rht and lft value for cycle 240 
+@1e0 f98c
+@1e1 06ec
+// rht and lft value for cycle 241 
+@1e2 f985
+@1e3 06f3
+// rht and lft value for cycle 242 
+@1e4 f97e
+@1e5 06fa
+// rht and lft value for cycle 243 
+@1e6 f978
+@1e7 0702
+// rht and lft value for cycle 244 
+@1e8 f971
+@1e9 0709
+// rht and lft value for cycle 245 
+@1ea f971
+@1eb 0709
+// rht and lft value for cycle 246 
+@1ec f971
+@1ed 0709
+// rht and lft value for cycle 247 
+@1ee f96c
+@1ef 0710
+// rht and lft value for cycle 248 
+@1f0 f973
+@1f1 0709
+// rht and lft value for cycle 249 
+@1f2 f97a
+@1f3 0702
+// rht and lft value for cycle 250 
+@1f4 f981
+@1f5 06fb
+// rht and lft value for cycle 251 
+@1f6 f983
+@1f7 06fb
+// rht and lft value for cycle 252 
+@1f8 f98a
+@1f9 06f4
+// rht and lft value for cycle 253 
+@1fa f998
+@1fb 06e6
+// rht and lft value for cycle 254 
+@1fc f99f
+@1fd 06df
+// rht and lft value for cycle 255 
+@1fe f9a8
+@1ff 06d8
+// rht and lft value for cycle 256 
+@200 f9bd
+@201 06c3
+// rht and lft value for cycle 257 
+@202 f9cb
+@203 06b5
+// rht and lft value for cycle 258 
+@204 f9d9
+@205 06a7
+// rht and lft value for cycle 259 
+@206 f9ea
+@207 0698
+// rht and lft value for cycle 260 
+@208 f9ff
+@209 0683
+// rht and lft value for cycle 261 
+@20a fa14
+@20b 066e
+// rht and lft value for cycle 262 
+@20c fa29
+@20d 0659
+// rht and lft value for cycle 263 
+@20e fa3a
+@20f 064a
+// rht and lft value for cycle 264 
+@210 fa52
+@211 0632
+// rht and lft value for cycle 265 
+@212 fa6a
+@213 061a
+// rht and lft value for cycle 266 
+@214 fa86
+@215 05fe
+// rht and lft value for cycle 267 
+@216 fa9e
+@217 05e8
+// rht and lft value for cycle 268 
+@218 faba
+@219 05cc
+// rht and lft value for cycle 269 
+@21a fad6
+@21b 05b0
+// rht and lft value for cycle 270 
+@21c faf6
+@21d 0590
+// rht and lft value for cycle 271 
+@21e fb12
+@21f 0576
+// rht and lft value for cycle 272 
+@220 fb31
+@221 0557
+// rht and lft value for cycle 273 
+@222 fb51
+@223 0537
+// rht and lft value for cycle 274 
+@224 fb74
+@225 0514
+// rht and lft value for cycle 275 
+@226 fb90
+@227 04fa
+// rht and lft value for cycle 276 
+@228 fbb3
+@229 04d7
+// rht and lft value for cycle 277 
+@22a fbd6
+@22b 04b4
+// rht and lft value for cycle 278 
+@22c fbf9
+@22d 0491
+// rht and lft value for cycle 279 
+@22e fc19
+@22f 0473
+// rht and lft value for cycle 280 
+@230 fc3f
+@231 044d
+// rht and lft value for cycle 281 
+@232 fc62
+@233 042a
+// rht and lft value for cycle 282 
+@234 fc89
+@235 0403
+// rht and lft value for cycle 283 
+@236 fcae
+@237 03e0
+// rht and lft value for cycle 284 
+@238 fcd1
+@239 03bd
+// rht and lft value for cycle 285 
+@23a fcf7
+@23b 0397
+// rht and lft value for cycle 286 
+@23c fd1e
+@23d 0370
+// rht and lft value for cycle 287 
+@23e fd43
+@23f 034d
+// rht and lft value for cycle 288 
+@240 fd6a
+@241 0326
+// rht and lft value for cycle 289 
+@242 fd90
+@243 0300
+// rht and lft value for cycle 290 
+@244 fdb7
+@245 02d9
+// rht and lft value for cycle 291 
+@246 fddc
+@247 02b6
+// rht and lft value for cycle 292 
+@248 fe02
+@249 0290
+// rht and lft value for cycle 293 
+@24a fe29
+@24b 0269
+// rht and lft value for cycle 294 
+@24c fe4f
+@24d 0243
+// rht and lft value for cycle 295 
+@24e fe76
+@24f 021e
+// rht and lft value for cycle 296 
+@250 fe9c
+@251 01f8
+// rht and lft value for cycle 297 
+@252 fec2
+@253 01d2
+// rht and lft value for cycle 298 
+@254 fee9
+@255 01ab
+// rht and lft value for cycle 299 
+@256 ff0d
+@257 0189
+// rht and lft value for cycle 300 
+@258 ff33
+@259 0163
+// rht and lft value for cycle 301 
+@25a ff56
+@25b 0140
+// rht and lft value for cycle 302 
+@25c ff7c
+@25d 011a
+// rht and lft value for cycle 303 
+@25e ff9c
+@25f 00fc
+// rht and lft value for cycle 304 
+@260 ffbf
+@261 00d9
+// rht and lft value for cycle 305 
+@262 ffe2
+@263 00b6
+// rht and lft value for cycle 306 
+@264 0005
+@265 0093
+// rht and lft value for cycle 307 
+@266 0026
+@267 0074
+// rht and lft value for cycle 308 
+@268 0049
+@269 0051
+// rht and lft value for cycle 309 
+@26a 0068
+@26b 0032
+// rht and lft value for cycle 310 
+@26c 0088
+@26d 0012
+// rht and lft value for cycle 311 
+@26e 00a9
+@26f fff3
+// rht and lft value for cycle 312 
+@270 00c9
+@271 ffd3
+// rht and lft value for cycle 313 
+@272 00e8
+@273 ffb4
+// rht and lft value for cycle 314 
+@274 0104
+@275 ff98
+// rht and lft value for cycle 315 
+@276 0123
+@277 ff7b
+// rht and lft value for cycle 316 
+@278 013f
+@279 ff5f
+// rht and lft value for cycle 317 
+@27a 015b
+@27b ff43
+// rht and lft value for cycle 318 
+@27c 0173
+@27d ff2b
+// rht and lft value for cycle 319 
+@27e 018f
+@27f ff11
+// rht and lft value for cycle 320 
+@280 01a7
+@281 fef9
+// rht and lft value for cycle 321 
+@282 01c0
+@283 fee0
+// rht and lft value for cycle 322 
+@284 01d5
+@285 fecb
+// rht and lft value for cycle 323 
+@286 01f0
+@287 feb2
+// rht and lft value for cycle 324 
+@288 0205
+@289 fe9d
+// rht and lft value for cycle 325 
+@28a 0217
+@28b fe8b
+// rht and lft value for cycle 326 
+@28c 022b
+@28d fe77
+// rht and lft value for cycle 327 
+@28e 0241
+@28f fe63
+// rht and lft value for cycle 328 
+@290 0252
+@291 fe52
+// rht and lft value for cycle 329 
+@292 0260
+@293 fe44
+// rht and lft value for cycle 330 
+@294 0272
+@295 fe32
+// rht and lft value for cycle 331 
+@296 0284
+@297 fe22
+// rht and lft value for cycle 332 
+@298 028e
+@299 fe18
+// rht and lft value for cycle 333 
+@29a 029c
+@29b fe0a
+// rht and lft value for cycle 334 
+@29c 02a7
+@29d fdff
+// rht and lft value for cycle 335 
+@29e 02b5
+@29f fdf3
+// rht and lft value for cycle 336 
+@2a0 02c0
+@2a1 fde8
+// rht and lft value for cycle 337 
+@2a2 02c7
+@2a3 fde1
+// rht and lft value for cycle 338 
+@2a4 02ce
+@2a5 fdda
+// rht and lft value for cycle 339 
+@2a6 02da
+@2a7 fdd0
+// rht and lft value for cycle 340 
+@2a8 02e1
+@2a9 fdc9
+// rht and lft value for cycle 341 
+@2aa 02e4
+@2ab fdc6
+// rht and lft value for cycle 342 
+@2ac 02e8
+@2ad fdc2
+// rht and lft value for cycle 343 
+@2ae 02ef
+@2af fdbd
+// rht and lft value for cycle 344 
+@2b0 02ef
+@2b1 fdbd
+// rht and lft value for cycle 345 
+@2b2 02ef
+@2b3 fdbd
+// rht and lft value for cycle 346 
+@2b4 02ef
+@2b5 fdbd
+// rht and lft value for cycle 347 
+@2b6 02f4
+@2b7 fdba
+// rht and lft value for cycle 348 
+@2b8 02f1
+@2b9 fdbd
+// rht and lft value for cycle 349 
+@2ba 02ed
+@2bb fdc1
+// rht and lft value for cycle 350 
+@2bc 02ea
+@2bd fdc4
+// rht and lft value for cycle 351 
+@2be 02ea
+@2bf fdc6
+// rht and lft value for cycle 352 
+@2c0 02e3
+@2c1 fdcd
+// rht and lft value for cycle 353 
+@2c2 02dc
+@2c3 fdd4
+// rht and lft value for cycle 354 
+@2c4 02d5
+@2c5 fddb
+// rht and lft value for cycle 355 
+@2c6 02d2
+@2c7 fde0
+// rht and lft value for cycle 356 
+@2c8 02c8
+@2c9 fdea
+// rht and lft value for cycle 357 
+@2ca 02bd
+@2cb fdf5
+// rht and lft value for cycle 358 
+@2cc 02b3
+@2cd fdff
+// rht and lft value for cycle 359 
+@2ce 02ac
+@2cf fe08
+// rht and lft value for cycle 360 
+@2d0 02a2
+@2d1 fe12
+// rht and lft value for cycle 361 
+@2d2 0294
+@2d3 fe20
+// rht and lft value for cycle 362 
+@2d4 0286
+@2d5 fe2e
+// rht and lft value for cycle 363 
+@2d6 027c
+@2d7 fe3a
+// rht and lft value for cycle 364 
+@2d8 026e
+@2d9 fe48
+// rht and lft value for cycle 365 
+@2da 0260
+@2db fe56
+// rht and lft value for cycle 366 
+@2dc 024f
+@2dd fe67
+// rht and lft value for cycle 367 
+@2de 0241
+@2df fe77
+// rht and lft value for cycle 368 
+@2e0 0230
+@2e1 fe88
+// rht and lft value for cycle 369 
+@2e2 021e
+@2e3 fe9a
+// rht and lft value for cycle 370 
+@2e4 020d
+@2e5 feab
+// rht and lft value for cycle 371 
+@2e6 01fe
+@2e7 febc
+// rht and lft value for cycle 372 
+@2e8 01e9
+@2e9 fed1
+// rht and lft value for cycle 373 
+@2ea 01d8
+@2eb fee2
+// rht and lft value for cycle 374 
+@2ec 01c3
+@2ed fef7
+// rht and lft value for cycle 375 
+@2ee 01b1
+@2ef ff0b
+// rht and lft value for cycle 376 
+@2f0 019c
+@2f1 ff20
+// rht and lft value for cycle 377 
+@2f2 0187
+@2f3 ff35
+// rht and lft value for cycle 378 
+@2f4 0172
+@2f5 ff4a
+// rht and lft value for cycle 379 
+@2f6 0160
+@2f7 ff5e
+// rht and lft value for cycle 380 
+@2f8 0148
+@2f9 ff76
+// rht and lft value for cycle 381 
+@2fa 0133
+@2fb ff8b
+// rht and lft value for cycle 382 
+@2fc 011e
+@2fd ffa0
+// rht and lft value for cycle 383 
+@2fe 0107
+@2ff ffb9
+// rht and lft value for cycle 384 
+@300 00f2
+@301 ffce
+// rht and lft value for cycle 385 
+@302 00da
+@303 ffe6
+// rht and lft value for cycle 386 
+@304 00c1
+@305 ffff
+// rht and lft value for cycle 387 
+@306 00ae
+@307 0014
+// rht and lft value for cycle 388 
+@308 0096
+@309 002c
+// rht and lft value for cycle 389 
+@30a 007e
+@30b 0044
+// rht and lft value for cycle 390 
+@30c 0069
+@30d 0059
+// rht and lft value for cycle 391 
+@30e 0052
+@30f 0072
+// rht and lft value for cycle 392 
+@310 003a
+@311 008a
+// rht and lft value for cycle 393 
+@312 0025
+@313 009f
+// rht and lft value for cycle 394 
+@314 000c
+@315 00b8
+// rht and lft value for cycle 395 
+@316 fff5
+@317 00d1
+// rht and lft value for cycle 396 
+@318 ffe0
+@319 00e6
+// rht and lft value for cycle 397 
+@31a ffc8
+@31b 00fe
+// rht and lft value for cycle 398 
+@31c ffb7
+@31d 010f
+// rht and lft value for cycle 399 
+@31e ffa0
+@31f 0128
+// rht and lft value for cycle 400 
+@320 ff8b
+@321 013d
+// rht and lft value for cycle 401 
+@322 ff72
+@323 0156
+// rht and lft value for cycle 402 
+@324 ff5d
+@325 016b
+// rht and lft value for cycle 403 
+@326 ff49
+@327 0181
+// rht and lft value for cycle 404 
+@328 ff34
+@329 0196
+// rht and lft value for cycle 405 
+@32a ff1f
+@32b 01ab
+// rht and lft value for cycle 406 
+@32c ff0a
+@32d 01c0
+// rht and lft value for cycle 407 
+@32e fef5
+@32f 01d7
+// rht and lft value for cycle 408 
+@330 fee1
+@331 01eb
+// rht and lft value for cycle 409 
+@332 fecf
+@333 01fd
+// rht and lft value for cycle 410 
+@334 feba
+@335 0212
+// rht and lft value for cycle 411 
+@336 fea9
+@337 0225
+// rht and lft value for cycle 412 
+@338 fe94
+@339 023a
+// rht and lft value for cycle 413 
+@33a fe82
+@33b 024c
+// rht and lft value for cycle 414 
+@33c fe71
+@33d 025d
+// rht and lft value for cycle 415 
+@33e fe5f
+@33f 0271
+// rht and lft value for cycle 416 
+@340 fe4e
+@341 0282
+// rht and lft value for cycle 417 
+@342 fe40
+@343 0290
+// rht and lft value for cycle 418 
+@344 fe2e
+@345 02a2
+// rht and lft value for cycle 419 
+@346 fe1f
+@347 02b3
+// rht and lft value for cycle 420 
+@348 fe11
+@349 02c1
+// rht and lft value for cycle 421 
+@34a fe00
+@34b 02d2
+// rht and lft value for cycle 422 
+@34c fdf6
+@34d 02dc
+// rht and lft value for cycle 423 
+@34e fde7
+@34f 02ed
+// rht and lft value for cycle 424 
+@350 fdd9
+@351 02fb
+// rht and lft value for cycle 425 
+@352 fdce
+@353 0306
+// rht and lft value for cycle 426 
+@354 fdc0
+@355 0314
+// rht and lft value for cycle 427 
+@356 fdb5
+@357 0321
+// rht and lft value for cycle 428 
+@358 fdaa
+@359 032c
+// rht and lft value for cycle 429 
+@35a fda0
+@35b 0336
+// rht and lft value for cycle 430 
+@35c fd99
+@35d 033d
+// rht and lft value for cycle 431 
+@35e fd8d
+@35f 034b
+// rht and lft value for cycle 432 
+@360 fd86
+@361 0352
+// rht and lft value for cycle 433 
+@362 fd7f
+@363 0359
+// rht and lft value for cycle 434 
+@364 fd78
+@365 0360
+// rht and lft value for cycle 435 
+@366 fd70
+@367 036a
+// rht and lft value for cycle 436 
+@368 fd6d
+@369 036d
+// rht and lft value for cycle 437 
+@36a fd66
+@36b 0374
+// rht and lft value for cycle 438 
+@36c fd62
+@36d 0378
+// rht and lft value for cycle 439 
+@36e fd5e
+@36f 037e
+// rht and lft value for cycle 440 
+@370 fd5a
+@371 0382
+// rht and lft value for cycle 441 
+@372 fd57
+@373 0385
+// rht and lft value for cycle 442 
+@374 fd53
+@375 0389
+// rht and lft value for cycle 443 
+@376 fd51
+@377 038d
+// rht and lft value for cycle 444 
+@378 fd51
+@379 038d
+// rht and lft value for cycle 445 
+@37a fd51
+@37b 038d
+// rht and lft value for cycle 446 
+@37c fd51
+@37d 038d
+// rht and lft value for cycle 447 
+@37e fd50
+@37f 0390
+// rht and lft value for cycle 448 
+@380 fd50
+@381 0390
+// rht and lft value for cycle 449 
+@382 fd54
+@383 038c
+// rht and lft value for cycle 450 
+@384 fd54
+@385 038c
+// rht and lft value for cycle 451 
+@386 fd55
+@387 038d
+// rht and lft value for cycle 452 
+@388 fd59
+@389 0389
+// rht and lft value for cycle 453 
+@38a fd5c
+@38b 0386
+// rht and lft value for cycle 454 
+@38c fd63
+@38d 037f
+// rht and lft value for cycle 455 
+@38e fd66
+@38f 037e
+// rht and lft value for cycle 456 
+@390 fd6d
+@391 0377
+// rht and lft value for cycle 457 
+@392 fd70
+@393 0374
+// rht and lft value for cycle 458 
+@394 fd77
+@395 036d
+// rht and lft value for cycle 459 
+@396 fd7d
+@397 0369
+// rht and lft value for cycle 460 
+@398 fd84
+@399 0362
+// rht and lft value for cycle 461 
+@39a fd8b
+@39b 035b
+// rht and lft value for cycle 462 
+@39c fd96
+@39d 0350
+// rht and lft value for cycle 463 
+@39e fd9c
+@39f 034c
+// rht and lft value for cycle 464 
+@3a0 fda6
+@3a1 0342
+// rht and lft value for cycle 465 
+@3a2 fdad
+@3a3 033b
+// rht and lft value for cycle 466 
+@3a4 fdb8
+@3a5 0330
+// rht and lft value for cycle 467 
+@3a6 fdc1
+@3a7 0329
+// rht and lft value for cycle 468 
+@3a8 fdcc
+@3a9 031e
+// rht and lft value for cycle 469 
+@3aa fdd6
+@3ab 0314
+// rht and lft value for cycle 470 
+@3ac fde1
+@3ad 0309
+// rht and lft value for cycle 471 
+@3ae fdea
+@3af 0302
+// rht and lft value for cycle 472 
+@3b0 fdf8
+@3b1 02f4
+// rht and lft value for cycle 473 
+@3b2 fe02
+@3b3 02ea
+// rht and lft value for cycle 474 
+@3b4 fe10
+@3b5 02dc
+// rht and lft value for cycle 475 
+@3b6 fe1b
+@3b7 02d3
+// rht and lft value for cycle 476 
+@3b8 fe29
+@3b9 02c5
+// rht and lft value for cycle 477 
+@3ba fe33
+@3bb 02bb
+// rht and lft value for cycle 478 
+@3bc fe41
+@3bd 02ad
+// rht and lft value for cycle 479 
+@3be fe4f
+@3bf 02a1
+// rht and lft value for cycle 480 
+@3c0 fe5d
+@3c1 0293
+// rht and lft value for cycle 481 
+@3c2 fe6b
+@3c3 0285
+// rht and lft value for cycle 482 
+@3c4 fe76
+@3c5 027a
+// rht and lft value for cycle 483 
+@3c6 fe83
+@3c7 026f
+// rht and lft value for cycle 484 
+@3c8 fe91
+@3c9 0261
+// rht and lft value for cycle 485 
+@3ca fe9f
+@3cb 0253
+// rht and lft value for cycle 486 
+@3cc fead
+@3cd 0245
+// rht and lft value for cycle 487 
+@3ce febc
+@3cf 0238
+// rht and lft value for cycle 488 
+@3d0 feca
+@3d1 022a
+// rht and lft value for cycle 489 
+@3d2 fed8
+@3d3 021c
+// rht and lft value for cycle 490 
+@3d4 fee9
+@3d5 020b
+// rht and lft value for cycle 491 
+@3d6 fef7
+@3d7 01ff
+// rht and lft value for cycle 492 
+@3d8 ff05
+@3d9 01f1
+// rht and lft value for cycle 493 
+@3da ff13
+@3db 01e3
+// rht and lft value for cycle 494 
+@3dc ff21
+@3dd 01d5
+// rht and lft value for cycle 495 
+@3de ff2f
+@3df 01c9
+// rht and lft value for cycle 496 
+@3e0 ff3d
+@3e1 01bb
+// rht and lft value for cycle 497 
+@3e2 ff4b
+@3e3 01ad
+// rht and lft value for cycle 498 
+@3e4 ff59
+@3e5 019f
+// rht and lft value for cycle 499 
+@3e6 ff68
+@3e7 0192
+// rht and lft value for cycle 500 
+@3e8 ff76
+@3e9 0184
+// rht and lft value for cycle 501 
+@3ea ff80
+@3eb 017a
+// rht and lft value for cycle 502 
+@3ec ff8e
+@3ed 016c
+// rht and lft value for cycle 503 
+@3ee ff9d
+@3ef 015f
+// rht and lft value for cycle 504 
+@3f0 ffab
+@3f1 0151
+// rht and lft value for cycle 505 
+@3f2 ffb6
+@3f3 0146
+// rht and lft value for cycle 506 
+@3f4 ffbf
+@3f5 013d
+// rht and lft value for cycle 507 
+@3f6 ffca
+@3f7 0134
+// rht and lft value for cycle 508 
+@3f8 ffd8
+@3f9 0126
+// rht and lft value for cycle 509 
+@3fa ffe3
+@3fb 011b
+// rht and lft value for cycle 510 
+@3fc fff1
+@3fd 010d
+// rht and lft value for cycle 511 
+@3fe fffd
+@3ff 0103
+// rht and lft value for cycle 512 
+@400 0008
+@401 00f8
+// rht and lft value for cycle 513 
+@402 0012
+@403 00ee
+// rht and lft value for cycle 514 
+@404 0020
+@405 00e0
+// rht and lft value for cycle 515 
+@406 002c
+@407 00d6
+// rht and lft value for cycle 516 
+@408 0033
+@409 00cf
+// rht and lft value for cycle 517 
+@40a 003d
+@40b 00c5
+// rht and lft value for cycle 518 
+@40c 0048
+@40d 00ba
+// rht and lft value for cycle 519 
+@40e 0054
+@40f 00b0
+// rht and lft value for cycle 520 
+@410 005b
+@411 00a9
+// rht and lft value for cycle 521 
+@412 0066
+@413 009e
+// rht and lft value for cycle 522 
+@414 006d
+@415 0097
+// rht and lft value for cycle 523 
+@416 0076
+@417 0090
+// rht and lft value for cycle 524 
+@418 0080
+@419 0086
+// rht and lft value for cycle 525 
+@41a 0087
+@41b 007f
+// rht and lft value for cycle 526 
+@41c 008e
+@41d 0078
+// rht and lft value for cycle 527 
+@41e 0097
+@41f 0071
+// rht and lft value for cycle 528 
+@420 009b
+@421 006d
+// rht and lft value for cycle 529 
+@422 00a2
+@423 0066
+// rht and lft value for cycle 530 
+@424 00a8
+@425 0060
+// rht and lft value for cycle 531 
+@426 00ae
+@427 005c
+// rht and lft value for cycle 532 
+@428 00b5
+@429 0055
+// rht and lft value for cycle 533 
+@42a 00b8
+@42b 0052
+// rht and lft value for cycle 534 
+@42c 00bc
+@42d 004e
+// rht and lft value for cycle 535 
+@42e 00c1
+@42f 004b
+// rht and lft value for cycle 536 
+@430 00c5
+@431 0047
+// rht and lft value for cycle 537 
+@432 00c8
+@433 0044
+// rht and lft value for cycle 538 
+@434 00cc
+@435 0040
+// rht and lft value for cycle 539 
+@436 00d1
+@437 003d
+// rht and lft value for cycle 540 
+@438 00d1
+@439 003d
+// rht and lft value for cycle 541 
+@43a 00d5
+@43b 0039
+// rht and lft value for cycle 542 
+@43c 00d5
+@43d 0039
+// rht and lft value for cycle 543 
+@43e 00d7
+@43f 0039
+// rht and lft value for cycle 544 
+@440 00d7
+@441 0039
+// rht and lft value for cycle 545 
+@442 00d7
+@443 0039
+// rht and lft value for cycle 546 
+@444 00d7
+@445 0039
+// rht and lft value for cycle 547 
+@446 00d9
+@447 0039
+// rht and lft value for cycle 548 
+@448 00d9
+@449 0039
+// rht and lft value for cycle 549 
+@44a 00d9
+@44b 0039
+// rht and lft value for cycle 550 
+@44c 00d5
+@44d 003d
+// rht and lft value for cycle 551 
+@44e 00d7
+@44f 003d
+// rht and lft value for cycle 552 
+@450 00d4
+@451 0040
+// rht and lft value for cycle 553 
+@452 00d4
+@453 0040
+// rht and lft value for cycle 554 
+@454 00d0
+@455 0044
+// rht and lft value for cycle 555 
+@456 00cf
+@457 0047
+// rht and lft value for cycle 556 
+@458 00cb
+@459 004b
+// rht and lft value for cycle 557 
+@45a 00c8
+@45b 004e
+// rht and lft value for cycle 558 
+@45c 00c4
+@45d 0052
+// rht and lft value for cycle 559 
+@45e 00c3
+@45f 0055
+// rht and lft value for cycle 560 
+@460 00bc
+@461 005c
+// rht and lft value for cycle 561 
+@462 00b8
+@463 0060
+// rht and lft value for cycle 562 
+@464 00b5
+@465 0063
+// rht and lft value for cycle 563 
+@466 00b0
+@467 006a
+// rht and lft value for cycle 564 
+@468 00ad
+@469 006d
+// rht and lft value for cycle 565 
+@46a 00a6
+@46b 0074
+// rht and lft value for cycle 566 
+@46c 009f
+@46d 007b
+// rht and lft value for cycle 567 
+@46e 009d
+@46f 007f
+// rht and lft value for cycle 568 
+@470 0096
+@471 0086
+// rht and lft value for cycle 569 
+@472 008f
+@473 008d
+// rht and lft value for cycle 570 
+@474 0088
+@475 0094
+// rht and lft value for cycle 571 
+@476 0083
+@477 009b
+// rht and lft value for cycle 572 
+@478 007c
+@479 00a2
+// rht and lft value for cycle 573 
+@47a 0075
+@47b 00a9
+// rht and lft value for cycle 574 
+@47c 006e
+@47d 00b0
+// rht and lft value for cycle 575 
+@47e 0069
+@47f 00b7
+// rht and lft value for cycle 576 
+@480 0062
+@481 00be
+// rht and lft value for cycle 577 
+@482 0058
+@483 00c8
+// rht and lft value for cycle 578 
+@484 0051
+@485 00cf
+// rht and lft value for cycle 579 
+@486 004b
+@487 00d7
+// rht and lft value for cycle 580 
+@488 0044
+@489 00de
+// rht and lft value for cycle 581 
+@48a 0039
+@48b 00e9
+// rht and lft value for cycle 582 
+@48c 0032
+@48d 00f0
+// rht and lft value for cycle 583 
+@48e 002c
+@48f 00f8
+// rht and lft value for cycle 584 
+@490 0022
+@491 0102
+// rht and lft value for cycle 585 
+@492 001b
+@493 0109
+// rht and lft value for cycle 586 
+@494 0010
+@495 0114
+// rht and lft value for cycle 587 
+@496 000b
+@497 011b
+// rht and lft value for cycle 588 
+@498 0001
+@499 0125
+// rht and lft value for cycle 589 
+@49a fffa
+@49b 012c
+// rht and lft value for cycle 590 
+@49c ffef
+@49d 0137
+// rht and lft value for cycle 591 
+@49e ffe9
+@49f 013f
+// rht and lft value for cycle 592 
+@4a0 ffe3
+@4a1 0145
+// rht and lft value for cycle 593 
+@4a2 ffdd
+@4a3 014b
+// rht and lft value for cycle 594 
+@4a4 ffd6
+@4a5 0152
+// rht and lft value for cycle 595 
+@4a6 ffcc
+@4a7 015e
+// rht and lft value for cycle 596 
+@4a8 ffc5
+@4a9 0165
+// rht and lft value for cycle 597 
+@4aa ffbb
+@4ab 016f
+// rht and lft value for cycle 598 
+@4ac ffb4
+@4ad 0176
+// rht and lft value for cycle 599 
+@4ae ffae
+@4af 017e
+// rht and lft value for cycle 600 
+@4b0 ffa3
+@4b1 0189
+// rht and lft value for cycle 601 
+@4b2 ff9c
+@4b3 0190
+// rht and lft value for cycle 602 
+@4b4 ff95
+@4b5 0197
+// rht and lft value for cycle 603 
+@4b6 ff8b
+@4b7 01a3
+// rht and lft value for cycle 604 
+@4b8 ff84
+@4b9 01aa
+// rht and lft value for cycle 605 
+@4ba ff7d
+@4bb 01b1
+// rht and lft value for cycle 606 
+@4bc ff76
+@4bd 01b8
+// rht and lft value for cycle 607 
+@4be ff6c
+@4bf 01c4
+// rht and lft value for cycle 608 
+@4c0 ff65
+@4c1 01cb
+// rht and lft value for cycle 609 
+@4c2 ff5e
+@4c3 01d2
+// rht and lft value for cycle 610 
+@4c4 ff57
+@4c5 01d9
+// rht and lft value for cycle 611 
+@4c6 ff51
+@4c7 01e1
+// rht and lft value for cycle 612 
+@4c8 ff4a
+@4c9 01e8
+// rht and lft value for cycle 613 
+@4ca ff43
+@4cb 01ef
+// rht and lft value for cycle 614 
+@4cc ff3c
+@4cd 01f6
+// rht and lft value for cycle 615 
+@4ce ff39
+@4cf 01fb
+// rht and lft value for cycle 616 
+@4d0 ff32
+@4d1 0202
+// rht and lft value for cycle 617 
+@4d2 ff2b
+@4d3 0209
+// rht and lft value for cycle 618 
+@4d4 ff24
+@4d5 0210
+// rht and lft value for cycle 619 
+@4d6 ff20
+@4d7 0216
+// rht and lft value for cycle 620 
+@4d8 ff19
+@4d9 021d
+// rht and lft value for cycle 621 
+@4da ff16
+@4db 0220
+// rht and lft value for cycle 622 
+@4dc ff0f
+@4dd 0227
+// rht and lft value for cycle 623 
+@4de ff0c
+@4df 022c
+// rht and lft value for cycle 624 
+@4e0 ff09
+@4e1 022f
+// rht and lft value for cycle 625 
+@4e2 ff02
+@4e3 0236
+// rht and lft value for cycle 626 
+@4e4 feff
+@4e5 0239
+// rht and lft value for cycle 627 
+@4e6 fefb
+@4e7 023f
+// rht and lft value for cycle 628 
+@4e8 fef8
+@4e9 0242
+// rht and lft value for cycle 629 
+@4ea fef4
+@4eb 0246
+// rht and lft value for cycle 630 
+@4ec fef1
+@4ed 0249
+// rht and lft value for cycle 631 
+@4ee feed
+@4ef 024f
+// rht and lft value for cycle 632 
+@4f0 feea
+@4f1 0252
+// rht and lft value for cycle 633 
+@4f2 fee6
+@4f3 0256
+// rht and lft value for cycle 634 
+@4f4 fee6
+@4f5 0256
+// rht and lft value for cycle 635 
+@4f6 fee3
+@4f7 025b
+// rht and lft value for cycle 636 
+@4f8 fedf
+@4f9 025f
+// rht and lft value for cycle 637 
+@4fa fedf
+@4fb 025f
+// rht and lft value for cycle 638 
+@4fc fedc
+@4fd 0262
+// rht and lft value for cycle 639 
+@4fe fedc
+@4ff 0264
+// rht and lft value for cycle 640 
+@500 fedc
+@501 0264
+// rht and lft value for cycle 641 
+@502 fed8
+@503 0268
+// rht and lft value for cycle 642 
+@504 fed8
+@505 0268
+// rht and lft value for cycle 643 
+@506 fed8
+@507 026a
+// rht and lft value for cycle 644 
+@508 fed8
+@509 026a
+// rht and lft value for cycle 645 
+@50a fed8
+@50b 026a
+// rht and lft value for cycle 646 
+@50c fed8
+@50d 026a
+// rht and lft value for cycle 647 
+@50e fed8
+@50f 026c
+// rht and lft value for cycle 648 
+@510 fed8
+@511 026c
+// rht and lft value for cycle 649 
+@512 fed8
+@513 026c
+// rht and lft value for cycle 650 
+@514 fed8
+@515 026c
+// rht and lft value for cycle 651 
+@516 fedc
+@517 026a
+// rht and lft value for cycle 652 
+@518 fedc
+@519 026a
+// rht and lft value for cycle 653 
+@51a fedc
+@51b 026a
+// rht and lft value for cycle 654 
+@51c fedf
+@51d 0267
+// rht and lft value for cycle 655 
+@51e fee0
+@51f 0268
+// rht and lft value for cycle 656 
+@520 fee4
+@521 0264
+// rht and lft value for cycle 657 
+@522 fee7
+@523 0261
+// rht and lft value for cycle 658 
+@524 fee7
+@525 0261
+// rht and lft value for cycle 659 
+@526 feeb
+@527 025f
+// rht and lft value for cycle 660 
+@528 feee
+@529 025c
+// rht and lft value for cycle 661 
+@52a fef2
+@52b 0258
+// rht and lft value for cycle 662 
+@52c fef2
+@52d 0258
+// rht and lft value for cycle 663 
+@52e fef5
+@52f 0257
+// rht and lft value for cycle 664 
+@530 fef9
+@531 0253
+// rht and lft value for cycle 665 
+@532 fefc
+@533 0250
+// rht and lft value for cycle 666 
+@534 ff00
+@535 024c
+// rht and lft value for cycle 667 
+@536 ff03
+@537 024b
+// rht and lft value for cycle 668 
+@538 ff07
+@539 0247
+// rht and lft value for cycle 669 
+@53a ff0a
+@53b 0244
+// rht and lft value for cycle 670 
+@53c ff11
+@53d 023d
+// rht and lft value for cycle 671 
+@53e ff14
+@53f 023c
+// rht and lft value for cycle 672 
+@540 ff18
+@541 0238
+// rht and lft value for cycle 673 
+@542 ff1b
+@543 0235
+// rht and lft value for cycle 674 
+@544 ff22
+@545 022e
+// rht and lft value for cycle 675 
+@546 ff27
+@547 022b
+// rht and lft value for cycle 676 
+@548 ff2a
+@549 0228
+// rht and lft value for cycle 677 
+@54a ff2e
+@54b 0224
+// rht and lft value for cycle 678 
+@54c ff35
+@54d 021d
+// rht and lft value for cycle 679 
+@54e ff38
+@54f 021c
+// rht and lft value for cycle 680 
+@550 ff3f
+@551 0215
+// rht and lft value for cycle 681 
+@552 ff43
+@553 0211
+// rht and lft value for cycle 682 
+@554 ff46
+@555 020e
+// rht and lft value for cycle 683 
+@556 ff4e
+@557 0208
+// rht and lft value for cycle 684 
+@558 ff52
+@559 0204
+// rht and lft value for cycle 685 
+@55a ff59
+@55b 01fd
+// rht and lft value for cycle 686 
+@55c ff5c
+@55d 01fa
+// rht and lft value for cycle 687 
+@55e ff63
+@55f 01f5
+// rht and lft value for cycle 688 
+@560 ff67
+@561 01f1
+// rht and lft value for cycle 689 
+@562 ff6e
+@563 01ea
+// rht and lft value for cycle 690 
+@564 ff71
+@565 01e7
+// rht and lft value for cycle 691 
+@566 ff79
+@567 01e1
+// rht and lft value for cycle 692 
+@568 ff7d
+@569 01dd
+// rht and lft value for cycle 693 
+@56a ff84
+@56b 01d6
+// rht and lft value for cycle 694 
+@56c ff87
+@56d 01d3
+// rht and lft value for cycle 695 
+@56e ff8e
+@56f 01ce
+// rht and lft value for cycle 696 
+@570 ff92
+@571 01ca
+// rht and lft value for cycle 697 
+@572 ff99
+@573 01c3
+// rht and lft value for cycle 698 
+@574 ff9c
+@575 01c0
+// rht and lft value for cycle 699 
+@576 ffa4
+@577 01ba
+// rht and lft value for cycle 700 
+@578 ffa8
+@579 01b6
+// rht and lft value for cycle 701 
+@57a ffab
+@57b 01b3
+// rht and lft value for cycle 702 
+@57c ffb2
+@57d 01ac
+// rht and lft value for cycle 703 
+@57e ffb7
+@57f 01a9
+// rht and lft value for cycle 704 
+@580 ffbe
+@581 01a2
+// rht and lft value for cycle 705 
+@582 ffc1
+@583 019f
+// rht and lft value for cycle 706 
+@584 ffc5
+@585 019b
+// rht and lft value for cycle 707 
+@586 ffcd
+@587 0195
+// rht and lft value for cycle 708 
+@588 ffd0
+@589 0192
+// rht and lft value for cycle 709 
+@58a ffd4
+@58b 018e
+// rht and lft value for cycle 710 
+@58c ffd7
+@58d 018b
+// rht and lft value for cycle 711 
+@58e ffdf
+@58f 0185
+// rht and lft value for cycle 712 
+@590 ffe3
+@591 0181
+// rht and lft value for cycle 713 
+@592 ffe6
+@593 017e
+// rht and lft value for cycle 714 
+@594 ffea
+@595 017a
+// rht and lft value for cycle 715 
+@596 ffee
+@597 0178
+// rht and lft value for cycle 716 
+@598 fff1
+@599 0175
+// rht and lft value for cycle 717 
+@59a fff1
+@59b 0175
+// rht and lft value for cycle 718 
+@59c fff4
+@59d 0172
+// rht and lft value for cycle 719 
+@59e fff8
+@59f 0170
+// rht and lft value for cycle 720 
+@5a0 fffc
+@5a1 016c
+// rht and lft value for cycle 721 
+@5a2 ffff
+@5a3 0169
+// rht and lft value for cycle 722 
+@5a4 0003
+@5a5 0165
+// rht and lft value for cycle 723 
+@5a6 0007
+@5a7 0163
+// rht and lft value for cycle 724 
+@5a8 000b
+@5a9 015f
+// rht and lft value for cycle 725 
+@5aa 000b
+@5ab 015f
+// rht and lft value for cycle 726 
+@5ac 000e
+@5ad 015c
+// rht and lft value for cycle 727 
+@5ae 0014
+@5af 0158
+// rht and lft value for cycle 728 
+@5b0 0017
+@5b1 0155
+// rht and lft value for cycle 729 
+@5b2 0017
+@5b3 0155
+// rht and lft value for cycle 730 
+@5b4 001b
+@5b5 0151
+// rht and lft value for cycle 731 
+@5b6 001c
+@5b7 0152
+// rht and lft value for cycle 732 
+@5b8 001f
+@5b9 014f
+// rht and lft value for cycle 733 
+@5ba 001f
+@5bb 014f
+// rht and lft value for cycle 734 
+@5bc 0023
+@5bd 014b
+// rht and lft value for cycle 735 
+@5be 0024
+@5bf 014c
+// rht and lft value for cycle 736 
+@5c0 0027
+@5c1 0149
+// rht and lft value for cycle 737 
+@5c2 0027
+@5c3 0149
+// rht and lft value for cycle 738 
+@5c4 0027
+@5c5 0149
+// rht and lft value for cycle 739 
+@5c6 0028
+@5c7 014a
+// rht and lft value for cycle 740 
+@5c8 002c
+@5c9 0146
+// rht and lft value for cycle 741 
+@5ca 002c
+@5cb 0146
+// rht and lft value for cycle 742 
+@5cc 002c
+@5cd 0146
+// rht and lft value for cycle 743 
+@5ce 002e
+@5cf 0146
+// rht and lft value for cycle 744 
+@5d0 002e
+@5d1 0146
+// rht and lft value for cycle 745 
+@5d2 002e
+@5d3 0146
+// rht and lft value for cycle 746 
+@5d4 002e
+@5d5 0146
+// rht and lft value for cycle 747 
+@5d6 002f
+@5d7 0147
+// rht and lft value for cycle 748 
+@5d8 002f
+@5d9 0147
+// rht and lft value for cycle 749 
+@5da 002f
+@5db 0147
+// rht and lft value for cycle 750 
+@5dc 002f
+@5dd 0147
+// rht and lft value for cycle 751 
+@5de 0030
+@5df 0148
+// rht and lft value for cycle 752 
+@5e0 002c
+@5e1 014c
+// rht and lft value for cycle 753 
+@5e2 002c
+@5e3 014c
+// rht and lft value for cycle 754 
+@5e4 002c
+@5e5 014c
+// rht and lft value for cycle 755 
+@5e6 002d
+@5e7 014d
+// rht and lft value for cycle 756 
+@5e8 002a
+@5e9 0150
+// rht and lft value for cycle 757 
+@5ea 002a
+@5eb 0150
+// rht and lft value for cycle 758 
+@5ec 0026
+@5ed 0154
+// rht and lft value for cycle 759 
+@5ee 0027
+@5ef 0155
+// rht and lft value for cycle 760 
+@5f0 0027
+@5f1 0155
+// rht and lft value for cycle 761 
+@5f2 0024
+@5f3 0158
+// rht and lft value for cycle 762 
+@5f4 0024
+@5f5 0158
+// rht and lft value for cycle 763 
+@5f6 0022
+@5f7 015c
+// rht and lft value for cycle 764 
+@5f8 001f
+@5f9 015f
+// rht and lft value for cycle 765 
+@5fa 001f
+@5fb 015f
+// rht and lft value for cycle 766 
+@5fc 001b
+@5fd 0163
+// rht and lft value for cycle 767 
+@5fe 001c
+@5ff 0164
+// rht and lft value for cycle 768 
+@600 0019
+@601 0167
+// rht and lft value for cycle 769 
+@602 0015
+@603 016b
+// rht and lft value for cycle 770 
+@604 0015
+@605 016b
+// rht and lft value for cycle 771 
+@606 0013
+@607 016f
+// rht and lft value for cycle 772 
+@608 000f
+@609 0173
+// rht and lft value for cycle 773 
+@60a 000c
+@60b 0176
+// rht and lft value for cycle 774 
+@60c 000c
+@60d 0176
+// rht and lft value for cycle 775 
+@60e 0009
+@60f 017b
+// rht and lft value for cycle 776 
+@610 0006
+@611 017e
+// rht and lft value for cycle 777 
+@612 0003
+@613 0181
+// rht and lft value for cycle 778 
+@614 0003
+@615 0181
+// rht and lft value for cycle 779 
+@616 0004
+@617 0182
+// rht and lft value for cycle 780 
+@618 0001
+@619 0185
+// rht and lft value for cycle 781 
+@61a fffe
+@61b 0188
+// rht and lft value for cycle 782 
+@61c fffa
+@61d 018c
+// rht and lft value for cycle 783 
+@61e fff8
+@61f 0190
+// rht and lft value for cycle 784 
+@620 fff4
+@621 0194
+// rht and lft value for cycle 785 
+@622 fff1
+@623 0197
+// rht and lft value for cycle 786 
+@624 ffed
+@625 019b
+// rht and lft value for cycle 787 
+@626 ffeb
+@627 019f
+// rht and lft value for cycle 788 
+@628 ffeb
+@629 019f
+// rht and lft value for cycle 789 
+@62a ffe7
+@62b 01a3
+// rht and lft value for cycle 790 
+@62c ffe4
+@62d 01a6
+// rht and lft value for cycle 791 
+@62e ffe1
+@62f 01ab
+// rht and lft value for cycle 792 
+@630 ffde
+@631 01ae
+// rht and lft value for cycle 793 
+@632 ffda
+@633 01b2
+// rht and lft value for cycle 794 
+@634 ffd7
+@635 01b5
+// rht and lft value for cycle 795 
+@636 ffd4
+@637 01ba
+// rht and lft value for cycle 796 
+@638 ffd1
+@639 01bd
+// rht and lft value for cycle 797 
+@63a ffcd
+@63b 01c1
+// rht and lft value for cycle 798 
+@63c ffcd
+@63d 01c1
+// rht and lft value for cycle 799 
+@63e ffcb
+@63f 01c5
+// rht and lft value for cycle 800 
+@640 ffc7
+@641 01c9
+// rht and lft value for cycle 801 
+@642 ffc4
+@643 01cc
+// rht and lft value for cycle 802 
+@644 ffc0
+@645 01d0
+// rht and lft value for cycle 803 
+@646 ffbe
+@647 01d4
+// rht and lft value for cycle 804 
+@648 ffba
+@649 01d8
+// rht and lft value for cycle 805 
+@64a ffba
+@64b 01d8
+// rht and lft value for cycle 806 
+@64c ffb7
+@64d 01db
+// rht and lft value for cycle 807 
+@64e ffb4
+@64f 01e0
+// rht and lft value for cycle 808 
+@650 ffb1
+@651 01e3
+// rht and lft value for cycle 809 
+@652 ffad
+@653 01e7
+// rht and lft value for cycle 810 
+@654 ffad
+@655 01e7
+// rht and lft value for cycle 811 
+@656 ffaa
+@657 01ec
+// rht and lft value for cycle 812 
+@658 ffa6
+@659 01f0
+// rht and lft value for cycle 813 
+@65a ffa6
+@65b 01f0
+// rht and lft value for cycle 814 
+@65c ffa3
+@65d 01f3
+// rht and lft value for cycle 815 
+@65e ffa0
+@65f 01f8
+// rht and lft value for cycle 816 
+@660 ffa0
+@661 01f8
+// rht and lft value for cycle 817 
+@662 ff9d
+@663 01fb
+// rht and lft value for cycle 818 
+@664 ff99
+@665 01ff
+// rht and lft value for cycle 819 
+@666 ff9a
+@667 0200
+// rht and lft value for cycle 820 
+@668 ff97
+@669 0203
+// rht and lft value for cycle 821 
+@66a ff97
+@66b 0203
+// rht and lft value for cycle 822 
+@66c ff93
+@66d 0207
+// rht and lft value for cycle 823 
+@66e ff93
+@66f 0209
+// rht and lft value for cycle 824 
+@670 ff90
+@671 020c
+// rht and lft value for cycle 825 
+@672 ff90
+@673 020c
+// rht and lft value for cycle 826 
+@674 ff8c
+@675 0210
+// rht and lft value for cycle 827 
+@676 ff8d
+@677 0211
+// rht and lft value for cycle 828 
+@678 ff8a
+@679 0214
+// rht and lft value for cycle 829 
+@67a ff8a
+@67b 0214
+// rht and lft value for cycle 830 
+@67c ff8a
+@67d 0214
+// rht and lft value for cycle 831 
+@67e ff86
+@67f 021a
+// rht and lft value for cycle 832 
+@680 ff86
+@681 021a
+// rht and lft value for cycle 833 
+@682 ff86
+@683 021a
+// rht and lft value for cycle 834 
+@684 ff83
+@685 021d
+// rht and lft value for cycle 835 
+@686 ff84
+@687 021e
+// rht and lft value for cycle 836 
+@688 ff84
+@689 021e
+// rht and lft value for cycle 837 
+@68a ff84
+@68b 021e
+// rht and lft value for cycle 838 
+@68c ff80
+@68d 0222
+// rht and lft value for cycle 839 
+@68e ff81
+@68f 0223
+// rht and lft value for cycle 840 
+@690 ff81
+@691 0223
+// rht and lft value for cycle 841 
+@692 ff81
+@693 0223
+// rht and lft value for cycle 842 
+@694 ff81
+@695 0223
+// rht and lft value for cycle 843 
+@696 ff81
+@697 0225
+// rht and lft value for cycle 844 
+@698 ff81
+@699 0225
+// rht and lft value for cycle 845 
+@69a ff81
+@69b 0225
+// rht and lft value for cycle 846 
+@69c ff81
+@69d 0225
+// rht and lft value for cycle 847 
+@69e ff82
+@69f 0226
+// rht and lft value for cycle 848 
+@6a0 ff82
+@6a1 0226
+// rht and lft value for cycle 849 
+@6a2 ff82
+@6a3 0226
+// rht and lft value for cycle 850 
+@6a4 ff82
+@6a5 0226
+// rht and lft value for cycle 851 
+@6a6 ff82
+@6a7 0228
+// rht and lft value for cycle 852 
+@6a8 ff82
+@6a9 0228
+// rht and lft value for cycle 853 
+@6aa ff82
+@6ab 0228
+// rht and lft value for cycle 854 
+@6ac ff86
+@6ad 0224
+// rht and lft value for cycle 855 
+@6ae ff87
+@6af 0225
+// rht and lft value for cycle 856 
+@6b0 ff87
+@6b1 0225
+// rht and lft value for cycle 857 
+@6b2 ff87
+@6b3 0225
+// rht and lft value for cycle 858 
+@6b4 ff8a
+@6b5 0222
+// rht and lft value for cycle 859 
+@6b6 ff8a
+@6b7 0224
+// rht and lft value for cycle 860 
+@6b8 ff8a
+@6b9 0224
+// rht and lft value for cycle 861 
+@6ba ff8a
+@6bb 0224
+// rht and lft value for cycle 862 
+@6bc ff8e
+@6bd 0220
+// rht and lft value for cycle 863 
+@6be ff8f
+@6bf 0221
+// rht and lft value for cycle 864 
+@6c0 ff8f
+@6c1 0221
+// rht and lft value for cycle 865 
+@6c2 ff92
+@6c3 021e
+// rht and lft value for cycle 866 
+@6c4 ff92
+@6c5 021e
+// rht and lft value for cycle 867 
+@6c6 ff93
+@6c7 021f
+// rht and lft value for cycle 868 
+@6c8 ff97
+@6c9 021b
+// rht and lft value for cycle 869 
+@6ca ff97
+@6cb 021b
+// rht and lft value for cycle 870 
+@6cc ff9a
+@6cd 0218
+// rht and lft value for cycle 871 
+@6ce ff9a
+@6cf 021a
+// rht and lft value for cycle 872 
+@6d0 ff9e
+@6d1 0216
+// rht and lft value for cycle 873 
+@6d2 ff9e
+@6d3 0216
+// rht and lft value for cycle 874 
+@6d4 ff9e
+@6d5 0216
+// rht and lft value for cycle 875 
+@6d6 ffa2
+@6d7 0214
+// rht and lft value for cycle 876 
+@6d8 ffa2
+@6d9 0214
+// rht and lft value for cycle 877 
+@6da ffa6
+@6db 0210
+// rht and lft value for cycle 878 
+@6dc ffa6
+@6dd 0210
+// rht and lft value for cycle 879 
+@6de ffa9
+@6df 020f
+// rht and lft value for cycle 880 
+@6e0 ffa9
+@6e1 020f
+// rht and lft value for cycle 881 
+@6e2 ffad
+@6e3 020b
+// rht and lft value for cycle 882 
+@6e4 ffb0
+@6e5 0208
+// rht and lft value for cycle 883 
+@6e6 ffb1
+@6e7 0209
+// rht and lft value for cycle 884 
+@6e8 ffb5
+@6e9 0205
+// rht and lft value for cycle 885 
+@6ea ffb5
+@6eb 0205
+// rht and lft value for cycle 886 
+@6ec ffb8
+@6ed 0202
+// rht and lft value for cycle 887 
+@6ee ffb9
+@6ef 0203
+// rht and lft value for cycle 888 
+@6f0 ffbd
+@6f1 01ff
+// rht and lft value for cycle 889 
+@6f2 ffbd
+@6f3 01ff
+// rht and lft value for cycle 890 
+@6f4 ffc0
+@6f5 01fc
+// rht and lft value for cycle 891 
+@6f6 ffc1
+@6f7 01fd
+// rht and lft value for cycle 892 
+@6f8 ffc5
+@6f9 01f9
+// rht and lft value for cycle 893 
+@6fa ffc5
+@6fb 01f9
+// rht and lft value for cycle 894 
+@6fc ffc8
+@6fd 01f6
+// rht and lft value for cycle 895 
+@6fe ffcd
+@6ff 01f3
+// rht and lft value for cycle 896 
+@700 ffcd
+@701 01f3
+// rht and lft value for cycle 897 
+@702 ffd0
+@703 01f0
+// rht and lft value for cycle 898 
+@704 ffd0
+@705 01f0
+// rht and lft value for cycle 899 
+@706 ffd4
+@707 01ee
+// rht and lft value for cycle 900 
+@708 ffd4
+@709 01ee
+// rht and lft value for cycle 901 
+@70a ffd7
+@70b 01eb
+// rht and lft value for cycle 902 
+@70c ffd7
+@70d 01eb
+// rht and lft value for cycle 903 
+@70e ffdc
+@70f 01e8
+// rht and lft value for cycle 904 
+@710 ffdc
+@711 01e8
+// rht and lft value for cycle 905 
+@712 ffdf
+@713 01e5
+// rht and lft value for cycle 906 
+@714 ffdf
+@715 01e5
+// rht and lft value for cycle 907 
+@716 ffe4
+@717 01e2
+// rht and lft value for cycle 908 
+@718 ffe4
+@719 01e2
+// rht and lft value for cycle 909 
+@71a ffe7
+@71b 01df
+// rht and lft value for cycle 910 
+@71c ffe7
+@71d 01df
+// rht and lft value for cycle 911 
+@71e ffec
+@71f 01dc
+// rht and lft value for cycle 912 
+@720 ffec
+@721 01dc
+// rht and lft value for cycle 913 
+@722 ffec
+@723 01dc
+// rht and lft value for cycle 914 
+@724 ffef
+@725 01d9
+// rht and lft value for cycle 915 
+@726 fff0
+@727 01da
+// rht and lft value for cycle 916 
+@728 fff4
+@729 01d6
+// rht and lft value for cycle 917 
+@72a fff4
+@72b 01d6
+// rht and lft value for cycle 918 
+@72c fff4
+@72d 01d6
+// rht and lft value for cycle 919 
+@72e fff8
+@72f 01d4
+// rht and lft value for cycle 920 
+@730 fff8
+@731 01d4
+// rht and lft value for cycle 921 
+@732 fffc
+@733 01d0
+// rht and lft value for cycle 922 
+@734 fffc
+@735 01d0
+// rht and lft value for cycle 923 
+@736 fffd
+@737 01d1
+// rht and lft value for cycle 924 
+@738 fffd
+@739 01d1
+// rht and lft value for cycle 925 
+@73a 0000
+@73b 01ce
+// rht and lft value for cycle 926 
+@73c 0000
+@73d 01ce
+// rht and lft value for cycle 927 
+@73e 0001
+@73f 01cf
+// rht and lft value for cycle 928 
+@740 0005
+@741 01cb
+// rht and lft value for cycle 929 
+@742 0005
+@743 01cb
+// rht and lft value for cycle 930 
+@744 0005
+@745 01cb
+// rht and lft value for cycle 931 
+@746 0006
+@747 01cc
+// rht and lft value for cycle 932 
+@748 0006
+@749 01cc
+// rht and lft value for cycle 933 
+@74a 0009
+@74b 01c9
+// rht and lft value for cycle 934 
+@74c 0009
+@74d 01c9
+// rht and lft value for cycle 935 
+@74e 000a
+@74f 01ca
+// rht and lft value for cycle 936 
+@750 000a
+@751 01ca
+// rht and lft value for cycle 937 
+@752 000a
+@753 01ca
+// rht and lft value for cycle 938 
+@754 000a
+@755 01ca
+// rht and lft value for cycle 939 
+@756 000b
+@757 01cb
+// rht and lft value for cycle 940 
+@758 000b
+@759 01cb
+// rht and lft value for cycle 941 
+@75a 000b
+@75b 01cb
+// rht and lft value for cycle 942 
+@75c 000f
+@75d 01c7
+// rht and lft value for cycle 943 
+@75e 0010
+@75f 01c8
+// rht and lft value for cycle 944 
+@760 0010
+@761 01c8
+// rht and lft value for cycle 945 
+@762 0010
+@763 01c8
+// rht and lft value for cycle 946 
+@764 0010
+@765 01c8
+// rht and lft value for cycle 947 
+@766 0011
+@767 01c9
+// rht and lft value for cycle 948 
+@768 0011
+@769 01c9
+// rht and lft value for cycle 949 
+@76a 0011
+@76b 01c9
+// rht and lft value for cycle 950 
+@76c 000d
+@76d 01cd
+// rht and lft value for cycle 951 
+@76e 000e
+@76f 01ce
+// rht and lft value for cycle 952 
+@770 000e
+@771 01ce
+// rht and lft value for cycle 953 
+@772 000e
+@773 01ce
+// rht and lft value for cycle 954 
+@774 000e
+@775 01ce
+// rht and lft value for cycle 955 
+@776 000f
+@777 01cf
+// rht and lft value for cycle 956 
+@778 000f
+@779 01cf
+// rht and lft value for cycle 957 
+@77a 000f
+@77b 01cf
+// rht and lft value for cycle 958 
+@77c 000f
+@77d 01cf
+// rht and lft value for cycle 959 
+@77e 000d
+@77f 01d3
+// rht and lft value for cycle 960 
+@780 000d
+@781 01d3
+// rht and lft value for cycle 961 
+@782 000d
+@783 01d3
+// rht and lft value for cycle 962 
+@784 000d
+@785 01d3
+// rht and lft value for cycle 963 
+@786 000e
+@787 01d4
+// rht and lft value for cycle 964 
+@788 000e
+@789 01d4
+// rht and lft value for cycle 965 
+@78a 000a
+@78b 01d8
+// rht and lft value for cycle 966 
+@78c 000a
+@78d 01d8
+// rht and lft value for cycle 967 
+@78e 000b
+@78f 01d9
+// rht and lft value for cycle 968 
+@790 000b
+@791 01d9
+// rht and lft value for cycle 969 
+@792 0008
+@793 01dc
+// rht and lft value for cycle 970 
+@794 0008
+@795 01dc
+// rht and lft value for cycle 971 
+@796 0009
+@797 01dd
+// rht and lft value for cycle 972 
+@798 0009
+@799 01dd
+// rht and lft value for cycle 973 
+@79a 0005
+@79b 01e1
+// rht and lft value for cycle 974 
+@79c 0005
+@79d 01e1
+// rht and lft value for cycle 975 
+@79e 0006
+@79f 01e2
+// rht and lft value for cycle 976 
+@7a0 0003
+@7a1 01e5
+// rht and lft value for cycle 977 
+@7a2 0003
+@7a3 01e5
+// rht and lft value for cycle 978 
+@7a4 0003
+@7a5 01e5
+// rht and lft value for cycle 979 
+@7a6 0004
+@7a7 01e6
+// rht and lft value for cycle 980 
+@7a8 0000
+@7a9 01ea
+// rht and lft value for cycle 981 
+@7aa 0000
+@7ab 01ea
+// rht and lft value for cycle 982 
+@7ac 0000
+@7ad 01ea
+// rht and lft value for cycle 983 
+@7ae fffe
+@7af 01ee
+// rht and lft value for cycle 984 
+@7b0 fffe
+@7b1 01ee
+// rht and lft value for cycle 985 
+@7b2 fffe
+@7b3 01ee
+// rht and lft value for cycle 986 
+@7b4 fffa
+@7b5 01f2
+// rht and lft value for cycle 987 
+@7b6 fffb
+@7b7 01f3
+// rht and lft value for cycle 988 
+@7b8 fffb
+@7b9 01f3
+// rht and lft value for cycle 989 
+@7ba fff8
+@7bb 01f6
+// rht and lft value for cycle 990 
+@7bc fff8
+@7bd 01f6
+// rht and lft value for cycle 991 
+@7be fff9
+@7bf 01f7
+// rht and lft value for cycle 992 
+@7c0 fff5
+@7c1 01fb
+// rht and lft value for cycle 993 
+@7c2 fff5
+@7c3 01fb
+// rht and lft value for cycle 994 
+@7c4 fff5
+@7c5 01fb
+// rht and lft value for cycle 995 
+@7c6 fff2
+@7c7 0200
+// rht and lft value for cycle 996 
+@7c8 fff2
+@7c9 0200
+// rht and lft value for cycle 997 
+@7ca fff2
+@7cb 0200
+// rht and lft value for cycle 998 
+@7cc ffee
+@7cd 0204
+// rht and lft value for cycle 999 
+@7ce ffef
+@7cf 0205
+// rht and lft value for cycle 1000 
+@7d0 0031
+@7d1 01c3

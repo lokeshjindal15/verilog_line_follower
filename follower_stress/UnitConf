@@ -1,0 +1,21 @@
+
+unit("Follower")
+
+addfile("../digicore/motion/motion.sv")
+addfile("../digicore/commandcontrol/cmdcntrl.sv")
+addfile("../alu/alu.v")
+addfile("../a2d_intf/A2D_intf.sv")
+addfile("../barcode/barcode.sv")
+addfile("../barcode/barcode_mimic.sv")
+addfile("follower_stress_tb.sv", tb=True)
+addfile("../motor_cntrl/motor_cntrl.sv")
+addfile("../motor_cntrl/pwm_gen.v")
+addfile("../rst_synch/rst_synch.v")
+addfile("../uart/UART_rx.sv")
+addfile("../follower/follower.v")
+addfile("../digicore/dig_core.sv")
+addfile("../uart/UART_tx.sv")
+addfile("../a2d_intf/ADC128S.sv")
+
+addtest( ("simple_long_test") )
+toplevel("follower_tb")

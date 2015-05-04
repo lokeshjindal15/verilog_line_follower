@@ -19,6 +19,7 @@ def main():
   #addUnit('a2d_intf')
   #addUnit('digicore')
   addUnit('follower')
+  #addUnit('follower_stress')
 
   runRegressions()
 

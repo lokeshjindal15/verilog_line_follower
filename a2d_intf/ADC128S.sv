@@ -11,6 +11,8 @@ module ADC128S(clk,rst_n,SS_n,SCLK,MISO,MOSI);
   // set for CH0 ....                              ||
   //////////////////////////////////////////////////
 
+  parameter ANALOG_DAT = "../tests/analog.dat";
+
   input clk,rst_n;		// clock and active low asynch reset
   input SS_n;			// active low slave select
   input SCLK;			// Serial clock
@@ -148,7 +150,7 @@ module ADC128S(clk,rst_n,SS_n,SCLK,MISO,MOSI);
   assign MISO = (SS_n) ? 1'bz : shft_reg[15];
   
   initial
-    $readmemh("../tests/analog.dat",analog_mem);		// read in representation of analog data
+    $readmemh(ANALOG_DAT,analog_mem);		// read in representation of analog data
 	
   assign shft_data = {4'b0000,analog_mem[ptr*8+channel]};
 
