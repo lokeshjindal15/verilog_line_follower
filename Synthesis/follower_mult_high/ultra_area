@@ -3,9 +3,10 @@
 Report : area
 Design : Follower
 Version: I-2013.12-SP5
-Date   : Mon May  4 22:25:43 2015
+Date   : Mon May  4 23:26:58 2015
 ****************************************
 
+Information: Updating design information... (UID-85)
 Library(s) Used:
 
     tcbn40lpbwptc (File: /cae/apps/data/synopsys-2013/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)

@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : Follower
 Version: I-2013.12-SP5
-Date   : Mon May  4 22:03:14 2015
+Date   : Mon May  4 23:26:40 2015
 ****************************************
 
 Operating Conditions: NCCOM   Library: tcbn40lpbwptc

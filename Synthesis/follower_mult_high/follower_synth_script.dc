@@ -62,10 +62,20 @@ compile -map_effort high
 check_design
 
 report_timing > timing_report.txt
+
+report_area > area_report.txt
+
 # min-delay report
 report_timing -delay min > min_delay.txt
 
-report_area > area_report.txt
+# NEW!! do a compile ultra now
+compile_ultra
+
+report_area > ultra_area
+report_timing > ultra_timing
+
+# min-delay report
+report_timing -delay min > ultra_min_delay
 
 # MODIFY
 write -format verilog Follower -output follower.vg
