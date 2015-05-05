@@ -1,7 +1,7 @@
 # Opening design vision : design_vision -shell dc_shell
 
 # MODIFY
-read_file -format sverilog {../../a2d_intf/A2D_intf.sv, ../../barcode/barcode.sv, ../../digicore/motion/motion.sv, ../../digicore/commandcontrol/cmdcntrl.sv, ../../digicore/dig_core.sv, ../../motor_cntrl/motor_cntrl.sv, ../../uart/UART_rx.sv}
+read_file -format sverilog {../../a2d_intf/A2D_intf.sv, ../../barcode/barcode.sv, ../../digicore/motion/motion.sv, ../../digicore/commandcontrol/cmdcntrl.sv, ../../digicore/dig_core.sv, ../../motor_cntrl/motor_cntrl.sv, ../../uart/UART_rx.sv, ../../digicore/motion/ir_pwm_gen.sv}
 
 read_file -format verilog {../../alu/alu.v, ../../motor_cntrl/pwm_gen.v, ../../rst_synch/rst_synch.v, ../../follower/follower.v}
 

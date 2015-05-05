@@ -3,7 +3,7 @@
 Report : area
 Design : Follower
 Version: I-2013.12-SP5
-Date   : Sat May  2 22:59:57 2015
+Date   : Mon May  4 22:03:14 2015
 ****************************************
 
 Library(s) Used:
@@ -11,20 +11,20 @@ Library(s) Used:
     tcbn40lpbwptc (File: /cae/apps/data/synopsys-2013/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
 
 Number of ports:                           27
-Number of nets:                          2364
-Number of cells:                         2054
-Number of combinational cells:           1753
-Number of sequential cells:               301
+Number of nets:                          2501
+Number of cells:                         2188
+Number of combinational cells:           1880
+Number of sequential cells:               308
 Number of macros/black boxes:               0
-Number of buf/inv:                        326
-Number of references:                     154
+Number of buf/inv:                        383
+Number of references:                     159
 
-Combinational area:               2805.642012
-Buf/Inv area:                      263.012406
-Noncombinational area:            1238.857206
+Combinational area:               2911.129215
+Buf/Inv area:                      308.876407
+Noncombinational area:            1271.844004
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:                  4044.499218
+Total cell area:                  4182.973220
 Total area:                 undefined
 1

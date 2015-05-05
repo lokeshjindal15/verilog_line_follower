@@ -1,0 +1,515 @@
+Loading db file '/cae/apps/data/synopsys-2013/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db'
+Loading db file '/cae/apps/data/synopsys-2013/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tpfn45gsgv18_120a/tpfn45gsgv18tc.db'
+Loading db file '/cae/apps/data/synopsys-2014/I-2013.12-SP5/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2014/I-2013.12-SP5/libraries/syn/standard.sldb'
+  Loading link library 'tcbn40lpbwptc'
+  Loading link library 'tpfn45gsgv18tc'
+  Loading link library 'gtech'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/c/coutinho/ece551/project/a2d_intf/A2D_intf.sv
+Compiling source file /userspace/c/coutinho/ece551/project/barcode/barcode.sv
+Compiling source file /userspace/c/coutinho/ece551/project/digicore/motion/motion.sv
+Compiling source file /userspace/c/coutinho/ece551/project/digicore/commandcontrol/cmdcntrl.sv
+Compiling source file /userspace/c/coutinho/ece551/project/digicore/dig_core.sv
+Compiling source file /userspace/c/coutinho/ece551/project/motor_cntrl/motor_cntrl.sv
+Compiling source file /userspace/c/coutinho/ece551/project/uart/UART_rx.sv
+Compiling source file /userspace/c/coutinho/ece551/project/digicore/motion/ir_pwm_gen.sv
+Warning:  /userspace/c/coutinho/ece551/project/a2d_intf/A2D_intf.sv:51: signed to unsigned assignment occurs. (VER-318)
+Warning:  /userspace/c/coutinho/ece551/project/a2d_intf/A2D_intf.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /userspace/c/coutinho/ece551/project/a2d_intf/A2D_intf.sv:98: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 90 in file
+	'/userspace/c/coutinho/ece551/project/a2d_intf/A2D_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            98            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 35 in file
+		'/userspace/c/coutinho/ece551/project/a2d_intf/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  sclk_counter_reg   | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 55 in file
+		'/userspace/c/coutinho/ece551/project/a2d_intf/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   bit_counter_reg   | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 67 in file
+		'/userspace/c/coutinho/ece551/project/a2d_intf/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 123 in file
+		'/userspace/c/coutinho/ece551/project/a2d_intf/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 130 in file
+		'/userspace/c/coutinho/ece551/project/a2d_intf/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cnv_cmplt_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 140 in file
+	'/userspace/c/coutinho/ece551/project/barcode/barcode.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           152            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine barcode line 32 in file
+		'/userspace/c/coutinho/ece551/project/barcode/barcode.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       BC3_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       BC0_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       BC1_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       BC2_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine barcode line 50 in file
+		'/userspace/c/coutinho/ece551/project/barcode/barcode.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     BC_flop_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine barcode line 90 in file
+		'/userspace/c/coutinho/ece551/project/barcode/barcode.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     counter_reg     | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine barcode line 101 in file
+		'/userspace/c/coutinho/ece551/project/barcode/barcode.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  low_count_reg_reg  | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine barcode line 110 in file
+		'/userspace/c/coutinho/ece551/project/barcode/barcode.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   bit_counter_reg   | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine barcode line 120 in file
+		'/userspace/c/coutinho/ece551/project/barcode/barcode.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ID_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine barcode line 132 in file
+		'/userspace/c/coutinho/ece551/project/barcode/barcode.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine barcode line 245 in file
+		'/userspace/c/coutinho/ece551/project/barcode/barcode.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ID_vld_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 191 in file
+	'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           193            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 230 in file
+	'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           231            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 280 in file
+	'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           313            |    auto/auto     |
+|           336            |     no/auto      |
+|           382            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine motion line 95 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Accum_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 103 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Error_reg      | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 107 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     Intgrl_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 113 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Icomp_reg      | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 117 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Pcomp_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 127 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       Fwd_reg       | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 138 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rht_reg_reg     | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 146 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lft_reg_reg     | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 205 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ir_timer_reg     | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 215 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   channel_cnt_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 244 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     intgdec_reg     | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 251 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    mult_cnt_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine motion line 273 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/motion.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 55 in file
+	'/userspace/c/coutinho/ece551/project/digicore/commandcontrol/cmdcntrl.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            64            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine Cmdcntrl line 29 in file
+		'/userspace/c/coutinho/ece551/project/digicore/commandcontrol/cmdcntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Cmdcntrl line 37 in file
+		'/userspace/c/coutinho/ece551/project/digicore/commandcontrol/cmdcntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   in_transit_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Cmdcntrl line 48 in file
+		'/userspace/c/coutinho/ece551/project/digicore/commandcontrol/cmdcntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     dst_ID_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine dig_core line 100 in file
+		'/userspace/c/coutinho/ece551/project/digicore/dig_core.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pz_cnt_reg      | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine dig_core line 108 in file
+		'/userspace/c/coutinho/ece551/project/digicore/dig_core.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      buzz_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 31 in file
+	'/userspace/c/coutinho/ece551/project/uart/UART_rx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            32            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 40 in file
+	'/userspace/c/coutinho/ece551/project/uart/UART_rx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            41            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 49 in file
+	'/userspace/c/coutinho/ece551/project/uart/UART_rx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            54            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 99 in file
+	'/userspace/c/coutinho/ece551/project/uart/UART_rx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           107            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_rx line 31 in file
+		'/userspace/c/coutinho/ece551/project/uart/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 40 in file
+		'/userspace/c/coutinho/ece551/project/uart/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 49 in file
+		'/userspace/c/coutinho/ece551/project/uart/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rx_shift_reg_reg   | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 66 in file
+		'/userspace/c/coutinho/ece551/project/uart/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 74 in file
+		'/userspace/c/coutinho/ece551/project/uart/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      RXFF2_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      RXFF1_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 85 in file
+		'/userspace/c/coutinho/ece551/project/uart/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine pwm_gen_8bit line 14 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/ir_pwm_gen.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine pwm_gen_8bit line 42 in file
+		'/userspace/c/coutinho/ece551/project/digicore/motion/ir_pwm_gen.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pwm_sig_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 8 designs.
+Current design is 'A2D_intf'.
+A2D_intf barcode motion Cmdcntrl dig_core motor_cntrl UART_rx pwm_gen_8bit
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/c/coutinho/ece551/project/alu/alu.v
+Compiling source file /userspace/c/coutinho/ece551/project/motor_cntrl/pwm_gen.v
+Compiling source file /userspace/c/coutinho/ece551/project/rst_synch/rst_synch.v
+Compiling source file /userspace/c/coutinho/ece551/project/follower/follower.v
+Warning:  /userspace/c/coutinho/ece551/project/follower/follower.v:46: the undeclared symbol 'go' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /userspace/c/coutinho/ece551/project/alu/alu.v:74: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/c/coutinho/ece551/project/alu/alu.v:75: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/c/coutinho/ece551/project/alu/alu.v:81: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine pwm_gen line 33 in file
+		'/userspace/c/coutinho/ece551/project/motor_cntrl/pwm_gen.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     PWM_sig_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine pwm_gen line 40 in file
+		'/userspace/c/coutinho/ece551/project/motor_cntrl/pwm_gen.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine rst_synch line 17 in file
+		'/userspace/c/coutinho/ece551/project/rst_synch/rst_synch.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       q2_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       q1_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Follower line 77 in file
+		'/userspace/c/coutinho/ece551/project/follower/follower.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   OK2Move_ff1_reg   | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|   OK2Move_ff2_reg   | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 4 designs.
+Current design is 'alu'.
+alu pwm_gen rst_synch Follower
