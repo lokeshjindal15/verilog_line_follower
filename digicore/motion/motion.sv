@@ -13,6 +13,10 @@ Motion Control : this block handles reading the IR sensors and
              2- when go=0 ensure that motors go in braking mode
 */
 
+
+
+
+
 module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv, 
                 IR_in_en, IR_mid_en, IR_out_en, lft_reg, rht_reg );
 
@@ -34,6 +38,7 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
  // parameter ITERM_CONST = 12'h500;
  parameter PTERM_CONST = 14'h37e0;
  parameter ITERM_CONST = 12'h380;
+ parameter IR_PWM_DUTY = 8'h8c;
  
  
  /*-- timers for IR reading -*/
@@ -44,7 +49,9 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
  
  logic reset_timer, en_timer, timer_4095, timer_32;
  logic inc_intgdec, inc_channel_cnt, reset_channel_cnt, reset_mult_cnt, inc_mult_cnt;
- logic update_IR_en, clear_IR_all;
+ // logic update_IR_en, clear_IR_all; // IRECO
+ logic pwm_sig;
+ logic [7:0] IR_pwm_duty;
  
  /* -- ALU registers  --*/
  logic [15:0]  Accum, Pcomp;           // full width
@@ -82,6 +89,7 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
   /*-- constant values --*/
  assign Pterm = PTERM_CONST;
  assign Iterm = ITERM_CONST;
+ assign IR_pwm_duty = IR_PWM_DUTY;
  
  /*-- Value regs !! --*/
  always_ff @(posedge clk or negedge rst_n)
@@ -147,6 +155,11 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
  /*--- Miscellaneous timer logic ---*/
  ///////////////////////////////////////////////
  /*-- enables for IR sensors --*/
+ 
+ ////////////////////////////////////////////////////////
+ /* IRECO - Removing to enable the PWM logic for IR_en_*/
+ ////////////////////////////////////////////////////////
+ /*
  always_ff @(posedge clk or negedge rst_n)  begin
  if (!rst_n) begin
   IR_in_en <= 0;
@@ -161,7 +174,7 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
   end
     
   else if (update_IR_en) begin
-    /*-- one hot encoding based on channel_cnt -*/
+    // one hot encoding based on channel_cnt 
     case(channel_cnt[2:1])
         00: {IR_out_en, IR_mid_en, IR_in_en} <= 3'b001;
         01: {IR_out_en, IR_mid_en, IR_in_en} <= 3'b010;
@@ -170,7 +183,24 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
     endcase
     end
   end // end of always_ff 
-        
+*/
+  
+  //////////////////////////////////////////////////////////////
+  // IRECO New Combinational Logic 
+  //////////////////////////////////////////////////////////////
+  always_comb
+  begin
+    case(channel_cnt[2:1])
+	  00: {IR_out_en, IR_mid_en, IR_in_en} = {1'b0, 1'b0, pwm_sig};
+	  01: {IR_out_en, IR_mid_en, IR_in_en} = {1'b0, pwm_sig, 1'b0};
+	  default: {IR_out_en, IR_mid_en, IR_in_en} = {pwm_sig, 1'b0, 1'b0};
+	  
+	endcase
+  end
+	  
+  // Instantiate 8-bit PWM
+  pwm_gen_8bit ipwm_gen_8bit(.clk(clk), .duty(IR_pwm_duty), .rst_n(rst_n), .pwm_sig(pwm_sig));
+  
  /*-- timer for IR sesnor reading --*/
  always_ff @(posedge clk)
   if(reset_timer)
@@ -273,8 +303,8 @@ rstaccum = 0;
 dst2accum = 0; dst2error = 0; dst2intgrl= 0; dst2icomp = 0; dst2pcomp = 0;
 dst2lft = 0; dst2rht = 0;
 
-update_IR_en = 0;
-clear_IR_all = 0;
+// update_IR_en = 0; // IRECO
+// clear_IR_all = 0; // IRECO
 
 strt_cnv = 0;
 
@@ -287,7 +317,7 @@ nxt_state = IDLE;
             //reset_channel_cnt = 1;  // because we reset channel count as we leave OUT_LEFT
             reset_timer = 1;
             rstaccum = 1;
-            update_IR_en = 1;
+            // update_IR_en = 1; // IRECO
             nxt_state = WAIT_4095;
             end
             
@@ -382,7 +412,7 @@ nxt_state = IDLE;
 
       UPDATE_IR_ALL:
          begin
-          update_IR_en = 1;
+          // update_IR_en = 1; // IRECO
           reset_timer = 1;
           nxt_state = WAIT_4095;
          end
@@ -394,7 +424,7 @@ nxt_state = IDLE;
           saturate = 1;
           dst2error = 1;
           inc_intgdec = 1;
-          clear_IR_all = 1; // turn of all the IR sensors
+          // clear_IR_all = 1; // turn of all the IR sensors IRECO
 		  reset_channel_cnt = 1; // reset channel count so that when we do update_IR_en we enable the correct IR sensor
           nxt_state = INTGL;
          end
@@ -483,7 +513,9 @@ nxt_state = IDLE;
           
   endcase   
 end // end of FSM
-     
+  
 endmodule
+
+
 
   

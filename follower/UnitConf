@@ -1,6 +1,7 @@
 
 unit("Follower")
 
+addfile("../digicore/motion/ir_pwm_gen.sv")
 addfile("../digicore/motion/motion.sv")
 addfile("../digicore/commandcontrol/cmdcntrl.sv")
 addfile("../alu/alu.v")

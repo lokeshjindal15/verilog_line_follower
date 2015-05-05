@@ -65,7 +65,11 @@ always @(posedge iDut.iCORE.iMotion.dst2lft) begin : motion_checker
 
 end
 
-/*-- IR Checker --*/
+//////////////////////////////////////
+// IRECO Disabling IR_en_checker/
+//////////////////////////////////////
+/*
+//-- IR Checker --/
 logic [2:0] channel_count;
 assign channel_count = iDut.iCORE.iMotion.channel_cnt;
 // Checker to make sure we are enabling and reading from the correct IR pair //
@@ -101,7 +105,7 @@ always@(posedge iDut.iCORE.iMotion.strt_cnv) begin: IR_en_checker
 	end
     endcase
 end // end of IR_en_checker
-	    
+*/	    
 
 // Init motion tb signals//
 task init_motion;
