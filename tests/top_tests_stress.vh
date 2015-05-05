@@ -22,7 +22,7 @@ task simple_long_test;
   send_ID(8'b00011111);
   
   repeat(200 * 15000) @(posedge clk);
-  send_ID(8'b00111111)
+  send_ID(8'b00111111);
   
   repeat(200 * 15000) @(posedge clk);
   send_ID(8'b00010000);		// and we are home
@@ -204,6 +204,124 @@ task long_stop_go_test3;
 
 endtask
 
+/////////////////////////////////////////////////////////
+// This test is an effort to reproduce the scenario in the 
+// demo video posted by Eric Hoffman!
+// ///////////////////////////////////////////////////////
+class random_id_tdemo;
+	rand bit [7:0] id;
+	constraint id_not_destination{
+		id[7:4] == 4'b0000;
+	}
+endclass
+random_id_tdemo rogueid_demo;
+
+task demo_test;
+ 
+  $display("Starting: demo_test ...");
+
+  rogueid_demo = new();
+
+  OK2Move = 1;
+  send_cmd_go(8'b01_100000);
+
+  $display("Starting: Sending command go to station ID 100000");
+
+  repeat(10 * 15000) @(posedge clk);
+  if(|lft || |rht ) 
+  ; // OK we are moving
+  else begin
+    $display("1. ERROR FAIL! demo_test. Stopped at wrong ID %b with lft = %h and rht = %h", ID[5:0], lft, rht);
+    $stop;
+  end
+ 
+  disable_motion_check = 1; // since we will stop the bot multiple times
+  $display("OBSTACLE!!!");
+  // stop the bot
+  OK2Move = 0;
+
+  // check_if_stops_on_cmdstop();
+  repeat(OBS_DELAY) @(posedge clk);
+  if (!(&lft && &rht))
+  	$display("Cool! we did stop!");
+  else
+  begin
+    	    $display("2. ERROR FAIL! demo_test. Stopped at wrong ID %b with lft = %h and rht = %h", ID[5:0], lft, rht);
+          $stop;
+  end
+
+  $display("Obstacle Removed! :)");
+  OK2Move = 1;
+  repeat(10 * 15000) @(posedge clk);
+  if(|lft || |rht ) 
+  ; // OK we are moving
+  else begin
+    $display("3. ERROR FAIL! demo_test. Stopped at wrong ID %b with lft = %h and rht = %h", ID[5:0], lft, rht);
+    $stop;
+  end
+ 
+
+  rogueid_demo.randomize();
+  $display("3.5 Sending rogue ID : %h\n", rogueid_demo.id);
+  send_ID(rogueid_demo.id);
+
+  repeat(10 * 15000) @(posedge clk);
+  if(|lft || |rht ) 
+  ; // OK we are moving
+  else begin
+    $display("4. ERROR FAIL! demo_test. Stopped at wrong ID %b with lft = %h and rht = %h", ID[5:0], lft, rht);
+    $stop;
+  end
+ 
+  $display("Sending the correct destination ID");
+  send_ID(8'b00_100000);
+  
+  check_if_stops_on_id();
+  
+  $display("Send command go to another station with ID 110000");
+  send_cmd_go(8'b01_110000);
+
+  repeat(10 * 15000) @(posedge clk);
+  if(|lft || |rht ) 
+  ; // OK we are moving
+  else begin
+    $display("5. ERROR FAIL! demo_test. Stopped at wrong ID %b with lft = %h and rht = %h", ID[5:0], lft, rht);
+    $stop;
+  end
+  
+  repeat(100 * 15000) @(posedge clk);
+
+  rogueid_demo.randomize();
+  $display("5.5 Sending rogue ID : %h\n", rogueid_demo.id);
+  send_ID(rogueid_demo.id);
+  repeat(10 * 15000) @(posedge clk);
+  if(|lft || |rht ) 
+  	$display("Cool! We are still moving!");
+  else begin
+    $display("6. ERROR FAIL! demo_test. Stopped at wrong ID %b with lft = %h and rht = %h", ID[5:0], lft, rht);
+    $stop;
+  end
+
+  rogueid_demo.randomize();
+  $display("6.5 Sending rogue ID : %h\n", rogueid_demo.id);
+  send_ID(rogueid_demo.id);
+  repeat(10 * 15000) @(posedge clk);
+  if(|lft || |rht ) 
+  	$display("Cool! We are still moving...!");
+  else begin
+    $display("7. ERROR FAIL! demo_test. Stopped at wrong ID %b with lft = %h and rht = %h", ID[5:0], lft, rht);
+    $stop;
+  end
+
+
+  $display("Sending correct station ID 110000");
+  send_ID(8'b00_110000);
+  check_if_stops_on_id();
+ 
+
+  $display("demo_test passed !!");
+
+endtask
 
 /////////////////////////////////////////////////
 /*----------------------------------------------
@@ -220,5 +338,7 @@ if(test_name == "long_stop_go_test2")
     long_stop_go_test2();
 if(test_name == "long_stop_go_test3")
     long_stop_go_test3();
+if(test_name == "demo_test")
+    demo_test();
 
 endtask

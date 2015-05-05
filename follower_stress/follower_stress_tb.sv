@@ -6,7 +6,7 @@
 
 module follower_tb();
 
-parameter TEST_NAME = "long_stop_go_test3";
+parameter TEST_NAME = "demo_test";
 string test_name;
 
 logic clk, rst_n;
