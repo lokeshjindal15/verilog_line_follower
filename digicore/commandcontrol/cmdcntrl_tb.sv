@@ -8,6 +8,7 @@ reg cmd_rdy, ID_vld, in_transit;
 reg[7:0] cmd, ID;
 reg[7:0] tmp_cmd;
 logic clr_cmd_rdy, clr_ID_vld;
+logic set_moving;
 
 reg[10:0] counter;
 
@@ -23,6 +24,7 @@ initial begin
 
 	cmd = 8'h00;
 	ID = 8'b00000100;
+	set_moving = 0;
 
 	counter = 10'h00;
 end
@@ -37,17 +39,20 @@ endtask
 // Task to send commands
 task send_cmd_go;
 	cmd_rdy = 1;
+	set_moving = 1;
 	$display("Go command for station ID: %b", cmd);
 endtask
 
 task send_cmd_stop;
 	cmd = 8'b00000000;
+	set_moving = 0;
 	cmd_rdy = 1;
+	$display("Sending Stop command\n");
 endtask
 
 task send_cmd_invalid;
 	$display("Sending an invalid command");
-	cmd = 8'b11000111;
+	cmd = 8'b11001011;
 	cmd_rdy = 1;
 endtask
 
@@ -68,8 +73,10 @@ always @(in_transit) begin
 	if(in_transit)
 		$display("Moving");
 	else begin
-		$display("Stopped. Station ID : %b, Destination ID: %b", ID[5:0], cmd[5:0]);
-		$stop;
+		if(set_moving) begin
+		   $display("Stopped. Station ID : %b, Destination ID: %b", ID[5:0], cmd[5:0]);
+		   $stop;
+		end
 	end
 end
 
@@ -92,9 +99,10 @@ initial begin
 		send_ID;
 	end
 	
+	$stop();
 end
 
-// Send a rogue command
+// Send a rogue command in parallel
 initial begin
 	repeat (900)@(posedge clk);
 	tmp_cmd = cmd;
@@ -113,10 +121,11 @@ initial begin
 end
 
 //Send a stop command
+/*
 initial begin 
 	repeat (1500)@(posedge clk);
 	send_cmd_stop;
 end
-
+*/
 
 endmodule

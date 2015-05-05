@@ -17,6 +17,7 @@ state_t state, next_state;
 
 logic set_in_transit, clr_in_transit;
 logic cmd_go, cmd_stop;
+logic save_dest_id;
 
 reg[5:0] dst_ID;
 
@@ -43,6 +44,14 @@ always @(posedge clk, negedge rst_n) begin
     //else retain the value
 end
 
+//////// Destination id ff ////////////
+always @(posedge clk, negedge rst_n) begin
+	if(!rst_n)
+		dst_ID  <=  6'h00;
+	else if(save_dest_id)
+		dst_ID  <=  cmd[5:0];
+end
+
 always_comb begin
 	
     clr_in_transit = 1'b0;
@@ -50,6 +59,7 @@ always_comb begin
 	clr_cmd_rdy = 1'b0;
 	clr_ID_vld = 1'b0;
 	next_state = IDLE;
+	save_dest_id = 0;
 
 	case(state)
 		IDLE: begin
@@ -61,7 +71,7 @@ always_comb begin
 
 		CMD_CHK1:
 			if(cmd_go) begin
-				dst_ID = cmd[5:0];
+				save_dest_id = 1;
 				clr_cmd_rdy = 1'b1;
 				next_state = MOVING;
 			end
