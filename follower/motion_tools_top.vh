@@ -105,8 +105,46 @@ always@(posedge iDut.iCORE.iMotion.strt_cnv) begin: IR_en_checker
 	end
     endcase
 end // end of IR_en_checker
-*/	    
+*/	 
 
+///////////////////////////////////////
+// Re-enabling the new IR checker
+///////////////////////////////////////
+logic [2:0] channel_count;
+assign channel_count = iDut.iCORE.iMotion.channel_cnt;   
+always@(posedge IR_in_en)
+begin
+	if (chnnl == 3'b001 || chnnl == 3'b000)
+	;// we are OK
+	else
+	begin
+		$display("ERROR! FAIL! IR_in_en checker IR_in_en posedge occurs at wrong chnnl value: chhnl = 3'b%b and channel_count = %d", chnnl, channel_count);
+		$stop;
+	end
+end
+	
+always@(posedge IR_mid_en)
+begin
+	if (chnnl == 3'b010 || chnnl == 3'b100)
+	;// we are OK
+	else
+	begin
+		$display("ERROR! FAIL! IR_mid_en checker IR_mid_en posedge occurs at wrong chnnl value: chhnl = 3'b%b and channel_count = %d", chnnl, channel_count);
+		$stop;
+	end
+end
+
+always@(posedge IR_out_en)
+begin
+	if (chnnl == 3'b011 || chnnl == 3'b111)
+	;// we are OK
+	else
+	begin
+		$display("ERROR! FAIL! IR_out_en checker IR_out_en posedge occurs at wrong chnnl value: chhnl = 3'b%b and channel_count = %d", chnnl, channel_count);
+		$stop;
+	end
+end
+	
 // Init motion tb signals//
 task init_motion;
 
