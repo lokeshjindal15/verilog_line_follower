@@ -60,7 +60,7 @@ logic fwd_lft, fwd_rht, rev_lft, rev_rht;
 /// Test parameters 
 localparam PERIOD = 12'h20a;
 localparam ID_DELAY = 16*PERIOD;		// clock cycles for correct ID to cause the robot to stop
-localparam OBS_DELAY = 3;		// clock cycles for the robot to stop on seeing an obstacle
+localparam OBS_DELAY = 16*PERIOD;		// clock cycles for the robot to stop on seeing an obstacle
 localparam CMD_DELAY = 26040 + 5000;		// clock cycles for tobot to receive and process a cmd : courtesy lokesh tb
 
 ////////////////////////////////////////
@@ -132,7 +132,7 @@ uart_trans t_UART_TX(        // TBD: rename to UART_tx
 
 `include "cmdcntrl_tools_top.vh"
 `include "motion_tools_top.vh"
-//`include "../tests/digi_tests.vh"
+`include "digi_tests_post.vh"
 
 task clk_n_rst;
 
@@ -147,7 +147,7 @@ task clk_n_rst;
 
 endtask
 
-task check_if_stops_on_id;
+/*task check_if_stops_on_id;
   integer timer;
   timer = 0;
   repeat(ID_DELAY) @(posedge clk);
@@ -159,13 +159,13 @@ task check_if_stops_on_id;
 	 $stop();
   end
   
-endtask
+endtask*/
 
 // Simple cmd go send and stop once you reach
 //  note: this can be re-used in top level tb
 //    just ensure reasonable delay ID_DELAY for
 //    the new ID to be 
-task simple_test;
+/*task simple_test;
 
   //disable motion_checker;
   OK2Move = 1;
@@ -176,7 +176,8 @@ task simple_test;
   check_if_stops_on_id();
  
   $display("SimpleTest: PASSED!\n");
-endtask
+endtask*/
+
 
 initial begin
 
@@ -185,7 +186,12 @@ initial begin
   init_motion();
 
   test_name = TEST_NAME;
-  simple_test();
+  //simple_test();
+  //fakeID_test();
+  blockedbot_test();
+  //stop_test();
+  //rogue_cmd_test1();
+  //rogue_cmd_test2();
   
   repeat(1000) @(posedge clk);
   $display("*** ALL TESTS PASSED ***");
