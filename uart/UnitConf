@@ -1,0 +1,8 @@
+
+unit("uart")
+
+addfile("UART_rx.sv")
+addfile("UART_tx.sv")
+addfile("UART_tb.sv", tb=True)
+
+toplevel("uart_tb")

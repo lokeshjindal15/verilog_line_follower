@@ -125,7 +125,7 @@ begin
 		end
 
 end//end of for loop 2
-	$display("Yo! ALL TESTS FOR BOTH PARTS PASSED!\n");
+	$display("Yo! *** ALL TESTS PASSED ***!\n");
 	
 	$stop;
 	

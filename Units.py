@@ -11,21 +11,20 @@ UnitList = []
 
 class Unit:
 
-  name = ""                   # unit name
-  unitdir = ""
-  vfiles = []                 # verilog/system verilog files
-  inputsets = ['test']        # default reasonably sized input set
-
-  toplevel = ""               # * name of top level module 
-  dostring = "run -all"       # change this to a custom do script if needed
-  tests = []                  # names of tests to run for a multi test tb
-
 
   def __init__(self, _unitdir):
     if not os.path.isdir(_unitdir):
       print "Error: Cannot find the %s directory" % _unitdir
       sys.exit(1)
     self.unitdir = _unitdir
+    self.name = ""                   # unit name
+    self.vfiles = []                 # verilog/system verilog files
+    self.inputsets = ['test']        # default reasonably sized input set
+
+    self._toplevel = ""               # * name of top level module 
+    self.dostring = "run -all"       # change this to a custom do script if needed
+    self.tests = []                  # names of tests to run for a multi test tb
+
 
   def unit(self, _name):  # alias for adding name
     self.name = _name
@@ -45,8 +44,8 @@ class Unit:
 
     self.vfiles.append(filename)
 
-  def toplevel(self, _toplevel):
-    self.toplevel = _toplevel
+  def toplevel(self, this_toplevel):
+    self._toplevel = this_toplevel
   
   def add_dofile(self):
     pass
@@ -105,8 +104,8 @@ class Unit:
     os.system("vlog -sv " + " ".join(self.vfiles))
 
     # run simulation
-    print "\n\n Running simulations for %s ..." % self.toplevel
-    os.system("vsim -c -do '%s' %s -logfile sim.log %s" % (docmd , testparam, self.toplevel) )
+    print "\n\n Running simulations for %s ..." % self._toplevel
+    os.system("vsim -c -do '%s' %s -logfile sim.log %s" % (docmd , testparam, self._toplevel) )
 
     # todo add check
     cnt = subprocess.check_output("grep -c 'ALL TESTS PASSED' sim.log", shell=True)
@@ -129,20 +128,26 @@ def addToUnits(_unit):
 
 #-- this script does the Unitconf reading
 def addUnit(unitdir):
+  global UnitList
 
   unitconf = open("%s/UnitConf" % unitdir)
   unitcmds = unitconf.read().splitlines()
 
-  _Unit = Unit(unitdir)
+  _unit = Unit(unitdir)
 
   for line in unitcmds:
     line = line.strip()
     if line != '':
-      eval('_Unit.%s' % line)
+      eval('_unit.%s' % line)
 
   unitconf.close()
 
-  addToUnits(_Unit)
+  #print _unit.name
+  #print _unit.vfiles
+  #print _unit.tests
+
+  UnitList.append(_unit)
+  #addToUnits(_Unit)
 
 
 
