@@ -62,8 +62,8 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
  logic [15:0]  dst;                    // alu output
 
  /*-- signal encoding --*/
- typedef enum reg [2:0] {A2DRESIN0 = 0, INTGRLIN0, ICOMPIN0, PCOMPIN0, PTERMIN0}  src0select_t;
- typedef enum reg [2:0] {ACCUMIN1 = 0, ITERMIN1, ERRORIN1, ERRORSCALEIN1, FWDIN1} src1select_t;
+ typedef enum reg [2:0] {A2DRESIN0 = 3'b000, INTGRLIN0, ICOMPIN0, PCOMPIN0, PTERMIN0}  src0select_t;
+ typedef enum reg [2:0] {ACCUMIN1 = 3'b000, ITERMIN1, ERRORIN1, ERRORSCALEIN1, FWDIN1} src1select_t;
  
  logic multiply, sub, mult2, mult4, saturate;
  src0select_t src0sel;
@@ -260,7 +260,7 @@ module motion (clk, rst_n, A2D_res, cnv_cmplt, go, chnnl, strt_cnv,
  /*--- The BIGGG FSM ---*/
  ///////////////////////////////////////////////
 
-typedef enum reg [4:0] {IDLE = 0, WAIT_4095, 
+typedef enum reg [4:0] {IDLE = 5'b00000, WAIT_4095, 
                   A2D_RIGHT, IN_RIGHT, MID_RIGHT, OUT_RIGHT,
                   WAIT_32, 
                   A2D_LEFT, IN_LEFT, MID_LEFT, OUT_LEFT,

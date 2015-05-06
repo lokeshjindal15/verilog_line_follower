@@ -115,7 +115,7 @@ module dig_core(clk,rst_n,cmd_rdy,cmd,clr_cmd_rdy,lft,rht,buzz,buzz_n,
  assign buzz_n = ~buzz;
 
  // led : signal for our debuggin purposes
- assign led = cmd;
+ assign led [7:0] = 8'h00;
  
 endmodule
   
