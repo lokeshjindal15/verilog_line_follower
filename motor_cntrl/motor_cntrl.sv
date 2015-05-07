@@ -25,8 +25,11 @@ wire [9:0] mag_lft, mag_rht;   // absolute values to our pwm gen blocks
 wire  pwm_lft, pwm_rht, brake_lft, brake_rht;
  
  /*-- absolute values --*/
-assign  mag_lft = (lft[10]) ?   ~lft[9:0] + 10'b1  :  lft[9:0];
-assign  mag_rht = (rht[10]) ?   ~rht[9:0] + 10'b1  :  rht[9:0];
+assign  mag_lft = (lft[10]) ?   (|lft[9:0] ? (~lft[9:0] + 10'b1) : (10'b11_1111_1111))  :  
+				lft[9:0];
+
+assign  mag_rht = (rht[10]) ?   (|rht[9:0] ? (~rht[9:0] + 10'b1) : (10'b11_1111_1111)) 	:  
+				rht[9:0];
 
 /* -- get PWM signals  --*/
 pwm_gen iPwmlft(.clk(clk), .rst_n(rst_n), .duty(mag_lft), .PWM_sig(pwm_lft));
