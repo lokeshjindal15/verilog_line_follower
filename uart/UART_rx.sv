@@ -7,7 +7,9 @@ module UART_rx(clk, rst_n, clr_rdy, RX, rdy, cmd);
     input RX;												// Input RX bit
     output reg rdy;											// Output rdy to signal byte is received
     output reg [7:0] cmd;									// Output with the received byte
-    
+
+    logic sm_clr_rdy;
+
     typedef enum reg[1:0] {IDLE, START, SHIFT} state_t;		// States for the State Machine
     state_t state, next_state;
 
@@ -85,7 +87,7 @@ module UART_rx(clk, rst_n, clr_rdy, RX, rdy, cmd);
     always @(posedge clk or negedge rst_n) begin
     if(!rst_n)
       rdy <= 1'b0;
-		else if(clr_rdy)
+		else if(clr_rdy | sm_clr_rdy)
 			rdy <= 1'b0;
 		else if(set_rdy)
 			rdy <= 1'b1;
@@ -104,6 +106,7 @@ module UART_rx(clk, rst_n, clr_rdy, RX, rdy, cmd);
 		load_baud = 1'b1;
 		shift = 1'b0;
 		set_rdy = 1'b0;
+		sm_clr_rdy = 1'b0;
 		case(state)
 		IDLE: if(RXFF2)
 				next_state = IDLE;
@@ -112,6 +115,7 @@ module UART_rx(clk, rst_n, clr_rdy, RX, rdy, cmd);
 				load = 1'b0;
 				load_baud = 1'b0;
 				receiving = 1'b1;
+				sm_clr_rdy = 1'b1;
 				next_state = START;
 			end
 		START: begin load = 1'b0;
