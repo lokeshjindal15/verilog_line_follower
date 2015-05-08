@@ -7,7 +7,7 @@ Report : timing
         -max_paths 1
 Design : Follower
 Version: I-2013.12-SP5
-Date   : Mon May  4 23:26:40 2015
+Date   : Thu May  7 21:55:02 2015
 ****************************************
 
 Operating Conditions: NCCOM   Library: tcbn40lpbwptc
@@ -15,7 +15,7 @@ Wire Load Model Mode: segmented
 
   Startpoint: iCORE/iMotion/state_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: iCORE/iMotion/Pcomp_reg[6]
+  Endpoint: iCORE/iMotion/Icomp_reg[4]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -30,69 +30,70 @@ Wire Load Model Mode: segmented
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   iCORE/iMotion/state_reg[4]/CP (DFCND2BWP)               0.00       0.00 r
-  iCORE/iMotion/state_reg[4]/Q (DFCND2BWP)                0.14       0.14 f
-  U1553/ZN (NR2XD1BWP)                                    0.04       0.17 r
-  U1687/Z (AN2D4BWP)                                      0.06       0.23 r
-  U1663/ZN (INR2D2BWP)                                    0.06       0.30 r
-  U1688/Z (OR2XD1BWP)                                     0.07       0.37 r
-  U1544/ZN (NR2XD4BWP)                                    0.05       0.41 f
-  U1600/Z (OR2D2BWP)                                      0.10       0.52 f
-  U1561/Z (OA221D2BWP)                                    0.10       0.61 f
-  U1685/ZN (NR2D2BWP)                                     0.05       0.66 r
-  U2877/Z (XOR2D1BWP)                                     0.09       0.75 f
+  iCORE/iMotion/state_reg[4]/QN (DFCND2BWP)               0.17       0.17 r
+  U1568/Z (AN3D4BWP)                                      0.07       0.24 r
+  U1540/ZN (ND2D1BWP)                                     0.03       0.26 f
+  U1539/ZN (ND2D1BWP)                                     0.03       0.30 r
+  U1551/Z (CKBD4BWP)                                      0.06       0.36 r
+  U1477/ZN (INVD6BWP)                                     0.02       0.38 f
+  U1476/ZN (ND2D8BWP)                                     0.02       0.40 r
+  U1475/ZN (INVD8BWP)                                     0.02       0.42 f
+  U1643/Z (AN3D8BWP)                                      0.06       0.48 f
+  U1504/ZN (AOI22D4BWP)                                   0.04       0.52 r
+  U1678/Z (OA221D4BWP)                                    0.10       0.62 r
+  U1632/ZN (INR2D2BWP)                                    0.02       0.64 f
+  U1677/ZN (INVD1BWP)                                     0.02       0.65 r
+  U292/Z (XOR2D1BWP)                                      0.08       0.74 f
   iCORE/iMotion/iALU/add_1_root_add_66_2/U1_0/CO (FA1D0BWP)
-                                                          0.15       0.90 f
+                                                          0.15       0.89 f
   iCORE/iMotion/iALU/add_1_root_add_66_2/U1_1/CO (FA1D0BWP)
-                                                          0.09       0.99 f
-  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_2/CO (FA1D1BWP)
-                                                          0.07       1.06 f
+                                                          0.09       0.98 f
+  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_2/CO (FA1D0BWP)
+                                                          0.09       1.07 f
   iCORE/iMotion/iALU/add_1_root_add_66_2/U1_3/CO (FA1D1BWP)
                                                           0.07       1.13 f
-  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_4/CO (FA1D1BWP)
-                                                          0.07       1.20 f
+  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_4/CO (FA1D0BWP)
+                                                          0.09       1.22 f
   iCORE/iMotion/iALU/add_1_root_add_66_2/U1_5/CO (FA1D1BWP)
-                                                          0.07       1.27 f
+                                                          0.07       1.29 f
   iCORE/iMotion/iALU/add_1_root_add_66_2/U1_6/CO (FA1D1BWP)
-                                                          0.07       1.33 f
-  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_7/CO (FA1D1BWP)
-                                                          0.07       1.40 f
+                                                          0.06       1.35 f
+  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_7/CO (FA1D0BWP)
+                                                          0.09       1.44 f
   iCORE/iMotion/iALU/add_1_root_add_66_2/U1_8/CO (FA1D1BWP)
-                                                          0.07       1.47 f
-  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_9/CO (FA1D1BWP)
-                                                          0.07       1.53 f
+                                                          0.07       1.51 f
+  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_9/CO (FA1D0BWP)
+                                                          0.09       1.60 f
   iCORE/iMotion/iALU/add_1_root_add_66_2/U1_10/CO (FA1D1BWP)
-                                                          0.07       1.60 f
-  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_11/CO (FA1D1BWP)
                                                           0.07       1.67 f
+  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_11/CO (FA1D1BWP)
+                                                          0.07       1.73 f
   iCORE/iMotion/iALU/add_1_root_add_66_2/U1_12/CO (FA1D1BWP)
-                                                          0.07       1.74 f
-  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_13/CO (FA1D1BWP)
                                                           0.07       1.80 f
+  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_13/CO (FA1D1BWP)
+                                                          0.07       1.87 f
   iCORE/iMotion/iALU/add_1_root_add_66_2/U1_14/CO (FA1D1BWP)
-                                                          0.06       1.87 f
-  iCORE/iMotion/iALU/add_1_root_add_66_2/U1_15/Z (XOR3D1BWP)
-                                                          0.08       1.94 f
-  U2369/ZN (OAI31D2BWP)                                   0.07       2.01 r
-  U1555/Z (BUFFD4BWP)                                     0.06       2.07 r
-  U1575/ZN (INVD1BWP)                                     0.03       2.10 f
-  U1698/ZN (CKND2D1BWP)                                   0.03       2.14 r
-  U1523/Z (BUFFD6BWP)                                     0.05       2.19 r
-  U1705/ZN (OAI21D0BWP)                                   0.04       2.23 f
-  iCORE/iMotion/iALU/U209/ZN (IOA21D1BWP)                 0.04       2.27 r
-  U1534/ZN (INVD3BWP)                                     0.03       2.30 f
-  U2560/ZN (OAI22D1BWP)                                   0.06       2.36 r
-  iCORE/iMotion/Pcomp_reg[6]/D (DFD1BWP)                  0.00       2.36 r
-  data arrival time                                                  2.36
+                                                          0.07       1.94 f
+  U1637/Z (XOR3D1BWP)                                     0.10       2.04 r
+  U1490/ZN (ND3D1BWP)                                     0.05       2.09 f
+  U1631/Z (AN2D4BWP)                                      0.05       2.14 f
+  U1485/Z (OR2D4BWP)                                      0.06       2.20 f
+  U2836/ZN (OAI21D0BWP)                                   0.04       2.24 r
+  iCORE/iMotion/iALU/U179/ZN (IOA21D1BWP)                 0.05       2.29 f
+  U1507/ZN (INVD3BWP)                                     0.04       2.33 r
+  U2473/ZN (MOAI22D0BWP)                                  0.04       2.37 f
+  iCORE/iMotion/Icomp_reg[4]/D (DFQD1BWP)                 0.00       2.37 f
+  data arrival time                                                  2.37
 
   clock clk (rise edge)                                   2.50       2.50
   clock network delay (ideal)                             0.00       2.50
   clock uncertainty                                      -0.10       2.40
-  iCORE/iMotion/Pcomp_reg[6]/CP (DFD1BWP)                 0.00       2.40 r
-  library setup time                                     -0.04       2.36
-  data required time                                                 2.36
+  iCORE/iMotion/Icomp_reg[4]/CP (DFQD1BWP)                0.00       2.40 r
+  library setup time                                     -0.02       2.38
+  data required time                                                 2.38
   --------------------------------------------------------------------------
-  data required time                                                 2.36
-  data arrival time                                                 -2.36
+  data required time                                                 2.38
+  data arrival time                                                 -2.37
   --------------------------------------------------------------------------
   slack (MET)                                                        0.00
 

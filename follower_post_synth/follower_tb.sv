@@ -186,9 +186,9 @@ initial begin
   init_motion();
 
   test_name = TEST_NAME;
-  //simple_test();
+  simple_test();
   //fakeID_test();
-  blockedbot_test();
+  //blockedbot_test();
   //stop_test();
   //rogue_cmd_test1();
   //rogue_cmd_test2();
