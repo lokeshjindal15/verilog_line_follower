@@ -1,0 +1,127 @@
+Coverage Report Summary Data by file
+
+=================================================================================
+=== File: I:/551/git_repo/a2d_intf/A2D_intf.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           36        36         0     100.0
+    Branches                        27        27         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    Toggle Bins                     74        74         0     100.0
+
+=================================================================================
+=== File: I:/551/git_repo/alu/alu.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           10        10         0     100.0
+    Branches                        42        38         4      90.4
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    Toggle Bins                    642       546        96      85.0
+
+=================================================================================
+=== File: I:/551/git_repo/barcode/barcode.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           65        63         2      96.9
+    Branches                        48        45         3      93.7
+    FEC Condition Terms              7         7         0     100.0
+    FEC Expression Terms             9         7         2      77.7
+    Toggle Bins                    156       101        55      64.7
+
+=================================================================================
+=== File: I:/551/git_repo/digicore/commandcontrol/cmdcntrl.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           40        40         0     100.0
+    Branches                        24        23         1      95.8
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    Toggle Bins                     36        23        13      63.8
+
+=================================================================================
+=== File: I:/551/git_repo/digicore/dig_core.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            7         7         0     100.0
+    Branches                         3         3         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             4         3         1      75.0
+    Toggle Bins                     76        76         0     100.0
+
+=================================================================================
+=== File: I:/551/git_repo/digicore/motion/motion.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                          173       173         0     100.0
+    Branches                        89        87         2      97.7
+    FEC Condition Terms              2         1         1      50.0
+    FEC Expression Terms             0         0         0     100.0
+    Toggle Bins                    432       314       118      72.6
+
+=================================================================================
+=== File: I:/551/git_repo/motor_cntrl/motor_cntrl.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            8         8         0     100.0
+    Branches                        12        12         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms            12        12         0     100.0
+    Toggle Bins                     48        48         0     100.0
+
+=================================================================================
+=== File: I:/551/git_repo/motor_cntrl/pwm_gen.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            9         9         0     100.0
+    Branches                         8         8         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             3         3         0     100.0
+    Toggle Bins                     30        30         0     100.0
+
+=================================================================================
+=== File: I:/551/git_repo/rst_synch/rst_synch.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            5         5         0     100.0
+    Branches                         2         2         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    Toggle Bins                      4         2         2      50.0
+
+=================================================================================
+=== File: I:/551/git_repo/uart/UART_rx.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           60        60         0     100.0
+    Branches                        31        31         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    Toggle Bins                    122       101        21      82.7
+
+=================================================================================
+=== File: follower.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            0         0         0     100.0
+    Branches                         0         0         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    Toggle Bins                    202       174        28      86.1
+
+
+Total Coverage By File (code coverage only, filtered view): 91.1%
+
+
