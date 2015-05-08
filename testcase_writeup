@@ -1,0 +1,23 @@
+Top level tests: (digicore/top_tests.vh) :
+----------------------------------------------------
+
+Basic tests ( The PI math is checked here in parallel. The lft and rht values are compared against the analog.dat values )
+============
+1.1. simple_test: 	    Send go cmd, send ID, check if stops at the ID. 
+1.2. fakeID_test: 	    Send go cmd, send wrong station IDs, send correct ID, check if stops at the correct ID.
+1.3. blockedbot_test: 	Set OK2Move to zero, when the bot is moving. Set OK2Move to 1 again and check if stops at correct ID
+1.4. stop_test: 	    Send go cmd, send stop cmd after sometime. Check if the bot stops
+1.5. rogue_cmd_test1:	Send go cmd, invalid commands, when bot is moving. Check if it stops at the correct station ID.
+1.6. rogue_cmd_test2:	Send invalid commands, check the bot does not move. Send go cmd, and invalid cmds later and check the bot stops at correct station ID.
+1.7. invalidID_test: 	Send go cmd for a station ID, send invalid station IDs before sending the correct station ID. Check the bot stops at the correct station ID.
+1.8. glitchBC_test:	    Send go command. Force a BC pulse. After a timeout send the correct station ID. Check if the bot moves and stops at the correct station ID. 
+1.9 Reroute_test:       Send go cmd. After sometime, send another go cmd to a different station ID. Check if bot stops at the new station ID.
+
+Stress Tests ( The PI math is checked here in parallel. The lft and rht values are compared against the analog.dat values )
+=============
+
+2.1 simple_long_test:	Send go cmd, send invalid station IDs at long intervals continuously. Send a correct ID and check if the bot stops.
+2.2 long_stop_go_test:	Send go cmd, and send stop cmd repetitively in an iterating loop. Check if the bot behaves accordingly.
+2.3 long_stop_go_test2:	Send go cmd. Iteratively send incorrect station IDs and stop cmds. Check if the bot behaves accordingly.
+2.4 long_stop_go_test3: Send go cmd. Set OK2Move to 0 iteratively at certain intervals. Check if the bot stops and starts again.
+2.5 demo_test:		    Reproduce the sequence of events in Eric's demo video. 	
