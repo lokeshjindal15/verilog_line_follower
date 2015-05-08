@@ -23,6 +23,8 @@ def main():
   Units.addUnit('uart')
   Units.addUnit('digicore')
   Units.addUnit('follower')
+
+  Units.addUnit('FINAL')
   #addUnit('follower_stress')
 
   if( len(sys.argv) == 2 and sys.argv[1] == 'all'):
