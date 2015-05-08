@@ -26,7 +26,6 @@ reg [3:0]  bit_counter; //4-bit counter to track how many bits have been recvd
 reg recving, cnting_low, waiting_bc_negedge, done_waiting_bc_negedge;  //signals from SM to datapath: 22-b counter enable/disable signal
 
 reg [21:0] low_count_reg; //22-b reg that stores the number of low-period clk cycles
-logic [21:0] low_count_regX2;
 
 // making barcode reader robust 3-sampling circuit
 reg BC0, BC1, BC2, BC3; 
@@ -105,10 +104,7 @@ always@(posedge(clk) or negedge(rst_n))
 	else
 		if (latch_cnt_low)
 			low_count_reg <= counter;
-		
-
-assign low_count_regX2 = {low_count_reg[20:0], 1'b0};
-	
+			
 //bit_counter to track how many bits have been recved
 //reset on start of every transaction
 always@(posedge(clk))
@@ -183,8 +179,7 @@ begin
 				nxt_state = RECVING;
 				done_waiting_bc_negedge = 1'b1 ;
 			end
-			 // else if (counter == 22'h3fffff)//timeout if it was false start bit and we never see a BC_NEGEDGE
-			else if (counter == low_count_regX2[21:0])// ECO //timeout if it was false start bit and we never see a BC_NEGEDGE
+			else if (counter == 22'h3fffff)//timeout if it was false start bit and we never see a BC_NEGEDGE
 				begin
 					nxt_state = IDLE;
 					done_waiting_bc_negedge = 1'b1;
