@@ -1,6 +1,7 @@
 
-unit("Follower")
+unit("follower_stress")
 
+addfile("../digicore/motion/ir_pwm_gen.sv")
 addfile("../digicore/motion/motion.sv")
 addfile("../digicore/commandcontrol/cmdcntrl.sv")
 addfile("../alu/alu.v")
@@ -17,5 +18,5 @@ addfile("../digicore/dig_core.sv")
 addfile("../uart/UART_tx.sv")
 addfile("../a2d_intf/ADC128S.sv")
 
-addtest( ("simple_long_test") )
+addtests( ("simple_long_test", "long_stop_go_test", "long_stop_go_test2", "long_stop_go_test3", "demo_test") )
 toplevel("follower_tb")
